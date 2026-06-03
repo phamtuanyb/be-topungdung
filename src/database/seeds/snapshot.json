@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-06-03T04:37:55.194Z",
+  "exportedAt": "2026-06-03T07:27:49.483Z",
   "users": [
     {
       "id": 2,
@@ -19,9 +19,9 @@
       "fullName": "Root Admin",
       "role": "admin",
       "status": "active",
-      "refreshTokenHash": "$2a$10$.XRMK.14xvg1FqaDq0bHFOCKX4E48sG2tdWuTHZvIzyYn2HAx3QHG",
+      "refreshTokenHash": "$2a$10$et0HiA5..Tnifd00ziYLQ.Lot4FWw1EPIjDvVbkVDgVsVuxUNG3yi",
       "createdAt": "2026-05-27T21:08:53.537Z",
-      "updatedAt": "2026-06-02T21:27:57.643Z"
+      "updatedAt": "2026-06-03T00:10:56.804Z"
     }
   ],
   "categories": [
@@ -650,303 +650,6 @@
       "deletedAt": null
     },
     {
-      "id": 39,
-      "title": "ViAI Ads — Phần mềm tự động chạy quảng cáo đa nền tảng",
-      "slug": "viai-ads",
-      "excerpt": "AI Agent tự nghiên cứu audience, sinh creative và A/B test ngân sách quảng cáo Facebook, Google, TikTok, Zalo 24/7 — tối ưu ROAS không cần đội Media Buyer.",
-      "content": " ",
-      "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1280&h=720&q=80",
-      "categoryId": 7,
-      "authorId": 2,
-      "status": "published",
-      "publishedAt": "2026-05-29T09:00:00.000Z",
-      "seoTitle": null,
-      "seoDescription": null,
-      "seoKeywords": null,
-      "viewCount": 36,
-      "focusKeyword": null,
-      "seoScore": null,
-      "seoGrade": null,
-      "logoUrl": "http://localhost:3001/uploads/2758ced2-09f9-4521-a812-69a2a06a9fe8.webp",
-      "badge": "Hot",
-      "shortName": "ViAI Ads  — Phần mềm tự động chạy quảng cáo đa nền tảng",
-      "displayOrder": 1,
-      "menuGroupId": 254,
-      "productPageConfig": {
-        "faq": {
-          "items": [
-            {
-              "a": "Không. ViAI xử lý 80% việc lặp lại (research, tạo creative, A/B test, tối ưu bid). Media Buyer vẫn cần để định hướng chiến lược + xử lý case đặc biệt. Thực tế: 1 Media Buyer dùng ViAI = sức 4-5 người trước đây.",
-              "q": "ViAI Ads có thay thế hoàn toàn Media Buyer không?"
-            },
-            {
-              "a": "Có. Pro+ có thể fine-tune AI theo ngành cụ thể. Enterprise có riêng AI model train trên dữ liệu doanh nghiệp.",
-              "q": "Có hỗ trợ ngành đặc thù như BĐS, ô tô không?"
-            },
-            {
-              "a": "Áp dụng gói Pro+, ngân sách tối thiểu 100tr/tháng, sản phẩm có market fit, vận hành ≥60 ngày liên tục. Không đạt → miễn phí tháng tiếp theo.",
-              "q": "Cam kết ROAS 2.5x có điều kiện gì?"
-            },
-            {
-              "a": "Mã hoá AES-256, lưu tại Vietnam Data Center, tuân thủ PDPA. Không chia sẻ data giữa các khách hàng.",
-              "q": "Dữ liệu campaign có an toàn không?"
-            }
-          ],
-          "heading": "Câu hỏi thường gặp"
-        },
-        "demo": {
-          "videoUrl": "https://youtu.be/a5lAd25780w?si=xs5Tc648I6SHRE5a"
-        },
-        "hero": {
-          "statBig": "1.5x",
-          "statSub": "ROAS trung bình sau 6 tuần triển khai",
-          "tagline": "AI tự động chạy quảng cáo 24/7 — tối ưu ROAS không cần đội Media Buyer",
-          "ctaPrimary": {
-            "href": "/contact",
-            "text": "Dùng thử 7 ngày miễn phí"
-          },
-          "ctaSecondary": {
-            "href": "#demo",
-            "text": "Xem demo"
-          },
-          "heroImageAlt": "ViAI Ads dashboard",
-          "heroImageSrc": "http://localhost:3001/uploads/4aa52761-79b7-4c73-b39b-0175df3fd3e5.webp"
-        },
-        "pricing": {
-          "plans": [
-            {
-              "name": "Starter",
-              "price": "1.190.000đ",
-              "period": "/tháng",
-              "ctaHref": "/contact",
-              "ctaText": "Bắt đầu",
-              "features": [
-                "1 nền tảng (Facebook hoặc Google)",
-                "Tối đa 20 creative A/B test/tháng",
-                "5 audience tự nghiên cứu",
-                "Báo cáo realtime cơ bản",
-                "Hỗ trợ email"
-              ],
-              "subtitle": "Shop ecom mới, ngân sách <50tr/tháng",
-              "originalPrice": "1.990.000đ"
-            },
-            {
-              "name": "Pro",
-              "badge": "Phổ biến",
-              "price": "2.990.000đ",
-              "period": "/tháng",
-              "ctaHref": "/contact",
-              "ctaText": "Đặt lịch tư vấn",
-              "featured": true,
-              "features": [
-                "4 nền tảng: Facebook, Google, TikTok, Zalo",
-                "Tối đa 50 creative A/B test/tháng",
-                "Audience không giới hạn",
-                "Báo cáo realtime + insight AI",
-                "Hỗ trợ 1-1 Slack/Zalo",
-                "Cam kết tăng ROAS 2.5x trong 60 ngày"
-              ],
-              "subtitle": "Agency 5-30 KH, shop ecom 500tr-3 tỷ/tháng",
-              "originalPrice": "4.990.000đ"
-            },
-            {
-              "name": "Enterprise",
-              "price": "8.990.000đ",
-              "period": "/tháng",
-              "ctaHref": "/contact",
-              "ctaText": "Liên hệ",
-              "features": [
-                "Không giới hạn nền tảng + creative",
-                "AI model fine-tune riêng theo ngành",
-                "Strategist 1-1 hỗ trợ chiến lược",
-                "API + tích hợp BI tool nội bộ",
-                "SLA response 1h",
-                "Đào tạo nội bộ + workshop"
-              ],
-              "subtitle": "Brand 3+ tỷ ngân sách/tháng, agency 30+ KH",
-              "originalPrice": "14.990.000đ"
-            }
-          ],
-          "heading": "Bảng giá ViAI Ads",
-          "description": "Giảm 40% cho khách hàng đăng ký trong tháng"
-        },
-        "features": {
-          "items": [
-            {
-              "title": "Tự nghiên cứu audience theo sản phẩm và đối thủ",
-              "bullets": [
-                "AI phân tích landing page, sản phẩm, đối thủ trong ngành",
-                "Đề xuất 5-10 nhóm audience phù hợp với từng campaign",
-                "Tự refine audience theo dữ liệu conversion thật"
-              ],
-              "imageAlt": "Audience research",
-              "imageSrc": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1280&h=720&q=80"
-            },
-            {
-              "title": "Sinh creative đa định dạng tự động",
-              "bullets": [
-                "AI viết headline, caption, CTA theo brand voice",
-                "Tạo ảnh quảng cáo, carousel, video ngắn từ ảnh sản phẩm",
-                "Tự nhân bản 20-50 biến thể từ 1 brief"
-              ],
-              "imageAlt": "Creative generation",
-              "imageSrc": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1280&h=720&q=80"
-            },
-            {
-              "title": "A/B test đến 50 biến thể song song",
-              "bullets": [
-                "Test đồng thời nhiều creative, audience, placement",
-                "Tự kill biến thể CPL cao, scale biến thể CPL thấp",
-                "Học từ data trong 24-48h, không phải chờ tuần"
-              ],
-              "imageAlt": "A/B testing",
-              "imageSrc": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1280&h=720&q=80"
-            },
-            {
-              "title": "Tối ưu ngân sách theo khung giờ vàng",
-              "bullets": [
-                "AI phát hiện khung giờ ROAS cao nhất từng vùng",
-                "Tự bid nhiều giờ peak, giảm bid giờ thấp",
-                "Tối ưu cho mỗi vùng địa lý riêng"
-              ],
-              "imageAlt": "Budget optimization",
-              "imageSrc": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=1280&h=720&q=80"
-            },
-            {
-              "title": "Quản lý 4 nền tảng trong 1 dashboard",
-              "bullets": [
-                "Facebook Ads, Google Ads, TikTok Ads, Zalo Ads",
-                "Đồng bộ data, đối soát chi phí tự động",
-                "So sánh hiệu suất giữa các kênh realtime"
-              ],
-              "imageAlt": "Multi-platform dashboard",
-              "imageSrc": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=1280&h=720&q=80"
-            },
-            {
-              "title": "Báo cáo realtime kèm insight AI",
-              "bullets": [
-                "Dashboard ROAS, CPL, CPA, ROI cập nhật mỗi giờ",
-                "AI cảnh báo bất thường + đề xuất hành động cụ thể",
-                "Export PDF gửi khách hàng / sếp tự động"
-              ],
-              "imageAlt": "AI reporting",
-              "imageSrc": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1280&h=720&q=80"
-            }
-          ],
-          "heading": "6 tính năng cốt lõi"
-        },
-        "finalCta": {
-          "ctaHref": "/contact",
-          "ctaText": "Đăng ký dùng thử",
-          "heading": "Sẵn sàng tăng ROAS gấp 1.5-2.5 lần?",
-          "description": "Dùng thử 7 ngày miễn phí, không cần thẻ tín dụng. Hoàn tiền 100% nếu không hài lòng."
-        },
-        "solutions": {
-          "items": [
-            {
-              "text": "AI tự nghiên cứu audience theo sản phẩm + đối thủ",
-              "iconName": "CheckCircle"
-            },
-            {
-              "text": "Sinh creative đa định dạng (ảnh / carousel / video) trong vài phút",
-              "iconName": "CheckCircle"
-            },
-            {
-              "text": "A/B test hàng chục biến thể cùng lúc, tự kill kém",
-              "iconName": "CheckCircle"
-            },
-            {
-              "text": "Tối ưu ngân sách realtime theo khung giờ vàng",
-              "iconName": "CheckCircle"
-            },
-            {
-              "text": "Quản lý đồng bộ Facebook, Google, TikTok, Zalo Ads",
-              "iconName": "CheckCircle"
-            },
-            {
-              "text": "Báo cáo ROAS/CPL realtime kèm khuyến nghị AI",
-              "iconName": "CheckCircle"
-            }
-          ],
-          "heading": "ViAI Ads giải quyết triệt để",
-          "ctaPrimary": {
-            "href": "/contact",
-            "text": "Trải nghiệm miễn phí"
-          },
-          "ctaSecondary": {
-            "href": "#pricing",
-            "text": "Bảng giá"
-          }
-        },
-        "painPoints": {
-          "items": [
-            {
-              "title": "ROAS giảm, CPL tăng mà không biết vì sao",
-              "iconName": "Frown",
-              "description": "Set ads xong nhưng performance không ổn định, phải canh sửa từng ngày."
-            },
-            {
-              "title": "Tốn 4-6h/ngày test creative",
-              "iconName": "Clock",
-              "description": "Media Buyer phải tự design, viết caption, đẩy lên platform thủ công."
-            },
-            {
-              "title": "Lương Media Buyer 15-30tr/tháng",
-              "iconName": "DollarSign",
-              "description": "Tuyển khó, giữ khó, làm 6 tháng nghỉ là phải đào tạo lại từ đầu."
-            },
-            {
-              "title": "Đốt ngân sách vào audience không hiệu quả",
-              "iconName": "AlertTriangle",
-              "description": "Test sai audience tốn vài chục triệu mới biết, không có cơ chế cảnh báo sớm."
-            },
-            {
-              "title": "Quản lý đa nền tảng cực mệt",
-              "iconName": "Layers",
-              "description": "Facebook + Google + TikTok + Zalo — mỗi platform 1 dashboard, đối soát thủ công."
-            },
-            {
-              "title": "Không có insight để cải thiện",
-              "iconName": "BarChart",
-              "description": "Báo cáo cuối tháng chỉ có số, không có khuyến nghị hành động cụ thể."
-            }
-          ],
-          "heading": "Bạn đang gặp những vấn đề này khi chạy ads?"
-        },
-        "trustStrip": {
-          "text": "⭐ Đã có 500+ Agency và Shop Ecommerce tin dùng"
-        },
-        "stickyBottom": {
-          "enabled": true,
-          "priceLabel": "Từ 1.190.000đ/tháng",
-          "ctaPrimaryHref": "/contact",
-          "ctaPrimaryText": "Đặt lịch tư vấn",
-          "ctaSecondaryHref": "/contact",
-          "ctaSecondaryText": "Dùng thử miễn phí"
-        },
-        "testimonials": {
-          "items": [
-            {
-              "name": "Nguyễn Minh Tâm",
-              "role": "CEO chuỗi mỹ phẩm Pure Beauty",
-              "quote": "Sau 6 tuần triển khai ViAI Ads, ROAS chuỗi cửa hàng tăng từ 2.1 lên 3.4. Tiết kiệm hẳn 1 vị trí Media Buyer.",
-              "avatarSrc": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&h=200&q=80"
-            },
-            {
-              "name": "Trần Văn Hùng",
-              "role": "Head of Performance, Agency BlueWave",
-              "quote": "Quản lý 4 platform cùng lúc không còn là cơn ác mộng. Insight AI gợi ý kill audience kém rất chính xác.",
-              "avatarSrc": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&h=200&q=80"
-            }
-          ],
-          "heading": "Khách hàng nói gì"
-        }
-      },
-      "createdAt": "2026-05-29T22:54:02.463Z",
-      "updatedAt": "2026-06-02T19:32:30.371Z",
-      "deletedAt": null
-    },
-    {
       "id": 8,
       "title": "CRM cho SME Việt — quản lý lead, pipeline bán hàng, chăm sóc khách hàng tự động",
       "slug": "crm-cho-sme-viet-quan-ly-lead-pipeline-ban-hang-cham-soc-khach-hang-tu-dong",
@@ -1236,6 +939,303 @@
       "createdAt": "2026-05-29T18:57:48.692Z",
       "updatedAt": "2026-05-31T07:29:24.857Z",
       "deletedAt": "2026-05-31T07:29:24.857Z"
+    },
+    {
+      "id": 39,
+      "title": "ViAI Ads — Phần mềm tự động chạy quảng cáo đa nền tảng",
+      "slug": "viai-ads",
+      "excerpt": "AI Agent tự nghiên cứu audience, sinh creative và A/B test ngân sách quảng cáo Facebook, Google, TikTok, Zalo 24/7 — tối ưu ROAS không cần đội Media Buyer.",
+      "content": " ",
+      "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1280&h=720&q=80",
+      "categoryId": 7,
+      "authorId": 2,
+      "status": "published",
+      "publishedAt": "2026-05-29T09:00:00.000Z",
+      "seoTitle": null,
+      "seoDescription": null,
+      "seoKeywords": null,
+      "viewCount": 38,
+      "focusKeyword": null,
+      "seoScore": null,
+      "seoGrade": null,
+      "logoUrl": "http://localhost:3001/uploads/2758ced2-09f9-4521-a812-69a2a06a9fe8.webp",
+      "badge": "Hot",
+      "shortName": "ViAI Ads  — Phần mềm tự động chạy quảng cáo đa nền tảng",
+      "displayOrder": 1,
+      "menuGroupId": 254,
+      "productPageConfig": {
+        "faq": {
+          "items": [
+            {
+              "a": "Không. ViAI xử lý 80% việc lặp lại (research, tạo creative, A/B test, tối ưu bid). Media Buyer vẫn cần để định hướng chiến lược + xử lý case đặc biệt. Thực tế: 1 Media Buyer dùng ViAI = sức 4-5 người trước đây.",
+              "q": "ViAI Ads có thay thế hoàn toàn Media Buyer không?"
+            },
+            {
+              "a": "Có. Pro+ có thể fine-tune AI theo ngành cụ thể. Enterprise có riêng AI model train trên dữ liệu doanh nghiệp.",
+              "q": "Có hỗ trợ ngành đặc thù như BĐS, ô tô không?"
+            },
+            {
+              "a": "Áp dụng gói Pro+, ngân sách tối thiểu 100tr/tháng, sản phẩm có market fit, vận hành ≥60 ngày liên tục. Không đạt → miễn phí tháng tiếp theo.",
+              "q": "Cam kết ROAS 2.5x có điều kiện gì?"
+            },
+            {
+              "a": "Mã hoá AES-256, lưu tại Vietnam Data Center, tuân thủ PDPA. Không chia sẻ data giữa các khách hàng.",
+              "q": "Dữ liệu campaign có an toàn không?"
+            }
+          ],
+          "heading": "Câu hỏi thường gặp"
+        },
+        "demo": {
+          "videoUrl": "https://youtu.be/a5lAd25780w?si=xs5Tc648I6SHRE5a"
+        },
+        "hero": {
+          "statBig": "1.5x",
+          "statSub": "ROAS trung bình sau 6 tuần triển khai",
+          "tagline": "AI tự động chạy quảng cáo 24/7 — tối ưu ROAS không cần đội Media Buyer",
+          "ctaPrimary": {
+            "href": "/contact",
+            "text": "Dùng thử 7 ngày miễn phí"
+          },
+          "ctaSecondary": {
+            "href": "#demo",
+            "text": "Xem demo"
+          },
+          "heroImageAlt": "ViAI Ads dashboard",
+          "heroImageSrc": "http://localhost:3001/uploads/4aa52761-79b7-4c73-b39b-0175df3fd3e5.webp"
+        },
+        "pricing": {
+          "plans": [
+            {
+              "name": "Starter",
+              "price": "1.190.000đ",
+              "period": "/tháng",
+              "ctaHref": "/contact",
+              "ctaText": "Bắt đầu",
+              "features": [
+                "1 nền tảng (Facebook hoặc Google)",
+                "Tối đa 20 creative A/B test/tháng",
+                "5 audience tự nghiên cứu",
+                "Báo cáo realtime cơ bản",
+                "Hỗ trợ email"
+              ],
+              "subtitle": "Shop ecom mới, ngân sách <50tr/tháng",
+              "originalPrice": "1.990.000đ"
+            },
+            {
+              "name": "Pro",
+              "badge": "Phổ biến",
+              "price": "2.990.000đ",
+              "period": "/tháng",
+              "ctaHref": "/contact",
+              "ctaText": "Đặt lịch tư vấn",
+              "featured": true,
+              "features": [
+                "4 nền tảng: Facebook, Google, TikTok, Zalo",
+                "Tối đa 50 creative A/B test/tháng",
+                "Audience không giới hạn",
+                "Báo cáo realtime + insight AI",
+                "Hỗ trợ 1-1 Slack/Zalo",
+                "Cam kết tăng ROAS 2.5x trong 60 ngày"
+              ],
+              "subtitle": "Agency 5-30 KH, shop ecom 500tr-3 tỷ/tháng",
+              "originalPrice": "4.990.000đ"
+            },
+            {
+              "name": "Enterprise",
+              "price": "8.990.000đ",
+              "period": "/tháng",
+              "ctaHref": "/contact",
+              "ctaText": "Liên hệ",
+              "features": [
+                "Không giới hạn nền tảng + creative",
+                "AI model fine-tune riêng theo ngành",
+                "Strategist 1-1 hỗ trợ chiến lược",
+                "API + tích hợp BI tool nội bộ",
+                "SLA response 1h",
+                "Đào tạo nội bộ + workshop"
+              ],
+              "subtitle": "Brand 3+ tỷ ngân sách/tháng, agency 30+ KH",
+              "originalPrice": "14.990.000đ"
+            }
+          ],
+          "heading": "Bảng giá ViAI Ads",
+          "description": "Giảm 40% cho khách hàng đăng ký trong tháng"
+        },
+        "features": {
+          "items": [
+            {
+              "title": "Tự nghiên cứu audience theo sản phẩm và đối thủ",
+              "bullets": [
+                "AI phân tích landing page, sản phẩm, đối thủ trong ngành",
+                "Đề xuất 5-10 nhóm audience phù hợp với từng campaign",
+                "Tự refine audience theo dữ liệu conversion thật"
+              ],
+              "imageAlt": "Audience research",
+              "imageSrc": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1280&h=720&q=80"
+            },
+            {
+              "title": "Sinh creative đa định dạng tự động",
+              "bullets": [
+                "AI viết headline, caption, CTA theo brand voice",
+                "Tạo ảnh quảng cáo, carousel, video ngắn từ ảnh sản phẩm",
+                "Tự nhân bản 20-50 biến thể từ 1 brief"
+              ],
+              "imageAlt": "Creative generation",
+              "imageSrc": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1280&h=720&q=80"
+            },
+            {
+              "title": "A/B test đến 50 biến thể song song",
+              "bullets": [
+                "Test đồng thời nhiều creative, audience, placement",
+                "Tự kill biến thể CPL cao, scale biến thể CPL thấp",
+                "Học từ data trong 24-48h, không phải chờ tuần"
+              ],
+              "imageAlt": "A/B testing",
+              "imageSrc": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1280&h=720&q=80"
+            },
+            {
+              "title": "Tối ưu ngân sách theo khung giờ vàng",
+              "bullets": [
+                "AI phát hiện khung giờ ROAS cao nhất từng vùng",
+                "Tự bid nhiều giờ peak, giảm bid giờ thấp",
+                "Tối ưu cho mỗi vùng địa lý riêng"
+              ],
+              "imageAlt": "Budget optimization",
+              "imageSrc": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=1280&h=720&q=80"
+            },
+            {
+              "title": "Quản lý 4 nền tảng trong 1 dashboard",
+              "bullets": [
+                "Facebook Ads, Google Ads, TikTok Ads, Zalo Ads",
+                "Đồng bộ data, đối soát chi phí tự động",
+                "So sánh hiệu suất giữa các kênh realtime"
+              ],
+              "imageAlt": "Multi-platform dashboard",
+              "imageSrc": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=1280&h=720&q=80"
+            },
+            {
+              "title": "Báo cáo realtime kèm insight AI",
+              "bullets": [
+                "Dashboard ROAS, CPL, CPA, ROI cập nhật mỗi giờ",
+                "AI cảnh báo bất thường + đề xuất hành động cụ thể",
+                "Export PDF gửi khách hàng / sếp tự động"
+              ],
+              "imageAlt": "AI reporting",
+              "imageSrc": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1280&h=720&q=80"
+            }
+          ],
+          "heading": "6 tính năng cốt lõi"
+        },
+        "finalCta": {
+          "ctaHref": "/contact",
+          "ctaText": "Đăng ký dùng thử",
+          "heading": "Sẵn sàng tăng ROAS gấp 1.5-2.5 lần?",
+          "description": "Dùng thử 7 ngày miễn phí, không cần thẻ tín dụng. Hoàn tiền 100% nếu không hài lòng."
+        },
+        "solutions": {
+          "items": [
+            {
+              "text": "AI tự nghiên cứu audience theo sản phẩm + đối thủ",
+              "iconName": "CheckCircle"
+            },
+            {
+              "text": "Sinh creative đa định dạng (ảnh / carousel / video) trong vài phút",
+              "iconName": "CheckCircle"
+            },
+            {
+              "text": "A/B test hàng chục biến thể cùng lúc, tự kill kém",
+              "iconName": "CheckCircle"
+            },
+            {
+              "text": "Tối ưu ngân sách realtime theo khung giờ vàng",
+              "iconName": "CheckCircle"
+            },
+            {
+              "text": "Quản lý đồng bộ Facebook, Google, TikTok, Zalo Ads",
+              "iconName": "CheckCircle"
+            },
+            {
+              "text": "Báo cáo ROAS/CPL realtime kèm khuyến nghị AI",
+              "iconName": "CheckCircle"
+            }
+          ],
+          "heading": "ViAI Ads giải quyết triệt để",
+          "ctaPrimary": {
+            "href": "/contact",
+            "text": "Trải nghiệm miễn phí"
+          },
+          "ctaSecondary": {
+            "href": "#pricing",
+            "text": "Bảng giá"
+          }
+        },
+        "painPoints": {
+          "items": [
+            {
+              "title": "ROAS giảm, CPL tăng mà không biết vì sao",
+              "iconName": "Frown",
+              "description": "Set ads xong nhưng performance không ổn định, phải canh sửa từng ngày."
+            },
+            {
+              "title": "Tốn 4-6h/ngày test creative",
+              "iconName": "Clock",
+              "description": "Media Buyer phải tự design, viết caption, đẩy lên platform thủ công."
+            },
+            {
+              "title": "Lương Media Buyer 15-30tr/tháng",
+              "iconName": "DollarSign",
+              "description": "Tuyển khó, giữ khó, làm 6 tháng nghỉ là phải đào tạo lại từ đầu."
+            },
+            {
+              "title": "Đốt ngân sách vào audience không hiệu quả",
+              "iconName": "AlertTriangle",
+              "description": "Test sai audience tốn vài chục triệu mới biết, không có cơ chế cảnh báo sớm."
+            },
+            {
+              "title": "Quản lý đa nền tảng cực mệt",
+              "iconName": "Layers",
+              "description": "Facebook + Google + TikTok + Zalo — mỗi platform 1 dashboard, đối soát thủ công."
+            },
+            {
+              "title": "Không có insight để cải thiện",
+              "iconName": "BarChart",
+              "description": "Báo cáo cuối tháng chỉ có số, không có khuyến nghị hành động cụ thể."
+            }
+          ],
+          "heading": "Bạn đang gặp những vấn đề này khi chạy ads?"
+        },
+        "trustStrip": {
+          "text": "⭐ Đã có 500+ Agency và Shop Ecommerce tin dùng"
+        },
+        "stickyBottom": {
+          "enabled": true,
+          "priceLabel": "Từ 1.190.000đ/tháng",
+          "ctaPrimaryHref": "/contact",
+          "ctaPrimaryText": "Đặt lịch tư vấn",
+          "ctaSecondaryHref": "/contact",
+          "ctaSecondaryText": "Dùng thử miễn phí"
+        },
+        "testimonials": {
+          "items": [
+            {
+              "name": "Nguyễn Minh Tâm",
+              "role": "CEO chuỗi mỹ phẩm Pure Beauty",
+              "quote": "Sau 6 tuần triển khai ViAI Ads, ROAS chuỗi cửa hàng tăng từ 2.1 lên 3.4. Tiết kiệm hẳn 1 vị trí Media Buyer.",
+              "avatarSrc": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&h=200&q=80"
+            },
+            {
+              "name": "Trần Văn Hùng",
+              "role": "Head of Performance, Agency BlueWave",
+              "quote": "Quản lý 4 platform cùng lúc không còn là cơn ác mộng. Insight AI gợi ý kill audience kém rất chính xác.",
+              "avatarSrc": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&h=200&q=80"
+            }
+          ],
+          "heading": "Khách hàng nói gì"
+        }
+      },
+      "createdAt": "2026-05-29T22:54:02.463Z",
+      "updatedAt": "2026-06-02T23:44:32.729Z",
+      "deletedAt": null
     },
     {
       "id": 42,
@@ -1847,7 +1847,7 @@
       "seoTitle": "App bán hàng đa kênh — Web + Zalo Mini App + Mobile | Vsoftware",
       "seoDescription": "App bán hàng đa kênh Vsoftware: Web + Zalo Mini App + Mobile App đồng bộ tồn kho realtime. Triển khai 6-12 tuần.",
       "seoKeywords": null,
-      "viewCount": 37,
+      "viewCount": 39,
       "focusKeyword": null,
       "seoScore": null,
       "seoGrade": null,
@@ -2106,7 +2106,7 @@
         }
       },
       "createdAt": "2026-05-29T19:13:57.731Z",
-      "updatedAt": "2026-06-02T03:58:20.490Z",
+      "updatedAt": "2026-06-02T23:34:51.823Z",
       "deletedAt": null
     },
     {
@@ -5947,6 +5947,34 @@
       "deletedAt": "2026-06-01T09:22:55.371Z"
     },
     {
+      "id": 30,
+      "title": "Top 10 phần mềm SaaS: SME nên chọn công cụ nào để vận hành hiệu quả?",
+      "slug": "top-10-phan-mem-saas",
+      "excerpt": "Top 10 phần mềm SaaS giúp SME chọn công cụ phù hợp để quản lý bán hàng, marketing, CSKH, cộng tác và vận hành hiệu quả hơn.",
+      "content": "<p>Top 10 phần mềm SaaS là danh sách các công cụ điện toán đám mây giúp doanh nghiệp quản lý bán hàng, marketing, chăm sóc khách hàng, cộng tác nội bộ, họp trực tuyến, thiết kế, thương mại điện tử và thanh toán mà không cần tự xây hệ thống từ đầu.</p><p>Với SME Việt Nam, SaaS hấp dẫn vì triển khai nhanh, trả phí theo tháng và không đòi hỏi đội kỹ thuật lớn. Tuy vậy, chọn sai công cụ có thể khiến dữ liệu rời rạc và chi phí tăng dần.</p><p></p><h2>I. Phần mềm SaaS là gì và vì sao SME cần hiểu đúng?</h2><h3>1. SaaS giúp doanh nghiệp dùng phần mềm nhanh hơn</h3><p>SaaS là mô hình phần mềm được cung cấp qua internet, thường dùng theo tài khoản và trả phí định kỳ. Doanh nghiệp không cần cài đặt phức tạp trên máy chủ riêng mà có thể đăng nhập để dùng trên trình duyệt hoặc ứng dụng.</p><p>Điểm mạnh của SaaS với SME là tốc độ triển khai. Một đội nhỏ có thể dùng CRM, email, lưu trữ tài liệu, họp trực tuyến hoặc quản lý dự án chỉ sau vài ngày.</p><img src=\"http://localhost:3001/uploads/ff174708-0be2-48c4-8eb9-229af111c462.webp\"><h3>2. Không phải SaaS nào cũng phù hợp với SME</h3><p>Một phần mềm nhiều tính năng chưa chắc là lựa chọn tốt nhất. SME cần ưu tiên công cụ dễ dùng, phù hợp quy trình hiện tại, có chi phí rõ ràng và kết nối được với các nền tảng đang sử dụng.</p><p>Sai lầm phổ biến là chọn theo thương hiệu lớn nhưng không có người vận hành. Khi đội ngũ không dùng đều, phần mềm sẽ nhanh chóng trở thành chi phí cố định.</p><p></p><h2>II. Cách chọn phần mềm SaaS trước khi nhìn danh sách</h2><h3>1. Chọn theo quy trình cần cải thiện</h3><p>Doanh nghiệp nên bắt đầu từ câu hỏi: quy trình nào đang làm đội ngũ tốn thời gian nhất? Đó có thể là quản lý lead, chăm sóc khách hàng, họp nội bộ, giao việc, thiết kế hình ảnh, bán hàng online hoặc thanh toán.</p><p>Khi xác định đúng quy trình, việc chọn SaaS sẽ thực tế hơn. Công cụ phải giải quyết một điểm nghẽn cụ thể và có chỉ số để đo sau triển khai.</p><img src=\"http://localhost:3001/uploads/aeab3329-048b-47f9-ab2f-a5388bbba091.webp\"><h3>2. Ưu tiên tích hợp, dữ liệu và khả năng mở rộng</h3><p>Một SaaS tốt không chỉ xử lý tác vụ riêng lẻ mà còn giúp dữ liệu đi đúng luồng: form thu lead kết nối CRM, CRM kết nối email chăm sóc và báo cáo.</p><p>SME nên kiểm tra khả năng tích hợp trước khi mua: có API không, có kết nối với Zapier, Make, Google Workspace, CRM hoặc phần mềm kế toán không.</p><p></p><h2>III. Top 10 phần mềm SaaS phổ biến cho doanh nghiệp</h2><h3>1. Salesforce - CRM cho đội sales cần quản lý dữ liệu lớn</h3><p>Salesforce là nền tảng CRM phù hợp với doanh nghiệp cần quản lý khách hàng, pipeline, cơ hội bán hàng, quy trình sales và báo cáo ở quy mô lớn. Điểm mạnh của Salesforce là hệ sinh thái rộng, khả năng tùy chỉnh cao và nhiều tính năng tự động hóa.</p><p>Với SME, Salesforce phù hợp khi đội sales đã có quy trình rõ và cần mở rộng bài bản. Doanh nghiệp nhỏ nên cân nhắc chi phí triển khai và đào tạo trước khi chọn.</p><p></p><h3>2. HubSpot - CRM, marketing và sales trong một nền tảng</h3><p>HubSpot phù hợp với doanh nghiệp muốn kết hợp CRM, marketing automation, email, landing page, sales pipeline và chăm sóc khách hàng trên cùng một hệ thống. Điểm mạnh là giao diện dễ dùng và phù hợp với đội marketing cần triển khai nhanh.</p><p>SME có thể bắt đầu từ CRM cơ bản rồi mở rộng dần sang email, form, workflow và báo cáo. Tuy nhiên, khi dùng nhiều tính năng nâng cao, chi phí có thể tăng nên cần tính trước nhu cầu dài hạn.</p><img src=\"http://localhost:3001/uploads/d79601c5-813f-4319-9f99-bf5d0bb34f40.webp\"><h3>3. Slack - giao tiếp nội bộ và cộng tác theo kênh</h3><p>Slack là công cụ giao tiếp nhóm theo kênh, giúp giảm phụ thuộc vào email nội bộ. Doanh nghiệp có thể tạo kênh cho từng phòng ban, dự án, khách hàng hoặc chiến dịch để trao đổi tập trung hơn.</p><p>Điểm mạnh của Slack là tích hợp với nhiều SaaS khác như Google Drive, Zoom, Salesforce, Jira và các công cụ automation. Với SME làm việc hybrid hoặc có nhiều dự án, Slack giúp thông tin bớt phân tán.</p><p></p><h3>4. Zoom - họp trực tuyến và bán hàng từ xa</h3><p>Zoom là SaaS quen thuộc cho họp trực tuyến, webinar, đào tạo, tư vấn khách hàng và phỏng vấn ứng viên. Với đội sales, Zoom hỗ trợ demo sản phẩm và trao đổi với khách hàng ở nhiều khu vực mà không cần gặp trực tiếp.</p><p>Doanh nghiệp nên dùng Zoom kết hợp lịch hẹn, CRM và email nhắc lịch để giảm tỷ lệ quên hẹn. Khi quy trình tư vấn được chuẩn hóa, các buổi họp online có thể trở thành một phần của funnel bán hàng.</p><p></p><h3>5. Shopify - nền tảng SaaS cho thương mại điện tử</h3><p>Shopify phù hợp với doanh nghiệp muốn xây dựng cửa hàng online nhanh, quản lý sản phẩm, đơn hàng, thanh toán, giao diện website và các ứng dụng mở rộng trong hệ sinh thái thương mại điện tử.</p><p>Với SME bán hàng online, Shopify giúp giảm thời gian xây website từ đầu. Doanh nghiệp cần tính thêm chi phí theme, app, thanh toán và vận chuyển.</p><img src=\"http://localhost:3001/uploads/3eab0cfb-7cd2-4c17-8db8-de037b08e242.webp\"><h3>6. Stripe - thanh toán trực tuyến và quản lý billing</h3><p>Stripe là nền tảng thanh toán trực tuyến, thường được dùng cho website, ứng dụng, subscription, marketplace và SaaS billing. Công cụ này mạnh ở khả năng xử lý thanh toán, hóa đơn, gói định kỳ và nhiều phương thức thanh toán quốc tế.</p><p>Với doanh nghiệp Việt bán ra thị trường quốc tế hoặc có mô hình đăng ký định kỳ, Stripe là lựa chọn đáng xem xét. Doanh nghiệp vẫn cần kiểm tra điều kiện hỗ trợ và quy trình kế toán trước khi triển khai.</p><p></p><h3>7. Zendesk - chăm sóc khách hàng đa kênh</h3><p>Zendesk phù hợp với doanh nghiệp cần quản lý ticket, phản hồi khách hàng, live chat, email hỗ trợ, knowledge base và báo cáo chất lượng CSKH. Thay vì xử lý tin nhắn rời rạc, đội support có thể quản lý yêu cầu theo trạng thái rõ ràng.</p><p>SME nên cân nhắc Zendesk khi lượng yêu cầu hỗ trợ tăng và cần chuẩn hóa quy trình chăm sóc khách hàng. Công cụ này đặc biệt hữu ích nếu doanh nghiệp có nhiều kênh tiếp nhận như website, email, chat và mạng xã hội.</p><p></p><h3>8. Notion - tài liệu nội bộ, wiki và quản lý kiến thức</h3><p>Notion là công cụ SaaS giúp doanh nghiệp xây wiki nội bộ, tài liệu quy trình, kế hoạch nội dung, database đơn giản và workspace cộng tác. Với đội nhỏ, Notion giúp gom tài liệu vào một nơi dễ tìm hơn.</p><p>Điểm cần lưu ý là Notion dễ bị rối nếu không có cấu trúc. SME nên thiết kế sẵn thư mục, template và quy tắc đặt tên tài liệu.</p><p></p><h3>9. Canva - thiết kế nhanh cho marketing</h3><p>Canva giúp đội marketing tạo banner, bài đăng mạng xã hội, slide, tài liệu bán hàng và hình ảnh quảng cáo mà không cần kỹ năng thiết kế chuyên sâu. Với SME, Canva rút ngắn thời gian sản xuất visual hằng ngày.</p><p>Để dùng hiệu quả, doanh nghiệp nên tạo brand kit, template cố định và quy chuẩn hình ảnh. Khi có mẫu chung, đội ngũ có thể tạo nội dung nhanh hơn mà vẫn giữ được nhận diện thương hiệu.</p><p></p><h3>10. Google Workspace - email, tài liệu và cộng tác văn phòng</h3><p>Google Workspace là bộ SaaS quen thuộc gồm Gmail, Drive, Docs, Sheets, Slides, Meet và Calendar. Với SME, đây thường là nền tảng cơ bản để quản lý email, tài liệu, lịch họp và cộng tác nội bộ.</p><p>Điểm mạnh là dễ dùng và quen thuộc với nhiều nhân sự. Doanh nghiệp nên thiết lập quyền truy cập, thư mục dùng chung, quy tắc đặt tên file và phân quyền dữ liệu để tránh thất lạc thông tin khi đội ngũ mở rộng.</p><p></p><h2>IV. SME nên kết hợp các phần mềm SaaS như thế nào?</h2><h3>1. Xây stack theo hành trình khách hàng</h3><p>Một bộ SaaS tốt nên đi theo hành trình khách hàng: tạo nội dung, thu lead, lưu CRM, chăm sóc, tư vấn, thanh toán, hỗ trợ sau bán và báo cáo. Khi các công cụ được chọn theo hành trình này, dữ liệu ít bị đứt đoạn hơn.</p><p>Ví dụ, SME có thể dùng Google Workspace cho tài liệu, Canva cho thiết kế, HubSpot cho CRM, Zoom cho demo, Zendesk cho hỗ trợ và Stripe cho thanh toán quốc tế. Không nhất thiết dùng tất cả cùng lúc, nhưng nên hiểu vai trò của từng công cụ.</p><p></p><h3>2. Đừng để SaaS làm dữ liệu phân mảnh hơn</h3><p>Nếu mỗi phòng ban dùng một công cụ riêng mà không có chuẩn dữ liệu, doanh nghiệp sẽ gặp vấn đề mới: nhiều phần mềm hơn nhưng thông tin vẫn rời rạc. Đây là lý do cần quy định nguồn dữ liệu chính cho khách hàng, đơn hàng, tài liệu và báo cáo.</p><p>Trước khi mua thêm SaaS, SME nên kiểm tra công cụ mới có thay thế công cụ cũ, bổ sung quy trình thiếu hay chỉ tạo thêm một nơi để nhập liệu.</p><p></p><h2>V. FAQ về Top 10 phần mềm SaaS</h2><h3>1. Phần mềm SaaS là gì?</h3><p>Phần mềm SaaS là phần mềm được cung cấp qua internet, thường dùng theo tài khoản và trả phí định kỳ. Doanh nghiệp không cần tự cài đặt máy chủ riêng để vận hành.</p><h3>2. SME nên chọn SaaS theo tiêu chí nào?</h3><p>SME nên chọn theo quy trình cần cải thiện, mức dễ dùng, chi phí mở rộng, khả năng tích hợp, bảo mật dữ liệu và mức độ phù hợp với đội ngũ vận hành.</p><h3>3. Có nên dùng nhiều SaaS cùng lúc không?</h3><p>Có thể, nhưng cần kiểm soát luồng dữ liệu. Doanh nghiệp nên bắt đầu từ vài công cụ cốt lõi rồi mở rộng khi quy trình đã rõ.</p><h3>4. SaaS có phù hợp với doanh nghiệp Việt Nam không?</h3><p>Có, nhất là với SME cần triển khai nhanh và không có đội kỹ thuật lớn. Tuy nhiên, cần kiểm tra ngôn ngữ, thanh toán, hỗ trợ, tích hợp và yêu cầu pháp lý liên quan đến dữ liệu.</p><h3>5. Nên bắt đầu từ phần mềm nào trước?</h3><p>Doanh nghiệp nên bắt đầu từ công cụ ảnh hưởng trực tiếp đến doanh thu hoặc vận hành hằng ngày, như CRM, quản lý công việc, tài liệu nội bộ, chăm sóc khách hàng hoặc marketing.</p><h2>VI. Nên bắt đầu từ đâu để chọn SaaS không lãng phí?</h2><p>Top 10 phần mềm SaaS chỉ có giá trị khi doanh nghiệp biết mình cần giải quyết quy trình nào trước. Đừng bắt đầu từ danh sách công cụ. Hãy bắt đầu từ điểm nghẽn: lead thất thoát, chăm sóc khách chậm, tài liệu rời rạc, báo cáo thủ công hoặc đội ngũ phối hợp kém.</p><p>Khi đã xác định đúng vấn đề, SME nên chọn một công cụ cốt lõi, đo hiệu quả trong 30 đến 60 ngày rồi mới mở rộng.</p>",
+      "thumbnail": "http://localhost:3001/uploads/a78b05c9-74f3-4863-ae8b-f157ecca740c.webp",
+      "categoryId": 10,
+      "authorId": 2,
+      "status": "published",
+      "publishedAt": "2026-05-16T09:00:00.000Z",
+      "seoTitle": "Top 10 Phần Mềm SaaS Cho SME Nên Biết",
+      "seoDescription": "Top 10 phần mềm SaaS giúp SME chọn công cụ phù hợp để quản lý bán hàng, marketing, CSKH, cộng tác và vận hành hiệu quả hơn.",
+      "seoKeywords": "Top 10 phần mềm SaaS",
+      "viewCount": 2,
+      "focusKeyword": null,
+      "seoScore": null,
+      "seoGrade": null,
+      "logoUrl": null,
+      "badge": null,
+      "shortName": null,
+      "displayOrder": 0,
+      "menuGroupId": null,
+      "productPageConfig": null,
+      "createdAt": "2026-05-29T21:49:33.123Z",
+      "updatedAt": "2026-06-02T23:44:40.371Z",
+      "deletedAt": null
+    },
+    {
       "id": 35,
       "title": "Funnel chuyển đổi cho SME: Cách xây phễu bán hàng hiệu quả cho doanh nghiệp nhỏ",
       "slug": "funnel-chuyen-doi-cho-sme",
@@ -5972,34 +6000,6 @@
       "productPageConfig": null,
       "createdAt": "2026-05-29T21:49:33.163Z",
       "updatedAt": "2026-06-01T10:50:22.702Z",
-      "deletedAt": null
-    },
-    {
-      "id": 30,
-      "title": "Top 10 phần mềm SaaS: SME nên chọn công cụ nào để vận hành hiệu quả?",
-      "slug": "top-10-phan-mem-saas",
-      "excerpt": "Top 10 phần mềm SaaS giúp SME chọn công cụ phù hợp để quản lý bán hàng, marketing, CSKH, cộng tác và vận hành hiệu quả hơn.",
-      "content": "<p>Top 10 phần mềm SaaS là danh sách các công cụ điện toán đám mây giúp doanh nghiệp quản lý bán hàng, marketing, chăm sóc khách hàng, cộng tác nội bộ, họp trực tuyến, thiết kế, thương mại điện tử và thanh toán mà không cần tự xây hệ thống từ đầu.</p><p>Với SME Việt Nam, SaaS hấp dẫn vì triển khai nhanh, trả phí theo tháng và không đòi hỏi đội kỹ thuật lớn. Tuy vậy, chọn sai công cụ có thể khiến dữ liệu rời rạc và chi phí tăng dần.</p><p></p><h2>I. Phần mềm SaaS là gì và vì sao SME cần hiểu đúng?</h2><h3>1. SaaS giúp doanh nghiệp dùng phần mềm nhanh hơn</h3><p>SaaS là mô hình phần mềm được cung cấp qua internet, thường dùng theo tài khoản và trả phí định kỳ. Doanh nghiệp không cần cài đặt phức tạp trên máy chủ riêng mà có thể đăng nhập để dùng trên trình duyệt hoặc ứng dụng.</p><p>Điểm mạnh của SaaS với SME là tốc độ triển khai. Một đội nhỏ có thể dùng CRM, email, lưu trữ tài liệu, họp trực tuyến hoặc quản lý dự án chỉ sau vài ngày.</p><img src=\"http://localhost:3001/uploads/ff174708-0be2-48c4-8eb9-229af111c462.webp\"><h3>2. Không phải SaaS nào cũng phù hợp với SME</h3><p>Một phần mềm nhiều tính năng chưa chắc là lựa chọn tốt nhất. SME cần ưu tiên công cụ dễ dùng, phù hợp quy trình hiện tại, có chi phí rõ ràng và kết nối được với các nền tảng đang sử dụng.</p><p>Sai lầm phổ biến là chọn theo thương hiệu lớn nhưng không có người vận hành. Khi đội ngũ không dùng đều, phần mềm sẽ nhanh chóng trở thành chi phí cố định.</p><p></p><h2>II. Cách chọn phần mềm SaaS trước khi nhìn danh sách</h2><h3>1. Chọn theo quy trình cần cải thiện</h3><p>Doanh nghiệp nên bắt đầu từ câu hỏi: quy trình nào đang làm đội ngũ tốn thời gian nhất? Đó có thể là quản lý lead, chăm sóc khách hàng, họp nội bộ, giao việc, thiết kế hình ảnh, bán hàng online hoặc thanh toán.</p><p>Khi xác định đúng quy trình, việc chọn SaaS sẽ thực tế hơn. Công cụ phải giải quyết một điểm nghẽn cụ thể và có chỉ số để đo sau triển khai.</p><img src=\"http://localhost:3001/uploads/aeab3329-048b-47f9-ab2f-a5388bbba091.webp\"><h3>2. Ưu tiên tích hợp, dữ liệu và khả năng mở rộng</h3><p>Một SaaS tốt không chỉ xử lý tác vụ riêng lẻ mà còn giúp dữ liệu đi đúng luồng: form thu lead kết nối CRM, CRM kết nối email chăm sóc và báo cáo.</p><p>SME nên kiểm tra khả năng tích hợp trước khi mua: có API không, có kết nối với Zapier, Make, Google Workspace, CRM hoặc phần mềm kế toán không.</p><p></p><h2>III. Top 10 phần mềm SaaS phổ biến cho doanh nghiệp</h2><h3>1. Salesforce - CRM cho đội sales cần quản lý dữ liệu lớn</h3><p>Salesforce là nền tảng CRM phù hợp với doanh nghiệp cần quản lý khách hàng, pipeline, cơ hội bán hàng, quy trình sales và báo cáo ở quy mô lớn. Điểm mạnh của Salesforce là hệ sinh thái rộng, khả năng tùy chỉnh cao và nhiều tính năng tự động hóa.</p><p>Với SME, Salesforce phù hợp khi đội sales đã có quy trình rõ và cần mở rộng bài bản. Doanh nghiệp nhỏ nên cân nhắc chi phí triển khai và đào tạo trước khi chọn.</p><p></p><h3>2. HubSpot - CRM, marketing và sales trong một nền tảng</h3><p>HubSpot phù hợp với doanh nghiệp muốn kết hợp CRM, marketing automation, email, landing page, sales pipeline và chăm sóc khách hàng trên cùng một hệ thống. Điểm mạnh là giao diện dễ dùng và phù hợp với đội marketing cần triển khai nhanh.</p><p>SME có thể bắt đầu từ CRM cơ bản rồi mở rộng dần sang email, form, workflow và báo cáo. Tuy nhiên, khi dùng nhiều tính năng nâng cao, chi phí có thể tăng nên cần tính trước nhu cầu dài hạn.</p><img src=\"http://localhost:3001/uploads/d79601c5-813f-4319-9f99-bf5d0bb34f40.webp\"><h3>3. Slack - giao tiếp nội bộ và cộng tác theo kênh</h3><p>Slack là công cụ giao tiếp nhóm theo kênh, giúp giảm phụ thuộc vào email nội bộ. Doanh nghiệp có thể tạo kênh cho từng phòng ban, dự án, khách hàng hoặc chiến dịch để trao đổi tập trung hơn.</p><p>Điểm mạnh của Slack là tích hợp với nhiều SaaS khác như Google Drive, Zoom, Salesforce, Jira và các công cụ automation. Với SME làm việc hybrid hoặc có nhiều dự án, Slack giúp thông tin bớt phân tán.</p><p></p><h3>4. Zoom - họp trực tuyến và bán hàng từ xa</h3><p>Zoom là SaaS quen thuộc cho họp trực tuyến, webinar, đào tạo, tư vấn khách hàng và phỏng vấn ứng viên. Với đội sales, Zoom hỗ trợ demo sản phẩm và trao đổi với khách hàng ở nhiều khu vực mà không cần gặp trực tiếp.</p><p>Doanh nghiệp nên dùng Zoom kết hợp lịch hẹn, CRM và email nhắc lịch để giảm tỷ lệ quên hẹn. Khi quy trình tư vấn được chuẩn hóa, các buổi họp online có thể trở thành một phần của funnel bán hàng.</p><p></p><h3>5. Shopify - nền tảng SaaS cho thương mại điện tử</h3><p>Shopify phù hợp với doanh nghiệp muốn xây dựng cửa hàng online nhanh, quản lý sản phẩm, đơn hàng, thanh toán, giao diện website và các ứng dụng mở rộng trong hệ sinh thái thương mại điện tử.</p><p>Với SME bán hàng online, Shopify giúp giảm thời gian xây website từ đầu. Doanh nghiệp cần tính thêm chi phí theme, app, thanh toán và vận chuyển.</p><img src=\"http://localhost:3001/uploads/3eab0cfb-7cd2-4c17-8db8-de037b08e242.webp\"><h3>6. Stripe - thanh toán trực tuyến và quản lý billing</h3><p>Stripe là nền tảng thanh toán trực tuyến, thường được dùng cho website, ứng dụng, subscription, marketplace và SaaS billing. Công cụ này mạnh ở khả năng xử lý thanh toán, hóa đơn, gói định kỳ và nhiều phương thức thanh toán quốc tế.</p><p>Với doanh nghiệp Việt bán ra thị trường quốc tế hoặc có mô hình đăng ký định kỳ, Stripe là lựa chọn đáng xem xét. Doanh nghiệp vẫn cần kiểm tra điều kiện hỗ trợ và quy trình kế toán trước khi triển khai.</p><p></p><h3>7. Zendesk - chăm sóc khách hàng đa kênh</h3><p>Zendesk phù hợp với doanh nghiệp cần quản lý ticket, phản hồi khách hàng, live chat, email hỗ trợ, knowledge base và báo cáo chất lượng CSKH. Thay vì xử lý tin nhắn rời rạc, đội support có thể quản lý yêu cầu theo trạng thái rõ ràng.</p><p>SME nên cân nhắc Zendesk khi lượng yêu cầu hỗ trợ tăng và cần chuẩn hóa quy trình chăm sóc khách hàng. Công cụ này đặc biệt hữu ích nếu doanh nghiệp có nhiều kênh tiếp nhận như website, email, chat và mạng xã hội.</p><p></p><h3>8. Notion - tài liệu nội bộ, wiki và quản lý kiến thức</h3><p>Notion là công cụ SaaS giúp doanh nghiệp xây wiki nội bộ, tài liệu quy trình, kế hoạch nội dung, database đơn giản và workspace cộng tác. Với đội nhỏ, Notion giúp gom tài liệu vào một nơi dễ tìm hơn.</p><p>Điểm cần lưu ý là Notion dễ bị rối nếu không có cấu trúc. SME nên thiết kế sẵn thư mục, template và quy tắc đặt tên tài liệu.</p><p></p><h3>9. Canva - thiết kế nhanh cho marketing</h3><p>Canva giúp đội marketing tạo banner, bài đăng mạng xã hội, slide, tài liệu bán hàng và hình ảnh quảng cáo mà không cần kỹ năng thiết kế chuyên sâu. Với SME, Canva rút ngắn thời gian sản xuất visual hằng ngày.</p><p>Để dùng hiệu quả, doanh nghiệp nên tạo brand kit, template cố định và quy chuẩn hình ảnh. Khi có mẫu chung, đội ngũ có thể tạo nội dung nhanh hơn mà vẫn giữ được nhận diện thương hiệu.</p><p></p><h3>10. Google Workspace - email, tài liệu và cộng tác văn phòng</h3><p>Google Workspace là bộ SaaS quen thuộc gồm Gmail, Drive, Docs, Sheets, Slides, Meet và Calendar. Với SME, đây thường là nền tảng cơ bản để quản lý email, tài liệu, lịch họp và cộng tác nội bộ.</p><p>Điểm mạnh là dễ dùng và quen thuộc với nhiều nhân sự. Doanh nghiệp nên thiết lập quyền truy cập, thư mục dùng chung, quy tắc đặt tên file và phân quyền dữ liệu để tránh thất lạc thông tin khi đội ngũ mở rộng.</p><p></p><h2>IV. SME nên kết hợp các phần mềm SaaS như thế nào?</h2><h3>1. Xây stack theo hành trình khách hàng</h3><p>Một bộ SaaS tốt nên đi theo hành trình khách hàng: tạo nội dung, thu lead, lưu CRM, chăm sóc, tư vấn, thanh toán, hỗ trợ sau bán và báo cáo. Khi các công cụ được chọn theo hành trình này, dữ liệu ít bị đứt đoạn hơn.</p><p>Ví dụ, SME có thể dùng Google Workspace cho tài liệu, Canva cho thiết kế, HubSpot cho CRM, Zoom cho demo, Zendesk cho hỗ trợ và Stripe cho thanh toán quốc tế. Không nhất thiết dùng tất cả cùng lúc, nhưng nên hiểu vai trò của từng công cụ.</p><p></p><h3>2. Đừng để SaaS làm dữ liệu phân mảnh hơn</h3><p>Nếu mỗi phòng ban dùng một công cụ riêng mà không có chuẩn dữ liệu, doanh nghiệp sẽ gặp vấn đề mới: nhiều phần mềm hơn nhưng thông tin vẫn rời rạc. Đây là lý do cần quy định nguồn dữ liệu chính cho khách hàng, đơn hàng, tài liệu và báo cáo.</p><p>Trước khi mua thêm SaaS, SME nên kiểm tra công cụ mới có thay thế công cụ cũ, bổ sung quy trình thiếu hay chỉ tạo thêm một nơi để nhập liệu.</p><p></p><h2>V. FAQ về Top 10 phần mềm SaaS</h2><h3>1. Phần mềm SaaS là gì?</h3><p>Phần mềm SaaS là phần mềm được cung cấp qua internet, thường dùng theo tài khoản và trả phí định kỳ. Doanh nghiệp không cần tự cài đặt máy chủ riêng để vận hành.</p><h3>2. SME nên chọn SaaS theo tiêu chí nào?</h3><p>SME nên chọn theo quy trình cần cải thiện, mức dễ dùng, chi phí mở rộng, khả năng tích hợp, bảo mật dữ liệu và mức độ phù hợp với đội ngũ vận hành.</p><h3>3. Có nên dùng nhiều SaaS cùng lúc không?</h3><p>Có thể, nhưng cần kiểm soát luồng dữ liệu. Doanh nghiệp nên bắt đầu từ vài công cụ cốt lõi rồi mở rộng khi quy trình đã rõ.</p><h3>4. SaaS có phù hợp với doanh nghiệp Việt Nam không?</h3><p>Có, nhất là với SME cần triển khai nhanh và không có đội kỹ thuật lớn. Tuy nhiên, cần kiểm tra ngôn ngữ, thanh toán, hỗ trợ, tích hợp và yêu cầu pháp lý liên quan đến dữ liệu.</p><h3>5. Nên bắt đầu từ phần mềm nào trước?</h3><p>Doanh nghiệp nên bắt đầu từ công cụ ảnh hưởng trực tiếp đến doanh thu hoặc vận hành hằng ngày, như CRM, quản lý công việc, tài liệu nội bộ, chăm sóc khách hàng hoặc marketing.</p><h2>VI. Nên bắt đầu từ đâu để chọn SaaS không lãng phí?</h2><p>Top 10 phần mềm SaaS chỉ có giá trị khi doanh nghiệp biết mình cần giải quyết quy trình nào trước. Đừng bắt đầu từ danh sách công cụ. Hãy bắt đầu từ điểm nghẽn: lead thất thoát, chăm sóc khách chậm, tài liệu rời rạc, báo cáo thủ công hoặc đội ngũ phối hợp kém.</p><p>Khi đã xác định đúng vấn đề, SME nên chọn một công cụ cốt lõi, đo hiệu quả trong 30 đến 60 ngày rồi mới mở rộng.</p>",
-      "thumbnail": "http://localhost:3001/uploads/a78b05c9-74f3-4863-ae8b-f157ecca740c.webp",
-      "categoryId": 10,
-      "authorId": 2,
-      "status": "published",
-      "publishedAt": "2026-05-16T09:00:00.000Z",
-      "seoTitle": "Top 10 Phần Mềm SaaS Cho SME Nên Biết",
-      "seoDescription": "Top 10 phần mềm SaaS giúp SME chọn công cụ phù hợp để quản lý bán hàng, marketing, CSKH, cộng tác và vận hành hiệu quả hơn.",
-      "seoKeywords": "Top 10 phần mềm SaaS",
-      "viewCount": 1,
-      "focusKeyword": null,
-      "seoScore": null,
-      "seoGrade": null,
-      "logoUrl": null,
-      "badge": null,
-      "shortName": null,
-      "displayOrder": 0,
-      "menuGroupId": null,
-      "productPageConfig": null,
-      "createdAt": "2026-05-29T21:49:33.123Z",
-      "updatedAt": "2026-06-01T11:06:51.111Z",
       "deletedAt": null
     },
     {
@@ -6213,7 +6213,7 @@
           "plans": [
             {
               "name": "Starter",
-              "price": "15",
+              "price": "15 triệu",
               "period": "/ dự án trọn gói",
               "ctaHref": "https://zalo.me/vsoftware",
               "ctaText": "Nhận tư vấn",
@@ -6229,7 +6229,7 @@
             {
               "name": "Growth",
               "badge": "PHỔ BIẾN NHẤT",
-              "price": "80",
+              "price": "80 triệu",
               "period": "/ dự án trọn gói",
               "ctaHref": "https://zalo.me/vsoftware",
               "ctaText": "Đặt lịch khảo sát",
@@ -6245,7 +6245,7 @@
             },
             {
               "name": "Enterprise",
-              "price": "300",
+              "price": "300 triệu",
               "period": "/ dự án trọn gói",
               "ctaHref": "tel:+84123456789",
               "ctaText": "Gặp chuyên gia",
@@ -6388,7 +6388,7 @@
           "description": "Phần lớn SME Việt đang vận hành bằng Excel, Zalo và giấy tờ\nVà đang trả giá bằng thời gian, sai sót, và cơ hội bị bỏ lỡ."
         }
       },
-      "updatedAt": "2026-06-01T11:48:31.559Z"
+      "updatedAt": "2026-06-03T00:26:50.570Z"
     },
     {
       "key": "contact",
