@@ -1,17 +1,6 @@
 {
-  "exportedAt": "2026-06-03T03:26:15.476Z",
+  "exportedAt": "2026-06-03T04:03:56.873Z",
   "users": [
-    {
-      "id": 1,
-      "email": "root@vsoftware.vn",
-      "passwordHash": "$2a$12$BLrwplRVMkNpnM7Y7Pl8ie4sGwhf1tARLJ47GLYqriTVYu9AK/hUS",
-      "fullName": "Root Admin",
-      "role": "admin",
-      "status": "active",
-      "refreshTokenHash": "$2a$10$o98nbE0D5fstTRqRTRmMt.E1Jf4WNGuRUlY1eKbWu/qIT3qKhuKWS",
-      "createdAt": "2026-05-27T21:08:53.537Z",
-      "updatedAt": "2026-06-02T19:46:26.274Z"
-    },
     {
       "id": 2,
       "email": "admin@example.com",
@@ -22,6 +11,17 @@
       "refreshTokenHash": "$2a$10$eNMRSVI6LBM0I3IJElnE0.snMuGiHetiiP1zZ.SJa1ykHfR/odrMi",
       "createdAt": "2026-05-28T19:00:02.042Z",
       "updatedAt": "2026-06-01T02:06:00.655Z"
+    },
+    {
+      "id": 1,
+      "email": "root@vsoftware.vn",
+      "passwordHash": "$2a$12$BLrwplRVMkNpnM7Y7Pl8ie4sGwhf1tARLJ47GLYqriTVYu9AK/hUS",
+      "fullName": "Root Admin",
+      "role": "admin",
+      "status": "active",
+      "refreshTokenHash": "$2a$10$xPxcl/hlDjiZFJDujjzdj.IJ.UBatnAwL.l1NQsygXABKo7bzReq2",
+      "createdAt": "2026-05-27T21:08:53.537Z",
+      "updatedAt": "2026-06-02T20:48:00.234Z"
     }
   ],
   "categories": [
