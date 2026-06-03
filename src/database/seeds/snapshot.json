@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-06-03T15:40:22.780Z",
+  "exportedAt": "2026-06-03T15:52:33.071Z",
   "users": [
     {
       "id": 1,
@@ -8,9 +8,9 @@
       "fullName": "Root Admin",
       "role": "admin",
       "status": "active",
-      "refreshTokenHash": "$2a$10$.xqgZOXBG2MgX5bt69mxMeTxav1fs64OHYqZt0QkKIe8TMEZt7dTu",
+      "refreshTokenHash": "$2a$10$ngW622kVJ4LXAcS/wa86E.xL3ZxOp9G2frYrFJmJcsTYnjKkzMEZi",
       "createdAt": "2026-05-27T21:08:53.537Z",
-      "updatedAt": "2026-06-03T08:38:49.238Z"
+      "updatedAt": "2026-06-03T08:51:49.022Z"
     },
     {
       "id": 2,
@@ -267,6 +267,292 @@
     }
   ],
   "posts": [
+    {
+      "id": 46,
+      "title": "Phần Mềm Theo Yêu Cầu Cho Doanh Nghiệp — Xây hệ thống riêng theo quy trình vận hành thực tế",
+      "slug": "phan-mem-theo-yeu-cau-cho-doanh-nghiep",
+      "excerpt": "Xây dựng phần mềm riêng theo đúng quy trình vận hành, nhu cầu quản lý và mục tiêu tăng trưởng — 100+ hệ thống đã triển khai, giảm 70% thao tác thủ công.",
+      "content": " ",
+      "thumbnail": null,
+      "categoryId": 8,
+      "authorId": 1,
+      "status": "draft",
+      "publishedAt": null,
+      "seoTitle": "Phần Mềm Theo Yêu Cầu Cho Doanh Nghiệp | Vsoftware",
+      "seoDescription": "Vsoftware xây dựng phần mềm riêng theo nhu cầu vận hành thực tế của từng doanh nghiệp — quản lý tập trung, chuẩn hóa quy trình, tự động hóa và báo cáo realtime. 100+ hệ thống đã triển khai.",
+      "seoKeywords": "phần mềm theo yêu cầu, phần mềm custom doanh nghiệp, xây dựng phần mềm riêng, phần mềm quản lý doanh nghiệp Việt, custom software development",
+      "viewCount": 0,
+      "focusKeyword": null,
+      "seoScore": null,
+      "seoGrade": null,
+      "logoUrl": null,
+      "badge": "Phổ biến",
+      "shortName": "Phần mềm theo yêu cầu",
+      "displayOrder": 1,
+      "menuGroupId": 249,
+      "productPageConfig": {
+        "faq": {
+          "items": [
+            {
+              "a": "Phần mềm có sẵn (SaaS đóng gói) được xây cho số đông — anh phải uốn quy trình theo phần mềm. Phần mềm theo yêu cầu (custom) thì ngược lại — Vsoftware phân tích quy trình thực tế của doanh nghiệp, rồi code phần mềm khớp đúng. Ưu điểm: vừa vặn 100%, nhân viên dùng được ngay. Nhược: thời gian setup dài hơn (4–14 tuần) và chi phí ban đầu cao hơn — nhưng không có phí thuê hàng tháng và sở hữu code.",
+              "q": "Phần mềm theo yêu cầu khác gì phần mềm có sẵn?"
+            },
+            {
+              "a": "Có — nếu quy trình của anh đặc thù (vd ngành hẹp, model kinh doanh khác biệt) hoặc anh đang quản lý bằng Excel mất nhiều thời gian. Gói Starter từ 4–8 tuần, chi phí phù hợp SME 5–20 nhân sự. Nếu doanh nghiệp anh nhỏ và quy trình chuẩn (vd shop bán lẻ đơn giản) → mua phần mềm có sẵn tiết kiệm hơn. Vsoftware sẽ tư vấn thẳng — nếu anh không cần custom, mình sẽ nói luôn.",
+              "q": "Doanh nghiệp nhỏ có nên xây phần mềm theo yêu cầu không?"
+            },
+            {
+              "a": "Gói Starter 4–8 tuần (1 hệ thống, 3–5 module). Gói Pro 8–14 tuần (5–10 module + tích hợp). Gói Enterprise 14+ tuần, chia phase theo mức ưu tiên. Methodology của Vsoftware bàn giao cuốn chiếu — anh dùng được module xong trước trong khi module sau đang code.",
+              "q": "Thời gian triển khai phần mềm theo yêu cầu mất bao lâu?"
+            },
+            {
+              "a": "Có. Tất cả phần mềm Vsoftware build đều thiết kế kiến trúc mở (modular), có thể thêm module mới mà không phải đập đi xây lại. Anh sở hữu source code → có thể tự nâng cấp, hoặc đặt Vsoftware làm tiếp với giá ưu đãi khách cũ.",
+              "q": "Phần mềm có thể nâng cấp thêm tính năng sau này không?"
+            },
+            {
+              "a": "Có. Vsoftware có sẵn connector cho MISA, KiotViet, Sapo, Haravan, Shopify, Zalo OA, Zalo Mini App, Facebook, Google Workspace, Microsoft 365, các cổng thanh toán Việt Nam. Hệ thống khác có thể tích hợp qua REST API + Webhook trong scope dự án.",
+              "q": "Có thể tích hợp với phần mềm kế toán, website, CRM hoặc Zalo OA không?"
+            },
+            {
+              "a": "Có. Mọi gói đều có bảo hành: Starter 6 tháng, Pro 12 tháng, Enterprise 18 tháng (có SLA cam kết uptime). Sau hết bảo hành, anh có thể chọn gói maintenance hàng tháng (~5–15 triệu/tháng tùy phạm vi) hoặc thuê dev part-time qua Vsoftware.",
+              "q": "Vsoftware có hỗ trợ bảo trì sau khi bàn giao không?"
+            },
+            {
+              "a": "Chi phí phụ thuộc vào: (1) số module, (2) độ phức tạp nghiệp vụ, (3) số tích hợp với hệ thống ngoài, (4) yêu cầu UI/UX. Vsoftware báo giá CHI TIẾT theo module sau khi khảo sát — không có phí ẩn, không tăng giá giữa dự án. Khảo sát miễn phí, không ràng buộc.",
+              "q": "Chi phí xây phần mềm theo yêu cầu được tính như thế nào?"
+            }
+          ],
+          "heading": "Câu hỏi thường gặp"
+        },
+        "hero": {
+          "statBig": "100+",
+          "statSub": "Hệ thống phần mềm doanh nghiệp đã triển khai",
+          "tagline": "Xây dựng phần mềm riêng theo đúng quy trình vận hành, nhu cầu quản lý và mục tiêu tăng trưởng của doanh nghiệp. Vsoftware phân tích bài toán thực tế — không bán phần mềm rập khuôn.",
+          "ctaPrimary": {
+            "href": "/contact",
+            "text": "Tư vấn giải pháp miễn phí"
+          },
+          "ctaSecondary": {
+            "href": "#features",
+            "text": "Xem quy trình triển khai"
+          }
+        },
+        "pricing": {
+          "plans": [
+            {
+              "name": "Starter",
+              "price": "Liên hệ báo giá",
+              "period": "Theo phạm vi dự án",
+              "ctaHref": "/contact",
+              "ctaText": "Nhận tư vấn",
+              "features": [
+                "1 hệ thống quản lý chính (CRM, kho, bán hàng hoặc nhân sự)",
+                "3–5 module chức năng cốt lõi",
+                "Phân quyền cơ bản theo role",
+                "Báo cáo cơ bản + export Excel",
+                "Triển khai 4–8 tuần",
+                "Bảo hành 6 tháng + training 1 buổi"
+              ],
+              "subtitle": "Phần mềm quản lý cơ bản — SME 5–20 nhân sự"
+            },
+            {
+              "name": "Pro",
+              "badge": "PHỔ BIẾN NHẤT",
+              "price": "Liên hệ báo giá",
+              "period": "Theo phạm vi dự án",
+              "ctaHref": "/contact",
+              "ctaText": "Đặt lịch khảo sát",
+              "featured": true,
+              "features": [
+                "5–10 module chức năng theo nghiệp vụ",
+                "Phân quyền theo phòng ban + vị trí",
+                "Dashboard báo cáo realtime cho lãnh đạo",
+                "Tích hợp với hệ thống bên ngoài (CRM, kế toán, Zalo)",
+                "Workflow tự động hóa quy trình nội bộ",
+                "Triển khai 8–14 tuần",
+                "Bảo hành 12 tháng + training 3 buổi"
+              ],
+              "subtitle": "Phần mềm vận hành doanh nghiệp — SME 20–100 nhân sự"
+            },
+            {
+              "name": "Enterprise",
+              "price": "Liên hệ báo giá",
+              "period": "Theo phạm vi dự án",
+              "ctaHref": "/contact",
+              "ctaText": "Gặp chuyên gia",
+              "features": [
+                "Không giới hạn module theo nhu cầu",
+                "Quy trình vận hành tùy chỉnh sâu, custom workflow engine",
+                "API tích hợp toàn bộ hệ thống nội bộ + bên ngoài",
+                "Multi-brand, multi-region, multi-currency",
+                "On-premise hoặc dedicated cloud riêng",
+                "Triển khai 14+ tuần theo phase",
+                "Bảo trì, nâng cấp và mở rộng dài hạn (SLA cam kết)"
+              ],
+              "subtitle": "Hệ thống phần mềm tùy chỉnh toàn diện — Tập đoàn / Chuỗi đa chi nhánh"
+            }
+          ],
+          "heading": "3 gói dịch vụ — phù hợp từng giai đoạn doanh nghiệp",
+          "description": "Báo giá cuối tùy theo phạm vi module, mức độ tùy chỉnh và tích hợp. Liên hệ Vsoftware để khảo sát miễn phí và nhận báo giá cụ thể cho bài toán của anh."
+        },
+        "features": {
+          "items": [
+            {
+              "title": "Triển khai cho mọi nhóm phần mềm doanh nghiệp",
+              "bullets": [
+                "Phần mềm quản lý khách hàng (CRM) — pipeline lead, chăm sóc tự động",
+                "Phần mềm quản lý bán hàng — đơn hàng, công nợ, đa kênh",
+                "Phần mềm quản lý kho — xuất nhập tồn realtime, cảnh báo hết hàng",
+                "Phần mềm quản lý nhân sự — chấm công, lương, KPI, đánh giá",
+                "Phần mềm quản lý công việc/dự án — Kanban, Gantt, deadline, tiến độ",
+                "Phần mềm marketing — gom lead đa kênh, automation, chấm sóc khách",
+                "Dashboard báo cáo doanh nghiệp — BI realtime cho CEO/CFO",
+                "Hệ thống tự động hóa quy trình — workflow engine, RPA cơ bản"
+              ]
+            },
+            {
+              "title": "Quy trình triển khai 6 bước minh bạch",
+              "bullets": [
+                "Bước 1 — Khảo sát: nghe bài toán, hiểu quy trình hiện tại, xác định mục tiêu",
+                "Bước 2 — Phân tích & tư vấn giải pháp: đề xuất cấu trúc, module, phương án triển khai",
+                "Bước 3 — Thiết kế giao diện & luồng hệ thống: wireframe + UI mockup, anh duyệt trước khi code",
+                "Bước 4 — Phát triển phần mềm: chia sprint 2 tuần, demo cuốn chiếu từng module",
+                "Bước 5 — Kiểm thử & bàn giao: QA kỹ, hướng dẫn sử dụng, training nhân sự",
+                "Bước 6 — Bảo trì & nâng cấp: SLA hỗ trợ kỹ thuật, mở rộng tính năng khi nhu cầu phát triển"
+              ]
+            },
+            {
+              "title": "Quản lý dữ liệu tập trung — Single Source of Truth",
+              "bullets": [
+                "Một database duy nhất cho toàn bộ data doanh nghiệp",
+                "Schema thiết kế theo đúng nghiệp vụ thực tế của anh",
+                "Backup tự động hàng ngày, restore điểm bất kỳ",
+                "Tìm kiếm full-text, lọc đa điều kiện, export CSV/Excel"
+              ]
+            },
+            {
+              "title": "Tùy chỉnh theo quy trình riêng",
+              "bullets": [
+                "Workflow engine cho phép cấu hình các bước approval, escalation",
+                "Custom field, custom form, custom report — không cần lập trình",
+                "Branding riêng: logo, màu, domain, email gửi từ tên công ty",
+                "Đa ngôn ngữ, đa chi nhánh, đa tiền tệ nếu cần"
+              ]
+            },
+            {
+              "title": "Dashboard báo cáo realtime + Phân quyền chi tiết",
+              "bullets": [
+                "Dashboard CEO: doanh thu, đơn hàng, nhân sự, kho cập nhật từng phút",
+                "Dashboard từng phòng: marketing, sales, kho, kế toán, vận hành",
+                "Phân quyền theo role + permission chi tiết tới từng field",
+                "Audit log: ai sửa gì, lúc nào — minh bạch và truy vết được"
+              ]
+            },
+            {
+              "title": "Tích hợp & mở rộng linh hoạt",
+              "bullets": [
+                "REST API + Webhook đầy đủ cho mọi entity",
+                "Tích hợp sẵn: MISA, KiotViet, Sapo, Haravan, Zalo OA, Facebook",
+                "Single Sign-On (SSO) với Google Workspace / Microsoft 365",
+                "Hosting linh hoạt: cloud Vsoftware (AWS/GCP) hoặc on-premise"
+              ]
+            }
+          ],
+          "heading": "Năng lực kỹ thuật & quy trình triển khai Vsoftware"
+        },
+        "solutions": {
+          "items": [
+            {
+              "text": "Quản lý dữ liệu tập trung: khách hàng, đơn hàng, sản phẩm, kho, nhân sự, công việc trên một nền tảng duy nhất",
+              "iconName": "Database"
+            },
+            {
+              "text": "Chuẩn hóa quy trình vận hành: các bước xử lý công việc đưa vào hệ thống rõ ràng, kiểm soát tiến độ từng bộ phận",
+              "iconName": "GitMerge"
+            },
+            {
+              "text": "Tự động hóa thao tác lặp lại: gửi thông báo, phân loại dữ liệu, tạo báo cáo, chuyển lead, nhắc lịch, đồng bộ phòng ban",
+              "iconName": "Zap"
+            },
+            {
+              "text": "Phân quyền theo phòng ban và vị trí — mỗi nhân sự truy cập đúng dữ liệu phù hợp vai trò, tăng bảo mật",
+              "iconName": "ShieldCheck"
+            },
+            {
+              "text": "Báo cáo realtime cho lãnh đạo: dashboard hiển thị chỉ số quan trọng theo thời gian thực để ra quyết định nhanh",
+              "iconName": "BarChart3"
+            },
+            {
+              "text": "Tích hợp với hệ thống đang dùng: website, CRM, POS, kế toán, Zalo OA, Facebook, email, SMS và hệ thống nội bộ",
+              "iconName": "Link2"
+            }
+          ],
+          "heading": "Vsoftware xây phần mềm riêng — đúng quy trình, đúng nhu cầu của bạn",
+          "ctaPrimary": {
+            "href": "/contact",
+            "text": "Đặt lịch khảo sát miễn phí"
+          },
+          "ctaSecondary": {
+            "href": "/tin-tuc",
+            "text": "Xem case study triển khai"
+          }
+        },
+        "painPoints": {
+          "items": [
+            {
+              "title": "Dữ liệu phân tán trên nhiều file và công cụ",
+              "iconName": "FileSpreadsheet",
+              "description": "Khách hàng nằm trong Excel, đơn hàng trong Google Sheet, kho trong phần mềm khác, nhân sự trong file Word. Mỗi lần báo cáo phải tổng hợp thủ công, dễ sai số."
+            },
+            {
+              "title": "Phần mềm có sẵn không phù hợp thực tế",
+              "iconName": "Puzzle",
+              "description": "Nhiều phần mềm đóng gói không đáp ứng đúng nhu cầu — doanh nghiệp phải uốn quy trình theo phần mềm, thay vì phần mềm phục vụ quy trình."
+            },
+            {
+              "title": "Nhân viên mất nhiều thời gian thao tác lặp lại",
+              "iconName": "Clock",
+              "description": "Nhập liệu nhiều lần, tổng hợp số liệu qua lại giữa các phòng ban gây lãng phí thời gian, dễ sai sót, không scale được khi doanh nghiệp lớn lên."
+            },
+            {
+              "title": "Lãnh đạo khó theo dõi vận hành realtime",
+              "iconName": "Eye",
+              "description": "Dữ liệu không tập trung khiến việc kiểm soát hiệu quả kinh doanh, nhân sự, kho và đơn hàng bị chậm trễ — ra quyết định bằng cảm tính thay vì số liệu."
+            }
+          ],
+          "heading": "Doanh nghiệp anh có đang gặp những vấn đề này?"
+        },
+        "trustStrip": {
+          "text": "⭐ 100+ doanh nghiệp đã chuyển sang phần mềm riêng — giảm 70% thao tác thủ công, dữ liệu tập trung trên 1 nền tảng"
+        },
+        "stickyBottom": {
+          "enabled": true,
+          "priceLabel": "Báo giá theo dự án",
+          "ctaPrimaryHref": "/contact",
+          "ctaPrimaryText": "Tư vấn miễn phí",
+          "ctaSecondaryHref": "/contact",
+          "ctaSecondaryText": "Đặt lịch khảo sát"
+        },
+        "testimonials": {
+          "items": [
+            {
+              "name": "Anh Lê Văn Tuấn",
+              "role": "Giám đốc, công ty phân phối nông sản 35 nhân sự",
+              "quote": "Trước đây bên mình quản lý kho + đơn hàng + công nợ bằng 4 file Excel khác nhau. Sau 3 tháng Vsoftware xây hệ thống riêng, tất cả gom về 1 dashboard. Báo cáo cuối tháng trước mất 3 ngày, giờ 30 phút có sẵn."
+            },
+            {
+              "name": "Chị Phạm Thị Hương",
+              "role": "Founder, chuỗi cửa hàng F&B 12 chi nhánh",
+              "quote": "Phần mềm cũ mình mua sẵn 200 triệu nhưng dùng được 30% — quy trình bên mình đặc thù, phần mềm không bend được. Vsoftware code riêng đúng workflow, nhân viên dùng được ngay, không cần training nhiều."
+            }
+          ],
+          "heading": "Doanh nghiệp đã chuyển sang phần mềm riêng"
+        }
+      },
+      "createdAt": "2026-06-03T08:51:49.404Z",
+      "updatedAt": "2026-06-03T08:51:49.404Z",
+      "deletedAt": null
+    },
     {
       "id": 37,
       "title": "5 xu hướng AI Agent: SME nên chuẩn bị gì để ứng dụng hiệu quả?",
