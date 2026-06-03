@@ -1,30 +1,39 @@
-# ── Stage 1: Build ───────────────────────────────────────────────────────────
+# ─── Stage 1: Build ──────────────────────────────────────────────────────────
 FROM node:20-alpine AS builder
-
-RUN npm install -g pnpm
-
 WORKDIR /app
 
-COPY package.json pnpm-lock.yaml ./
-RUN pnpm install --frozen-lockfile
+# Copy package files + lock file
+COPY package.json package-lock.json* ./
+RUN npm ci
 
+# Copy source + build
 COPY . .
-RUN pnpm run build
+RUN npm run build
 
-# ── Stage 2: Production ──────────────────────────────────────────────────────
+# ─── Stage 2: Production ─────────────────────────────────────────────────────
 FROM node:20-alpine
 
-RUN npm install -g pnpm
+# netcat dùng cho entrypoint wait postgres; ts-node để chạy seed/migration
+RUN apk add --no-cache netcat-openbsd
 
 WORKDIR /app
 
-COPY package.json pnpm-lock.yaml ./
-RUN pnpm install --frozen-lockfile --prod
+COPY package.json package-lock.json* ./
 
+# Install cả deps (cần ts-node, typeorm CLI để chạy migration + seed)
+RUN npm ci
+
+# Copy built code + source seed (seed.ts vẫn cần ts-node để chạy)
 COPY --from=builder /app/dist ./dist
+COPY src ./src
+COPY tsconfig.json ./
 
+# Folder uploads (bind volume từ ngoài vào)
 RUN mkdir -p uploads
 
-EXPOSE 3001
+# Entrypoint script
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
-CMD ["node", "dist/main"]
+EXPOSE 3001
+ENTRYPOINT ["docker-entrypoint.sh"]

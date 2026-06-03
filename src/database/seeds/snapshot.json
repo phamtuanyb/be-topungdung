@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-06-02T08:44:54.743Z",
+  "exportedAt": "2026-06-03T03:26:15.476Z",
   "users": [
     {
       "id": 1,
@@ -8,9 +8,9 @@
       "fullName": "Root Admin",
       "role": "admin",
       "status": "active",
-      "refreshTokenHash": "$2a$10$JfqNY1P7iM1plqfhLD2dwev5NRP/C0i7H7RizJbtzv0w1oKwvPS/u",
+      "refreshTokenHash": "$2a$10$o98nbE0D5fstTRqRTRmMt.E1Jf4WNGuRUlY1eKbWu/qIT3qKhuKWS",
       "createdAt": "2026-05-27T21:08:53.537Z",
-      "updatedAt": "2026-06-01T22:23:03.984Z"
+      "updatedAt": "2026-06-02T19:46:26.274Z"
     },
     {
       "id": 2,
@@ -349,6 +349,601 @@
       "productPageConfig": null,
       "createdAt": "2026-05-29T21:49:33.188Z",
       "updatedAt": "2026-06-01T11:39:32.156Z",
+      "deletedAt": null
+    },
+    {
+      "id": 40,
+      "title": "ViAI CSKH — Chatbot AI chăm sóc khách hàng 24/7",
+      "slug": "viai-cskh",
+      "excerpt": "Trợ lý ảo AI trả lời khách Facebook inbox, Zalo OA, chat website dưới 30 giây — học tài liệu sản phẩm của bạn, tone giọng theo brand, không bao giờ nghỉ.",
+      "content": " ",
+      "thumbnail": "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?auto=format&fit=crop&w=1280&h=720&q=80",
+      "categoryId": 7,
+      "authorId": 2,
+      "status": "published",
+      "publishedAt": "2026-05-28T09:00:00.000Z",
+      "seoTitle": null,
+      "seoDescription": null,
+      "seoKeywords": null,
+      "viewCount": 9,
+      "focusKeyword": null,
+      "seoScore": null,
+      "seoGrade": null,
+      "logoUrl": "http://localhost:3001/uploads/299ccedb-f025-4f6b-8d32-d7b30cc06682.webp",
+      "badge": "Phổ biến",
+      "shortName": "ViAI CSKH - Chatbot AI chăm sóc khách hàng 24/7",
+      "displayOrder": 2,
+      "menuGroupId": 254,
+      "productPageConfig": {
+        "faq": {
+          "items": [
+            {
+              "a": "Rất tự nhiên. ViAI dùng LLM hiểu ngữ cảnh tiếng Việt, có thể trêu, đùa, expressive theo tone brand. Khách thường không phân biệt được với người thật.",
+              "q": "AI trả lời có tự nhiên không hay máy móc?"
+            },
+            {
+              "a": "Starter 30 phút, Pro 1-2 ngày (cần train tài liệu), Enterprise 1-2 tuần (custom workflow).",
+              "q": "Bao lâu setup xong?"
+            },
+            {
+              "a": "Có. Pro+ hỗ trợ tiếng Anh. Enterprise thêm Nhật, Hàn, Trung. Phù hợp shop bán xuyên biên giới.",
+              "q": "Có hỗ trợ ngôn ngữ khác ngoài tiếng Việt?"
+            },
+            {
+              "a": "AI tự nhận diện, gắn tag \"cần người thật\", ping nhân viên qua Slack/Zalo/Email. Nhân viên có thể jump vào trong vòng 1-2 phút.",
+              "q": "Khách yêu cầu nói chuyện với người thật thì sao?"
+            },
+            {
+              "a": "Pro+ cam kết response time <30s 95% conversation. Vượt → tự động giảm 20% hoá đơn tháng đó.",
+              "q": "Có cam kết SLA không?"
+            }
+          ],
+          "heading": "Câu hỏi thường gặp"
+        },
+        "hero": {
+          "statBig": "<30s",
+          "statSub": "Thời gian phản hồi trung bình",
+          "tagline": "Trợ lý ảo trả lời khách hàng dưới 30 giây — hoạt động không ngừng nghỉ",
+          "ctaPrimary": {
+            "href": "/contact",
+            "text": "Dùng thử miễn phí"
+          },
+          "ctaSecondary": {
+            "href": "#demo",
+            "text": "Xem demo"
+          },
+          "heroImageAlt": "ViAI CSKH chatbot",
+          "heroImageSrc": "http://localhost:3001/uploads/0b1ebb95-a167-453a-ae84-a78a5bef41cd.webp"
+        },
+        "pricing": {
+          "plans": [
+            {
+              "name": "Starter",
+              "price": "490.000đ",
+              "period": "/tháng",
+              "ctaHref": "/contact",
+              "ctaText": "Bắt đầu",
+              "features": [
+                "1.000 tin nhắn/tháng",
+                "2 kênh (FB + Zalo OA hoặc website)",
+                "Tone giọng cơ bản",
+                "Báo cáo cơ bản",
+                "Hỗ trợ email"
+              ],
+              "subtitle": "Shop online <50 đơn/ngày",
+              "originalPrice": "890.000đ"
+            },
+            {
+              "name": "Pro",
+              "badge": "Phổ biến",
+              "price": "1.190.000đ",
+              "period": "/tháng",
+              "ctaHref": "/contact",
+              "ctaText": "Đặt lịch tư vấn",
+              "featured": true,
+              "features": [
+                "10.000 tin nhắn/tháng",
+                "5 kênh (FB + Zalo + website + 2 thêm)",
+                "Tích hợp Pancake / Haravan / Sapo / KiotViet",
+                "Tone giọng tuỳ chỉnh + intent detection",
+                "Báo cáo nâng cao + insight AI",
+                "Cam kết response <30s"
+              ],
+              "subtitle": "Shop 50-500 đơn/ngày, spa/clinic, F&B chuỗi",
+              "originalPrice": "1.990.000đ"
+            },
+            {
+              "name": "Enterprise",
+              "price": "3.290.000đ",
+              "period": "/tháng",
+              "ctaHref": "/contact",
+              "ctaText": "Liên hệ",
+              "features": [
+                "Tin nhắn không giới hạn",
+                "Voice AI cho tổng đài hotline",
+                "Fine-tune LLM theo dữ liệu doanh nghiệp",
+                "API + SDK tích hợp tuỳ chỉnh",
+                "SLA response 1h",
+                "Đào tạo + workshop định kỳ"
+              ],
+              "subtitle": "Tập đoàn 5+ thương hiệu, chuỗi 20+ điểm bán",
+              "originalPrice": "5.490.000đ"
+            }
+          ],
+          "heading": "Bảng giá ViAI CSKH",
+          "description": "Giảm 40% cho khách đăng ký tháng này"
+        },
+        "features": {
+          "items": [
+            {
+              "title": "Học tài liệu sản phẩm + chính sách của bạn",
+              "bullets": [
+                "Upload PDF, Word, Google Doc — AI tự học",
+                "Cập nhật chính sách → AI biết ngay, không lag",
+                "Trả lời chính xác thông tin riêng của doanh nghiệp"
+              ],
+              "imageAlt": "Knowledge training",
+              "imageSrc": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1280&h=720&q=80"
+            },
+            {
+              "title": "Trả lời đa kênh: FB, Zalo OA, chat website",
+              "bullets": [
+                "Tích hợp Facebook Messenger, Zalo OA, website chat",
+                "Đồng bộ lịch sử conversation giữa các kênh",
+                "Khách nhắn Zalo → chuyển sang FB vẫn liền mạch"
+              ],
+              "imageAlt": "Multi-channel",
+              "imageSrc": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1280&h=720&q=80"
+            },
+            {
+              "title": "Tone giọng theo brand (friendly, professional, fun)",
+              "bullets": [
+                "Cấu hình tone trong 5 phút — friendly / formal / fun",
+                "AI giữ giọng nhất quán mọi conversation",
+                "Theo style sản phẩm: spa thì dịu dàng, gym thì máu lửa"
+              ],
+              "imageAlt": "Brand tone",
+              "imageSrc": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1280&h=720&q=80"
+            },
+            {
+              "title": "Tự nhận ý định mua hàng — chuyển nhân viên ngay",
+              "bullets": [
+                "AI phát hiện khách đang muốn chốt đơn",
+                "Tag conversation \"hot lead\" + ping nhân viên",
+                "Nhân viên jump vào trong 1 phút, chốt đơn ngay"
+              ],
+              "imageAlt": "Intent detection",
+              "imageSrc": "https://images.unsplash.com/photo-1556745753-b2904692b3cd?auto=format&fit=crop&w=1280&h=720&q=80"
+            },
+            {
+              "title": "Đồng bộ CRM phổ biến",
+              "bullets": [
+                "Tích hợp Pancake, Haravan, Sapo, KiotViet, Misa",
+                "Tự lưu thông tin khách vào CRM",
+                "Tag khách + lịch sử conversation"
+              ],
+              "imageAlt": "CRM integration",
+              "imageSrc": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1280&h=720&q=80"
+            },
+            {
+              "title": "Báo cáo response time + top câu hỏi",
+              "bullets": [
+                "Dashboard response time realtime",
+                "Top 20 câu hỏi để cải thiện content marketing",
+                "Conversion rate từng kênh, từng sản phẩm"
+              ],
+              "imageAlt": "Analytics reporting",
+              "imageSrc": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1280&h=720&q=80"
+            }
+          ],
+          "heading": "6 tính năng cốt lõi"
+        },
+        "finalCta": {
+          "ctaHref": "/contact",
+          "ctaText": "Đăng ký dùng thử",
+          "heading": "Để AI chăm khách hàng — bạn lo việc lớn",
+          "description": "Dùng thử 7 ngày miễn phí. Không cần thẻ tín dụng, không cần cam kết."
+        },
+        "solutions": {
+          "items": [
+            {
+              "text": "Học tài liệu sản phẩm + chính sách của bạn",
+              "iconName": "CheckCircle"
+            },
+            {
+              "text": "Trả lời Facebook inbox, Zalo OA, chat website đồng nhất",
+              "iconName": "CheckCircle"
+            },
+            {
+              "text": "Tone giọng tuỳ chỉnh theo brand (friendly / professional)",
+              "iconName": "CheckCircle"
+            },
+            {
+              "text": "Tự nhận ý định mua, chuyển nhân viên kịp thời",
+              "iconName": "CheckCircle"
+            },
+            {
+              "text": "Đồng bộ CRM Pancake, Haravan, Sapo, KiotViet",
+              "iconName": "CheckCircle"
+            },
+            {
+              "text": "Báo cáo response time, conversion, top câu hỏi",
+              "iconName": "CheckCircle"
+            }
+          ],
+          "heading": "ViAI CSKH giải quyết hết",
+          "ctaPrimary": {
+            "href": "/contact",
+            "text": "Trải nghiệm miễn phí"
+          },
+          "ctaSecondary": {
+            "href": "#pricing",
+            "text": "Bảng giá"
+          }
+        },
+        "painPoints": {
+          "items": [
+            {
+              "title": "Khách inbox 10h tối — không ai trả lời",
+              "iconName": "Moon",
+              "description": "Mất 30-40% khách hàng vì phản hồi chậm ngoài giờ hành chính."
+            },
+            {
+              "title": "Tuyển 3-5 nhân viên CSKH lương 8-15tr/tháng",
+              "iconName": "Users",
+              "description": "Chi phí cao, làm 6 tháng nghỉ phải đào tạo lại."
+            },
+            {
+              "title": "Nhân viên trả lời thiếu nhất quán",
+              "iconName": "Frown",
+              "description": "Mỗi người tone giọng khác, thông tin sai lệch giữa các ca."
+            },
+            {
+              "title": "Lặp đi lặp lại 80% câu hỏi giống nhau",
+              "iconName": "Repeat",
+              "description": "Giá bao nhiêu, ship mấy ngày, có hàng size M không... mệt mỏi."
+            },
+            {
+              "title": "Bỏ sót khách có ý định mua",
+              "iconName": "AlertTriangle",
+              "description": "Khách hỏi mua mà inbox đè lên 50 tin spam, nhân viên không thấy."
+            },
+            {
+              "title": "Không có data để cải thiện",
+              "iconName": "BarChart",
+              "description": "Không biết khách thường hỏi gì, sản phẩm nào hot, ai chốt được."
+            }
+          ],
+          "heading": "Bạn có đang gặp những vấn đề này?"
+        },
+        "trustStrip": {
+          "text": "⭐ Đã có 500+ shop online, spa, F&B sử dụng"
+        },
+        "stickyBottom": {
+          "enabled": true,
+          "priceLabel": "Từ 490.000đ/tháng",
+          "ctaPrimaryHref": "/contact",
+          "ctaPrimaryText": "Đặt lịch tư vấn",
+          "ctaSecondaryHref": "/contact",
+          "ctaSecondaryText": "Dùng thử miễn phí"
+        },
+        "testimonials": {
+          "items": [
+            {
+              "name": "Lê Thị Hà",
+              "role": "Founder Saigon Spa Chain",
+              "quote": "Chuỗi spa của em đang dùng ViAI CSKH 2 tháng. Tỉ lệ chốt lịch tăng 35%, không phải thuê thêm lễ tân ca tối.",
+              "avatarSrc": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=200&h=200&q=80"
+            },
+            {
+              "name": "Phạm Minh Thư",
+              "role": "Chủ shop thời trang TikTok",
+              "quote": "Shop em bán hàng livestream, đỉnh điểm 500 inbox/giờ. ViAI handle hết, em chỉ cần lo đơn quan trọng.",
+              "avatarSrc": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200&q=80"
+            }
+          ],
+          "heading": "Khách hàng nói gì"
+        }
+      },
+      "createdAt": "2026-05-29T22:54:02.475Z",
+      "updatedAt": "2026-06-02T03:58:12.845Z",
+      "deletedAt": null
+    },
+    {
+      "id": 39,
+      "title": "ViAI Ads — Phần mềm tự động chạy quảng cáo đa nền tảng",
+      "slug": "viai-ads",
+      "excerpt": "AI Agent tự nghiên cứu audience, sinh creative và A/B test ngân sách quảng cáo Facebook, Google, TikTok, Zalo 24/7 — tối ưu ROAS không cần đội Media Buyer.",
+      "content": " ",
+      "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1280&h=720&q=80",
+      "categoryId": 7,
+      "authorId": 2,
+      "status": "published",
+      "publishedAt": "2026-05-29T09:00:00.000Z",
+      "seoTitle": null,
+      "seoDescription": null,
+      "seoKeywords": null,
+      "viewCount": 36,
+      "focusKeyword": null,
+      "seoScore": null,
+      "seoGrade": null,
+      "logoUrl": "http://localhost:3001/uploads/2758ced2-09f9-4521-a812-69a2a06a9fe8.webp",
+      "badge": "Hot",
+      "shortName": "ViAI Ads  — Phần mềm tự động chạy quảng cáo đa nền tảng",
+      "displayOrder": 1,
+      "menuGroupId": 254,
+      "productPageConfig": {
+        "faq": {
+          "items": [
+            {
+              "a": "Không. ViAI xử lý 80% việc lặp lại (research, tạo creative, A/B test, tối ưu bid). Media Buyer vẫn cần để định hướng chiến lược + xử lý case đặc biệt. Thực tế: 1 Media Buyer dùng ViAI = sức 4-5 người trước đây.",
+              "q": "ViAI Ads có thay thế hoàn toàn Media Buyer không?"
+            },
+            {
+              "a": "Có. Pro+ có thể fine-tune AI theo ngành cụ thể. Enterprise có riêng AI model train trên dữ liệu doanh nghiệp.",
+              "q": "Có hỗ trợ ngành đặc thù như BĐS, ô tô không?"
+            },
+            {
+              "a": "Áp dụng gói Pro+, ngân sách tối thiểu 100tr/tháng, sản phẩm có market fit, vận hành ≥60 ngày liên tục. Không đạt → miễn phí tháng tiếp theo.",
+              "q": "Cam kết ROAS 2.5x có điều kiện gì?"
+            },
+            {
+              "a": "Mã hoá AES-256, lưu tại Vietnam Data Center, tuân thủ PDPA. Không chia sẻ data giữa các khách hàng.",
+              "q": "Dữ liệu campaign có an toàn không?"
+            }
+          ],
+          "heading": "Câu hỏi thường gặp"
+        },
+        "demo": {
+          "videoUrl": "https://youtu.be/a5lAd25780w?si=xs5Tc648I6SHRE5a"
+        },
+        "hero": {
+          "statBig": "1.5x",
+          "statSub": "ROAS trung bình sau 6 tuần triển khai",
+          "tagline": "AI tự động chạy quảng cáo 24/7 — tối ưu ROAS không cần đội Media Buyer",
+          "ctaPrimary": {
+            "href": "/contact",
+            "text": "Dùng thử 7 ngày miễn phí"
+          },
+          "ctaSecondary": {
+            "href": "#demo",
+            "text": "Xem demo"
+          },
+          "heroImageAlt": "ViAI Ads dashboard",
+          "heroImageSrc": "http://localhost:3001/uploads/4aa52761-79b7-4c73-b39b-0175df3fd3e5.webp"
+        },
+        "pricing": {
+          "plans": [
+            {
+              "name": "Starter",
+              "price": "1.190.000đ",
+              "period": "/tháng",
+              "ctaHref": "/contact",
+              "ctaText": "Bắt đầu",
+              "features": [
+                "1 nền tảng (Facebook hoặc Google)",
+                "Tối đa 20 creative A/B test/tháng",
+                "5 audience tự nghiên cứu",
+                "Báo cáo realtime cơ bản",
+                "Hỗ trợ email"
+              ],
+              "subtitle": "Shop ecom mới, ngân sách <50tr/tháng",
+              "originalPrice": "1.990.000đ"
+            },
+            {
+              "name": "Pro",
+              "badge": "Phổ biến",
+              "price": "2.990.000đ",
+              "period": "/tháng",
+              "ctaHref": "/contact",
+              "ctaText": "Đặt lịch tư vấn",
+              "featured": true,
+              "features": [
+                "4 nền tảng: Facebook, Google, TikTok, Zalo",
+                "Tối đa 50 creative A/B test/tháng",
+                "Audience không giới hạn",
+                "Báo cáo realtime + insight AI",
+                "Hỗ trợ 1-1 Slack/Zalo",
+                "Cam kết tăng ROAS 2.5x trong 60 ngày"
+              ],
+              "subtitle": "Agency 5-30 KH, shop ecom 500tr-3 tỷ/tháng",
+              "originalPrice": "4.990.000đ"
+            },
+            {
+              "name": "Enterprise",
+              "price": "8.990.000đ",
+              "period": "/tháng",
+              "ctaHref": "/contact",
+              "ctaText": "Liên hệ",
+              "features": [
+                "Không giới hạn nền tảng + creative",
+                "AI model fine-tune riêng theo ngành",
+                "Strategist 1-1 hỗ trợ chiến lược",
+                "API + tích hợp BI tool nội bộ",
+                "SLA response 1h",
+                "Đào tạo nội bộ + workshop"
+              ],
+              "subtitle": "Brand 3+ tỷ ngân sách/tháng, agency 30+ KH",
+              "originalPrice": "14.990.000đ"
+            }
+          ],
+          "heading": "Bảng giá ViAI Ads",
+          "description": "Giảm 40% cho khách hàng đăng ký trong tháng"
+        },
+        "features": {
+          "items": [
+            {
+              "title": "Tự nghiên cứu audience theo sản phẩm và đối thủ",
+              "bullets": [
+                "AI phân tích landing page, sản phẩm, đối thủ trong ngành",
+                "Đề xuất 5-10 nhóm audience phù hợp với từng campaign",
+                "Tự refine audience theo dữ liệu conversion thật"
+              ],
+              "imageAlt": "Audience research",
+              "imageSrc": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1280&h=720&q=80"
+            },
+            {
+              "title": "Sinh creative đa định dạng tự động",
+              "bullets": [
+                "AI viết headline, caption, CTA theo brand voice",
+                "Tạo ảnh quảng cáo, carousel, video ngắn từ ảnh sản phẩm",
+                "Tự nhân bản 20-50 biến thể từ 1 brief"
+              ],
+              "imageAlt": "Creative generation",
+              "imageSrc": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1280&h=720&q=80"
+            },
+            {
+              "title": "A/B test đến 50 biến thể song song",
+              "bullets": [
+                "Test đồng thời nhiều creative, audience, placement",
+                "Tự kill biến thể CPL cao, scale biến thể CPL thấp",
+                "Học từ data trong 24-48h, không phải chờ tuần"
+              ],
+              "imageAlt": "A/B testing",
+              "imageSrc": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1280&h=720&q=80"
+            },
+            {
+              "title": "Tối ưu ngân sách theo khung giờ vàng",
+              "bullets": [
+                "AI phát hiện khung giờ ROAS cao nhất từng vùng",
+                "Tự bid nhiều giờ peak, giảm bid giờ thấp",
+                "Tối ưu cho mỗi vùng địa lý riêng"
+              ],
+              "imageAlt": "Budget optimization",
+              "imageSrc": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=1280&h=720&q=80"
+            },
+            {
+              "title": "Quản lý 4 nền tảng trong 1 dashboard",
+              "bullets": [
+                "Facebook Ads, Google Ads, TikTok Ads, Zalo Ads",
+                "Đồng bộ data, đối soát chi phí tự động",
+                "So sánh hiệu suất giữa các kênh realtime"
+              ],
+              "imageAlt": "Multi-platform dashboard",
+              "imageSrc": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=1280&h=720&q=80"
+            },
+            {
+              "title": "Báo cáo realtime kèm insight AI",
+              "bullets": [
+                "Dashboard ROAS, CPL, CPA, ROI cập nhật mỗi giờ",
+                "AI cảnh báo bất thường + đề xuất hành động cụ thể",
+                "Export PDF gửi khách hàng / sếp tự động"
+              ],
+              "imageAlt": "AI reporting",
+              "imageSrc": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1280&h=720&q=80"
+            }
+          ],
+          "heading": "6 tính năng cốt lõi"
+        },
+        "finalCta": {
+          "ctaHref": "/contact",
+          "ctaText": "Đăng ký dùng thử",
+          "heading": "Sẵn sàng tăng ROAS gấp 1.5-2.5 lần?",
+          "description": "Dùng thử 7 ngày miễn phí, không cần thẻ tín dụng. Hoàn tiền 100% nếu không hài lòng."
+        },
+        "solutions": {
+          "items": [
+            {
+              "text": "AI tự nghiên cứu audience theo sản phẩm + đối thủ",
+              "iconName": "CheckCircle"
+            },
+            {
+              "text": "Sinh creative đa định dạng (ảnh / carousel / video) trong vài phút",
+              "iconName": "CheckCircle"
+            },
+            {
+              "text": "A/B test hàng chục biến thể cùng lúc, tự kill kém",
+              "iconName": "CheckCircle"
+            },
+            {
+              "text": "Tối ưu ngân sách realtime theo khung giờ vàng",
+              "iconName": "CheckCircle"
+            },
+            {
+              "text": "Quản lý đồng bộ Facebook, Google, TikTok, Zalo Ads",
+              "iconName": "CheckCircle"
+            },
+            {
+              "text": "Báo cáo ROAS/CPL realtime kèm khuyến nghị AI",
+              "iconName": "CheckCircle"
+            }
+          ],
+          "heading": "ViAI Ads giải quyết triệt để",
+          "ctaPrimary": {
+            "href": "/contact",
+            "text": "Trải nghiệm miễn phí"
+          },
+          "ctaSecondary": {
+            "href": "#pricing",
+            "text": "Bảng giá"
+          }
+        },
+        "painPoints": {
+          "items": [
+            {
+              "title": "ROAS giảm, CPL tăng mà không biết vì sao",
+              "iconName": "Frown",
+              "description": "Set ads xong nhưng performance không ổn định, phải canh sửa từng ngày."
+            },
+            {
+              "title": "Tốn 4-6h/ngày test creative",
+              "iconName": "Clock",
+              "description": "Media Buyer phải tự design, viết caption, đẩy lên platform thủ công."
+            },
+            {
+              "title": "Lương Media Buyer 15-30tr/tháng",
+              "iconName": "DollarSign",
+              "description": "Tuyển khó, giữ khó, làm 6 tháng nghỉ là phải đào tạo lại từ đầu."
+            },
+            {
+              "title": "Đốt ngân sách vào audience không hiệu quả",
+              "iconName": "AlertTriangle",
+              "description": "Test sai audience tốn vài chục triệu mới biết, không có cơ chế cảnh báo sớm."
+            },
+            {
+              "title": "Quản lý đa nền tảng cực mệt",
+              "iconName": "Layers",
+              "description": "Facebook + Google + TikTok + Zalo — mỗi platform 1 dashboard, đối soát thủ công."
+            },
+            {
+              "title": "Không có insight để cải thiện",
+              "iconName": "BarChart",
+              "description": "Báo cáo cuối tháng chỉ có số, không có khuyến nghị hành động cụ thể."
+            }
+          ],
+          "heading": "Bạn đang gặp những vấn đề này khi chạy ads?"
+        },
+        "trustStrip": {
+          "text": "⭐ Đã có 500+ Agency và Shop Ecommerce tin dùng"
+        },
+        "stickyBottom": {
+          "enabled": true,
+          "priceLabel": "Từ 1.190.000đ/tháng",
+          "ctaPrimaryHref": "/contact",
+          "ctaPrimaryText": "Đặt lịch tư vấn",
+          "ctaSecondaryHref": "/contact",
+          "ctaSecondaryText": "Dùng thử miễn phí"
+        },
+        "testimonials": {
+          "items": [
+            {
+              "name": "Nguyễn Minh Tâm",
+              "role": "CEO chuỗi mỹ phẩm Pure Beauty",
+              "quote": "Sau 6 tuần triển khai ViAI Ads, ROAS chuỗi cửa hàng tăng từ 2.1 lên 3.4. Tiết kiệm hẳn 1 vị trí Media Buyer.",
+              "avatarSrc": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&h=200&q=80"
+            },
+            {
+              "name": "Trần Văn Hùng",
+              "role": "Head of Performance, Agency BlueWave",
+              "quote": "Quản lý 4 platform cùng lúc không còn là cơn ác mộng. Insight AI gợi ý kill audience kém rất chính xác.",
+              "avatarSrc": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&h=200&q=80"
+            }
+          ],
+          "heading": "Khách hàng nói gì"
+        }
+      },
+      "createdAt": "2026-05-29T22:54:02.463Z",
+      "updatedAt": "2026-06-02T19:32:30.371Z",
       "deletedAt": null
     },
     {
@@ -941,601 +1536,6 @@
       "deletedAt": null
     },
     {
-      "id": 39,
-      "title": "ViAI Ads — Phần mềm tự động chạy quảng cáo đa nền tảng",
-      "slug": "viai-ads",
-      "excerpt": "AI Agent tự nghiên cứu audience, sinh creative và A/B test ngân sách quảng cáo Facebook, Google, TikTok, Zalo 24/7 — tối ưu ROAS không cần đội Media Buyer.",
-      "content": " ",
-      "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1280&h=720&q=80",
-      "categoryId": 7,
-      "authorId": 2,
-      "status": "published",
-      "publishedAt": "2026-05-29T09:00:00.000Z",
-      "seoTitle": null,
-      "seoDescription": null,
-      "seoKeywords": null,
-      "viewCount": 29,
-      "focusKeyword": null,
-      "seoScore": null,
-      "seoGrade": null,
-      "logoUrl": "http://localhost:3001/uploads/2758ced2-09f9-4521-a812-69a2a06a9fe8.webp",
-      "badge": "Hot",
-      "shortName": "ViAI Ads  — Phần mềm tự động chạy quảng cáo đa nền tảng",
-      "displayOrder": 1,
-      "menuGroupId": 254,
-      "productPageConfig": {
-        "faq": {
-          "items": [
-            {
-              "a": "Không. ViAI xử lý 80% việc lặp lại (research, tạo creative, A/B test, tối ưu bid). Media Buyer vẫn cần để định hướng chiến lược + xử lý case đặc biệt. Thực tế: 1 Media Buyer dùng ViAI = sức 4-5 người trước đây.",
-              "q": "ViAI Ads có thay thế hoàn toàn Media Buyer không?"
-            },
-            {
-              "a": "Có. Pro+ có thể fine-tune AI theo ngành cụ thể. Enterprise có riêng AI model train trên dữ liệu doanh nghiệp.",
-              "q": "Có hỗ trợ ngành đặc thù như BĐS, ô tô không?"
-            },
-            {
-              "a": "Áp dụng gói Pro+, ngân sách tối thiểu 100tr/tháng, sản phẩm có market fit, vận hành ≥60 ngày liên tục. Không đạt → miễn phí tháng tiếp theo.",
-              "q": "Cam kết ROAS 2.5x có điều kiện gì?"
-            },
-            {
-              "a": "Mã hoá AES-256, lưu tại Vietnam Data Center, tuân thủ PDPA. Không chia sẻ data giữa các khách hàng.",
-              "q": "Dữ liệu campaign có an toàn không?"
-            }
-          ],
-          "heading": "Câu hỏi thường gặp"
-        },
-        "demo": {
-          "videoUrl": "https://youtu.be/a5lAd25780w?si=xs5Tc648I6SHRE5a"
-        },
-        "hero": {
-          "statBig": "1.5x",
-          "statSub": "ROAS trung bình sau 6 tuần triển khai",
-          "tagline": "AI tự động chạy quảng cáo 24/7 — tối ưu ROAS không cần đội Media Buyer",
-          "ctaPrimary": {
-            "href": "/contact",
-            "text": "Dùng thử 7 ngày miễn phí"
-          },
-          "ctaSecondary": {
-            "href": "#demo",
-            "text": "Xem demo"
-          },
-          "heroImageAlt": "ViAI Ads dashboard",
-          "heroImageSrc": "http://localhost:3001/uploads/4aa52761-79b7-4c73-b39b-0175df3fd3e5.webp"
-        },
-        "pricing": {
-          "plans": [
-            {
-              "name": "Starter",
-              "price": "1.190.000đ",
-              "period": "/tháng",
-              "ctaHref": "/contact",
-              "ctaText": "Bắt đầu",
-              "features": [
-                "1 nền tảng (Facebook hoặc Google)",
-                "Tối đa 20 creative A/B test/tháng",
-                "5 audience tự nghiên cứu",
-                "Báo cáo realtime cơ bản",
-                "Hỗ trợ email"
-              ],
-              "subtitle": "Shop ecom mới, ngân sách <50tr/tháng",
-              "originalPrice": "1.990.000đ"
-            },
-            {
-              "name": "Pro",
-              "badge": "Phổ biến",
-              "price": "2.990.000đ",
-              "period": "/tháng",
-              "ctaHref": "/contact",
-              "ctaText": "Đặt lịch tư vấn",
-              "featured": true,
-              "features": [
-                "4 nền tảng: Facebook, Google, TikTok, Zalo",
-                "Tối đa 50 creative A/B test/tháng",
-                "Audience không giới hạn",
-                "Báo cáo realtime + insight AI",
-                "Hỗ trợ 1-1 Slack/Zalo",
-                "Cam kết tăng ROAS 2.5x trong 60 ngày"
-              ],
-              "subtitle": "Agency 5-30 KH, shop ecom 500tr-3 tỷ/tháng",
-              "originalPrice": "4.990.000đ"
-            },
-            {
-              "name": "Enterprise",
-              "price": "8.990.000đ",
-              "period": "/tháng",
-              "ctaHref": "/contact",
-              "ctaText": "Liên hệ",
-              "features": [
-                "Không giới hạn nền tảng + creative",
-                "AI model fine-tune riêng theo ngành",
-                "Strategist 1-1 hỗ trợ chiến lược",
-                "API + tích hợp BI tool nội bộ",
-                "SLA response 1h",
-                "Đào tạo nội bộ + workshop"
-              ],
-              "subtitle": "Brand 3+ tỷ ngân sách/tháng, agency 30+ KH",
-              "originalPrice": "14.990.000đ"
-            }
-          ],
-          "heading": "Bảng giá ViAI Ads",
-          "description": "Giảm 40% cho khách hàng đăng ký trong tháng"
-        },
-        "features": {
-          "items": [
-            {
-              "title": "Tự nghiên cứu audience theo sản phẩm và đối thủ",
-              "bullets": [
-                "AI phân tích landing page, sản phẩm, đối thủ trong ngành",
-                "Đề xuất 5-10 nhóm audience phù hợp với từng campaign",
-                "Tự refine audience theo dữ liệu conversion thật"
-              ],
-              "imageAlt": "Audience research",
-              "imageSrc": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1280&h=720&q=80"
-            },
-            {
-              "title": "Sinh creative đa định dạng tự động",
-              "bullets": [
-                "AI viết headline, caption, CTA theo brand voice",
-                "Tạo ảnh quảng cáo, carousel, video ngắn từ ảnh sản phẩm",
-                "Tự nhân bản 20-50 biến thể từ 1 brief"
-              ],
-              "imageAlt": "Creative generation",
-              "imageSrc": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1280&h=720&q=80"
-            },
-            {
-              "title": "A/B test đến 50 biến thể song song",
-              "bullets": [
-                "Test đồng thời nhiều creative, audience, placement",
-                "Tự kill biến thể CPL cao, scale biến thể CPL thấp",
-                "Học từ data trong 24-48h, không phải chờ tuần"
-              ],
-              "imageAlt": "A/B testing",
-              "imageSrc": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1280&h=720&q=80"
-            },
-            {
-              "title": "Tối ưu ngân sách theo khung giờ vàng",
-              "bullets": [
-                "AI phát hiện khung giờ ROAS cao nhất từng vùng",
-                "Tự bid nhiều giờ peak, giảm bid giờ thấp",
-                "Tối ưu cho mỗi vùng địa lý riêng"
-              ],
-              "imageAlt": "Budget optimization",
-              "imageSrc": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=1280&h=720&q=80"
-            },
-            {
-              "title": "Quản lý 4 nền tảng trong 1 dashboard",
-              "bullets": [
-                "Facebook Ads, Google Ads, TikTok Ads, Zalo Ads",
-                "Đồng bộ data, đối soát chi phí tự động",
-                "So sánh hiệu suất giữa các kênh realtime"
-              ],
-              "imageAlt": "Multi-platform dashboard",
-              "imageSrc": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=1280&h=720&q=80"
-            },
-            {
-              "title": "Báo cáo realtime kèm insight AI",
-              "bullets": [
-                "Dashboard ROAS, CPL, CPA, ROI cập nhật mỗi giờ",
-                "AI cảnh báo bất thường + đề xuất hành động cụ thể",
-                "Export PDF gửi khách hàng / sếp tự động"
-              ],
-              "imageAlt": "AI reporting",
-              "imageSrc": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1280&h=720&q=80"
-            }
-          ],
-          "heading": "6 tính năng cốt lõi"
-        },
-        "finalCta": {
-          "ctaHref": "/contact",
-          "ctaText": "Đăng ký dùng thử",
-          "heading": "Sẵn sàng tăng ROAS gấp 1.5-2.5 lần?",
-          "description": "Dùng thử 7 ngày miễn phí, không cần thẻ tín dụng. Hoàn tiền 100% nếu không hài lòng."
-        },
-        "solutions": {
-          "items": [
-            {
-              "text": "AI tự nghiên cứu audience theo sản phẩm + đối thủ",
-              "iconName": "CheckCircle"
-            },
-            {
-              "text": "Sinh creative đa định dạng (ảnh / carousel / video) trong vài phút",
-              "iconName": "CheckCircle"
-            },
-            {
-              "text": "A/B test hàng chục biến thể cùng lúc, tự kill kém",
-              "iconName": "CheckCircle"
-            },
-            {
-              "text": "Tối ưu ngân sách realtime theo khung giờ vàng",
-              "iconName": "CheckCircle"
-            },
-            {
-              "text": "Quản lý đồng bộ Facebook, Google, TikTok, Zalo Ads",
-              "iconName": "CheckCircle"
-            },
-            {
-              "text": "Báo cáo ROAS/CPL realtime kèm khuyến nghị AI",
-              "iconName": "CheckCircle"
-            }
-          ],
-          "heading": "ViAI Ads giải quyết triệt để",
-          "ctaPrimary": {
-            "href": "/contact",
-            "text": "Trải nghiệm miễn phí"
-          },
-          "ctaSecondary": {
-            "href": "#pricing",
-            "text": "Bảng giá"
-          }
-        },
-        "painPoints": {
-          "items": [
-            {
-              "title": "ROAS giảm, CPL tăng mà không biết vì sao",
-              "iconName": "Frown",
-              "description": "Set ads xong nhưng performance không ổn định, phải canh sửa từng ngày."
-            },
-            {
-              "title": "Tốn 4-6h/ngày test creative",
-              "iconName": "Clock",
-              "description": "Media Buyer phải tự design, viết caption, đẩy lên platform thủ công."
-            },
-            {
-              "title": "Lương Media Buyer 15-30tr/tháng",
-              "iconName": "DollarSign",
-              "description": "Tuyển khó, giữ khó, làm 6 tháng nghỉ là phải đào tạo lại từ đầu."
-            },
-            {
-              "title": "Đốt ngân sách vào audience không hiệu quả",
-              "iconName": "AlertTriangle",
-              "description": "Test sai audience tốn vài chục triệu mới biết, không có cơ chế cảnh báo sớm."
-            },
-            {
-              "title": "Quản lý đa nền tảng cực mệt",
-              "iconName": "Layers",
-              "description": "Facebook + Google + TikTok + Zalo — mỗi platform 1 dashboard, đối soát thủ công."
-            },
-            {
-              "title": "Không có insight để cải thiện",
-              "iconName": "BarChart",
-              "description": "Báo cáo cuối tháng chỉ có số, không có khuyến nghị hành động cụ thể."
-            }
-          ],
-          "heading": "Bạn đang gặp những vấn đề này khi chạy ads?"
-        },
-        "trustStrip": {
-          "text": "⭐ Đã có 500+ Agency và Shop Ecommerce tin dùng"
-        },
-        "stickyBottom": {
-          "enabled": true,
-          "priceLabel": "Từ 1.190.000đ/tháng",
-          "ctaPrimaryHref": "/contact",
-          "ctaPrimaryText": "Đặt lịch tư vấn",
-          "ctaSecondaryHref": "/contact",
-          "ctaSecondaryText": "Dùng thử miễn phí"
-        },
-        "testimonials": {
-          "items": [
-            {
-              "name": "Nguyễn Minh Tâm",
-              "role": "CEO chuỗi mỹ phẩm Pure Beauty",
-              "quote": "Sau 6 tuần triển khai ViAI Ads, ROAS chuỗi cửa hàng tăng từ 2.1 lên 3.4. Tiết kiệm hẳn 1 vị trí Media Buyer.",
-              "avatarSrc": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&h=200&q=80"
-            },
-            {
-              "name": "Trần Văn Hùng",
-              "role": "Head of Performance, Agency BlueWave",
-              "quote": "Quản lý 4 platform cùng lúc không còn là cơn ác mộng. Insight AI gợi ý kill audience kém rất chính xác.",
-              "avatarSrc": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&h=200&q=80"
-            }
-          ],
-          "heading": "Khách hàng nói gì"
-        }
-      },
-      "createdAt": "2026-05-29T22:54:02.463Z",
-      "updatedAt": "2026-06-01T11:43:14.366Z",
-      "deletedAt": null
-    },
-    {
-      "id": 40,
-      "title": "ViAI CSKH — Chatbot AI chăm sóc khách hàng 24/7",
-      "slug": "viai-cskh",
-      "excerpt": "Trợ lý ảo AI trả lời khách Facebook inbox, Zalo OA, chat website dưới 30 giây — học tài liệu sản phẩm của bạn, tone giọng theo brand, không bao giờ nghỉ.",
-      "content": " ",
-      "thumbnail": "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?auto=format&fit=crop&w=1280&h=720&q=80",
-      "categoryId": 7,
-      "authorId": 2,
-      "status": "published",
-      "publishedAt": "2026-05-28T09:00:00.000Z",
-      "seoTitle": null,
-      "seoDescription": null,
-      "seoKeywords": null,
-      "viewCount": 8,
-      "focusKeyword": null,
-      "seoScore": null,
-      "seoGrade": null,
-      "logoUrl": "http://localhost:3001/uploads/299ccedb-f025-4f6b-8d32-d7b30cc06682.webp",
-      "badge": "Phổ biến",
-      "shortName": "ViAI CSKH - Chatbot AI chăm sóc khách hàng 24/7",
-      "displayOrder": 2,
-      "menuGroupId": 254,
-      "productPageConfig": {
-        "faq": {
-          "items": [
-            {
-              "a": "Rất tự nhiên. ViAI dùng LLM hiểu ngữ cảnh tiếng Việt, có thể trêu, đùa, expressive theo tone brand. Khách thường không phân biệt được với người thật.",
-              "q": "AI trả lời có tự nhiên không hay máy móc?"
-            },
-            {
-              "a": "Starter 30 phút, Pro 1-2 ngày (cần train tài liệu), Enterprise 1-2 tuần (custom workflow).",
-              "q": "Bao lâu setup xong?"
-            },
-            {
-              "a": "Có. Pro+ hỗ trợ tiếng Anh. Enterprise thêm Nhật, Hàn, Trung. Phù hợp shop bán xuyên biên giới.",
-              "q": "Có hỗ trợ ngôn ngữ khác ngoài tiếng Việt?"
-            },
-            {
-              "a": "AI tự nhận diện, gắn tag \"cần người thật\", ping nhân viên qua Slack/Zalo/Email. Nhân viên có thể jump vào trong vòng 1-2 phút.",
-              "q": "Khách yêu cầu nói chuyện với người thật thì sao?"
-            },
-            {
-              "a": "Pro+ cam kết response time <30s 95% conversation. Vượt → tự động giảm 20% hoá đơn tháng đó.",
-              "q": "Có cam kết SLA không?"
-            }
-          ],
-          "heading": "Câu hỏi thường gặp"
-        },
-        "hero": {
-          "statBig": "<30s",
-          "statSub": "Thời gian phản hồi trung bình",
-          "tagline": "Trợ lý ảo trả lời khách hàng dưới 30 giây — hoạt động không ngừng nghỉ",
-          "ctaPrimary": {
-            "href": "/contact",
-            "text": "Dùng thử miễn phí"
-          },
-          "ctaSecondary": {
-            "href": "#demo",
-            "text": "Xem demo"
-          },
-          "heroImageAlt": "ViAI CSKH chatbot",
-          "heroImageSrc": "http://localhost:3001/uploads/0b1ebb95-a167-453a-ae84-a78a5bef41cd.webp"
-        },
-        "pricing": {
-          "plans": [
-            {
-              "name": "Starter",
-              "price": "490.000đ",
-              "period": "/tháng",
-              "ctaHref": "/contact",
-              "ctaText": "Bắt đầu",
-              "features": [
-                "1.000 tin nhắn/tháng",
-                "2 kênh (FB + Zalo OA hoặc website)",
-                "Tone giọng cơ bản",
-                "Báo cáo cơ bản",
-                "Hỗ trợ email"
-              ],
-              "subtitle": "Shop online <50 đơn/ngày",
-              "originalPrice": "890.000đ"
-            },
-            {
-              "name": "Pro",
-              "badge": "Phổ biến",
-              "price": "1.190.000đ",
-              "period": "/tháng",
-              "ctaHref": "/contact",
-              "ctaText": "Đặt lịch tư vấn",
-              "featured": true,
-              "features": [
-                "10.000 tin nhắn/tháng",
-                "5 kênh (FB + Zalo + website + 2 thêm)",
-                "Tích hợp Pancake / Haravan / Sapo / KiotViet",
-                "Tone giọng tuỳ chỉnh + intent detection",
-                "Báo cáo nâng cao + insight AI",
-                "Cam kết response <30s"
-              ],
-              "subtitle": "Shop 50-500 đơn/ngày, spa/clinic, F&B chuỗi",
-              "originalPrice": "1.990.000đ"
-            },
-            {
-              "name": "Enterprise",
-              "price": "3.290.000đ",
-              "period": "/tháng",
-              "ctaHref": "/contact",
-              "ctaText": "Liên hệ",
-              "features": [
-                "Tin nhắn không giới hạn",
-                "Voice AI cho tổng đài hotline",
-                "Fine-tune LLM theo dữ liệu doanh nghiệp",
-                "API + SDK tích hợp tuỳ chỉnh",
-                "SLA response 1h",
-                "Đào tạo + workshop định kỳ"
-              ],
-              "subtitle": "Tập đoàn 5+ thương hiệu, chuỗi 20+ điểm bán",
-              "originalPrice": "5.490.000đ"
-            }
-          ],
-          "heading": "Bảng giá ViAI CSKH",
-          "description": "Giảm 40% cho khách đăng ký tháng này"
-        },
-        "features": {
-          "items": [
-            {
-              "title": "Học tài liệu sản phẩm + chính sách của bạn",
-              "bullets": [
-                "Upload PDF, Word, Google Doc — AI tự học",
-                "Cập nhật chính sách → AI biết ngay, không lag",
-                "Trả lời chính xác thông tin riêng của doanh nghiệp"
-              ],
-              "imageAlt": "Knowledge training",
-              "imageSrc": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1280&h=720&q=80"
-            },
-            {
-              "title": "Trả lời đa kênh: FB, Zalo OA, chat website",
-              "bullets": [
-                "Tích hợp Facebook Messenger, Zalo OA, website chat",
-                "Đồng bộ lịch sử conversation giữa các kênh",
-                "Khách nhắn Zalo → chuyển sang FB vẫn liền mạch"
-              ],
-              "imageAlt": "Multi-channel",
-              "imageSrc": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1280&h=720&q=80"
-            },
-            {
-              "title": "Tone giọng theo brand (friendly, professional, fun)",
-              "bullets": [
-                "Cấu hình tone trong 5 phút — friendly / formal / fun",
-                "AI giữ giọng nhất quán mọi conversation",
-                "Theo style sản phẩm: spa thì dịu dàng, gym thì máu lửa"
-              ],
-              "imageAlt": "Brand tone",
-              "imageSrc": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1280&h=720&q=80"
-            },
-            {
-              "title": "Tự nhận ý định mua hàng — chuyển nhân viên ngay",
-              "bullets": [
-                "AI phát hiện khách đang muốn chốt đơn",
-                "Tag conversation \"hot lead\" + ping nhân viên",
-                "Nhân viên jump vào trong 1 phút, chốt đơn ngay"
-              ],
-              "imageAlt": "Intent detection",
-              "imageSrc": "https://images.unsplash.com/photo-1556745753-b2904692b3cd?auto=format&fit=crop&w=1280&h=720&q=80"
-            },
-            {
-              "title": "Đồng bộ CRM phổ biến",
-              "bullets": [
-                "Tích hợp Pancake, Haravan, Sapo, KiotViet, Misa",
-                "Tự lưu thông tin khách vào CRM",
-                "Tag khách + lịch sử conversation"
-              ],
-              "imageAlt": "CRM integration",
-              "imageSrc": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1280&h=720&q=80"
-            },
-            {
-              "title": "Báo cáo response time + top câu hỏi",
-              "bullets": [
-                "Dashboard response time realtime",
-                "Top 20 câu hỏi để cải thiện content marketing",
-                "Conversion rate từng kênh, từng sản phẩm"
-              ],
-              "imageAlt": "Analytics reporting",
-              "imageSrc": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1280&h=720&q=80"
-            }
-          ],
-          "heading": "6 tính năng cốt lõi"
-        },
-        "finalCta": {
-          "ctaHref": "/contact",
-          "ctaText": "Đăng ký dùng thử",
-          "heading": "Để AI chăm khách hàng — bạn lo việc lớn",
-          "description": "Dùng thử 7 ngày miễn phí. Không cần thẻ tín dụng, không cần cam kết."
-        },
-        "solutions": {
-          "items": [
-            {
-              "text": "Học tài liệu sản phẩm + chính sách của bạn",
-              "iconName": "CheckCircle"
-            },
-            {
-              "text": "Trả lời Facebook inbox, Zalo OA, chat website đồng nhất",
-              "iconName": "CheckCircle"
-            },
-            {
-              "text": "Tone giọng tuỳ chỉnh theo brand (friendly / professional)",
-              "iconName": "CheckCircle"
-            },
-            {
-              "text": "Tự nhận ý định mua, chuyển nhân viên kịp thời",
-              "iconName": "CheckCircle"
-            },
-            {
-              "text": "Đồng bộ CRM Pancake, Haravan, Sapo, KiotViet",
-              "iconName": "CheckCircle"
-            },
-            {
-              "text": "Báo cáo response time, conversion, top câu hỏi",
-              "iconName": "CheckCircle"
-            }
-          ],
-          "heading": "ViAI CSKH giải quyết hết",
-          "ctaPrimary": {
-            "href": "/contact",
-            "text": "Trải nghiệm miễn phí"
-          },
-          "ctaSecondary": {
-            "href": "#pricing",
-            "text": "Bảng giá"
-          }
-        },
-        "painPoints": {
-          "items": [
-            {
-              "title": "Khách inbox 10h tối — không ai trả lời",
-              "iconName": "Moon",
-              "description": "Mất 30-40% khách hàng vì phản hồi chậm ngoài giờ hành chính."
-            },
-            {
-              "title": "Tuyển 3-5 nhân viên CSKH lương 8-15tr/tháng",
-              "iconName": "Users",
-              "description": "Chi phí cao, làm 6 tháng nghỉ phải đào tạo lại."
-            },
-            {
-              "title": "Nhân viên trả lời thiếu nhất quán",
-              "iconName": "Frown",
-              "description": "Mỗi người tone giọng khác, thông tin sai lệch giữa các ca."
-            },
-            {
-              "title": "Lặp đi lặp lại 80% câu hỏi giống nhau",
-              "iconName": "Repeat",
-              "description": "Giá bao nhiêu, ship mấy ngày, có hàng size M không... mệt mỏi."
-            },
-            {
-              "title": "Bỏ sót khách có ý định mua",
-              "iconName": "AlertTriangle",
-              "description": "Khách hỏi mua mà inbox đè lên 50 tin spam, nhân viên không thấy."
-            },
-            {
-              "title": "Không có data để cải thiện",
-              "iconName": "BarChart",
-              "description": "Không biết khách thường hỏi gì, sản phẩm nào hot, ai chốt được."
-            }
-          ],
-          "heading": "Bạn có đang gặp những vấn đề này?"
-        },
-        "trustStrip": {
-          "text": "⭐ Đã có 500+ shop online, spa, F&B sử dụng"
-        },
-        "stickyBottom": {
-          "enabled": true,
-          "priceLabel": "Từ 490.000đ/tháng",
-          "ctaPrimaryHref": "/contact",
-          "ctaPrimaryText": "Đặt lịch tư vấn",
-          "ctaSecondaryHref": "/contact",
-          "ctaSecondaryText": "Dùng thử miễn phí"
-        },
-        "testimonials": {
-          "items": [
-            {
-              "name": "Lê Thị Hà",
-              "role": "Founder Saigon Spa Chain",
-              "quote": "Chuỗi spa của em đang dùng ViAI CSKH 2 tháng. Tỉ lệ chốt lịch tăng 35%, không phải thuê thêm lễ tân ca tối.",
-              "avatarSrc": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=200&h=200&q=80"
-            },
-            {
-              "name": "Phạm Minh Thư",
-              "role": "Chủ shop thời trang TikTok",
-              "quote": "Shop em bán hàng livestream, đỉnh điểm 500 inbox/giờ. ViAI handle hết, em chỉ cần lo đơn quan trọng.",
-              "avatarSrc": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200&q=80"
-            }
-          ],
-          "heading": "Khách hàng nói gì"
-        }
-      },
-      "createdAt": "2026-05-29T22:54:02.475Z",
-      "updatedAt": "2026-06-01T11:43:17.125Z",
-      "deletedAt": null
-    },
-    {
       "id": 41,
       "title": "ViAI Video — Phần mềm sản xuất video TikTok/Reels số lượng lớn",
       "slug": "viai-video",
@@ -1847,7 +1847,7 @@
       "seoTitle": "App bán hàng đa kênh — Web + Zalo Mini App + Mobile | Vsoftware",
       "seoDescription": "App bán hàng đa kênh Vsoftware: Web + Zalo Mini App + Mobile App đồng bộ tồn kho realtime. Triển khai 6-12 tuần.",
       "seoKeywords": null,
-      "viewCount": 33,
+      "viewCount": 37,
       "focusKeyword": null,
       "seoScore": null,
       "seoGrade": null,
@@ -2106,7 +2106,7 @@
         }
       },
       "createdAt": "2026-05-29T19:13:57.731Z",
-      "updatedAt": "2026-06-01T11:43:07.674Z",
+      "updatedAt": "2026-06-02T03:58:20.490Z",
       "deletedAt": null
     },
     {
@@ -4085,7 +4085,7 @@
       "seoTitle": "Website & Landing Page — chuẩn SEO + CRM automation | Vsoftware",
       "seoDescription": "Landing Page Vsoftware: SEO chuẩn, CRM tích hợp, nuôi lead tự động. ROAS tăng 2-3x. Triển khai 2 tuần.",
       "seoKeywords": null,
-      "viewCount": 7,
+      "viewCount": 8,
       "focusKeyword": null,
       "seoScore": null,
       "seoGrade": null,
@@ -4345,7 +4345,7 @@
         }
       },
       "createdAt": "2026-05-29T19:24:03.469Z",
-      "updatedAt": "2026-06-01T11:42:02.612Z",
+      "updatedAt": "2026-06-02T18:02:02.827Z",
       "deletedAt": null
     },
     {
