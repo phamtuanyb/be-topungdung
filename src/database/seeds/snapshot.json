@@ -1,6 +1,17 @@
 {
-  "exportedAt": "2026-06-03T15:18:35.346Z",
+  "exportedAt": "2026-06-03T15:40:22.780Z",
   "users": [
+    {
+      "id": 1,
+      "email": "root@vsoftware.vn",
+      "passwordHash": "$2a$12$BLrwplRVMkNpnM7Y7Pl8ie4sGwhf1tARLJ47GLYqriTVYu9AK/hUS",
+      "fullName": "Root Admin",
+      "role": "admin",
+      "status": "active",
+      "refreshTokenHash": "$2a$10$.xqgZOXBG2MgX5bt69mxMeTxav1fs64OHYqZt0QkKIe8TMEZt7dTu",
+      "createdAt": "2026-05-27T21:08:53.537Z",
+      "updatedAt": "2026-06-03T08:38:49.238Z"
+    },
     {
       "id": 2,
       "email": "admin@example.com",
@@ -11,17 +22,6 @@
       "refreshTokenHash": "$2a$10$eNMRSVI6LBM0I3IJElnE0.snMuGiHetiiP1zZ.SJa1ykHfR/odrMi",
       "createdAt": "2026-05-28T19:00:02.042Z",
       "updatedAt": "2026-06-01T02:06:00.655Z"
-    },
-    {
-      "id": 1,
-      "email": "root@vsoftware.vn",
-      "passwordHash": "$2a$12$BLrwplRVMkNpnM7Y7Pl8ie4sGwhf1tARLJ47GLYqriTVYu9AK/hUS",
-      "fullName": "Root Admin",
-      "role": "admin",
-      "status": "active",
-      "refreshTokenHash": "$2a$10$uAjJsf6nbNw0MZvf5gUDcONi2vBpUlsdraxkjg6OJ4Gzj28TBuyce",
-      "createdAt": "2026-05-27T21:08:53.537Z",
-      "updatedAt": "2026-06-03T01:04:11.710Z"
     }
   ],
   "categories": [
@@ -2107,6 +2107,279 @@
       },
       "createdAt": "2026-05-29T19:13:57.731Z",
       "updatedAt": "2026-06-02T23:34:51.823Z",
+      "deletedAt": null
+    },
+    {
+      "id": 45,
+      "title": "Phần Mềm Marketing Đa Kênh Theo Yêu Cầu — Hệ thống vận hành marketing riêng cho SME",
+      "slug": "phan-mem-marketing-da-kenh-theo-yeu-cau",
+      "excerpt": "Xây dựng phần mềm marketing đa kênh theo nhu cầu doanh nghiệp — gom data từ Facebook, Zalo, Website về một nền tảng, tự động hóa chăm sóc lead và đo lường hiệu quả từng chiến dịch.",
+      "content": " ",
+      "thumbnail": null,
+      "categoryId": 8,
+      "authorId": 1,
+      "status": "draft",
+      "publishedAt": null,
+      "seoTitle": "Phần Mềm Marketing Đa Kênh Theo Yêu Cầu | Vsoftware",
+      "seoDescription": "Vsoftware xây dựng phần mềm marketing đa kênh riêng cho doanh nghiệp — quản lý data, chiến dịch, khách hàng và tự động hóa chăm sóc trên Facebook, Zalo, Email, SMS trong một nền tảng.",
+      "seoKeywords": "phần mềm marketing, marketing đa kênh, phần mềm marketing theo yêu cầu, marketing automation SME, hệ thống marketing doanh nghiệp",
+      "viewCount": 0,
+      "focusKeyword": null,
+      "seoScore": null,
+      "seoGrade": null,
+      "logoUrl": null,
+      "badge": "Mới",
+      "shortName": "Phần mềm Marketing",
+      "displayOrder": 0,
+      "menuGroupId": 249,
+      "productPageConfig": {
+        "faq": {
+          "items": [
+            {
+              "a": "Hệ thống có sẵn connector cho: Facebook (Lead Ads, Messenger, Page), Zalo OA, Zalo Mini App, Website form, Landing Page, Email (SMTP/SendGrid/Mailgun), SMS brandname, Google Ads, Google Analytics 4, Meta Pixel. Nếu kênh anh dùng chưa có sẵn → đội kỹ thuật sẽ xây thêm connector trong scope dự án.",
+              "q": "Vsoftware kết nối được những kênh marketing nào?"
+            },
+            {
+              "a": "Tùy phạm vi: gói Starter ~3–4 tuần, Growth ~6–8 tuần, Enterprise ~10–14 tuần. Methodology của Vsoftware chia nhỏ module + bàn giao cuốn chiếu — anh dùng được module Lead Hub trong khi Automation Engine vẫn đang được build.",
+              "q": "Mất bao lâu để setup và đưa vào vận hành?"
+            },
+            {
+              "a": "Linh hoạt: gói Starter/Growth host trên cloud Vsoftware (AWS/GCP region Singapore). Gói Enterprise có thể host on-premise tại server của doanh nghiệp, hoặc dedicated cloud riêng — phù hợp khi có data nhạy cảm hoặc tuân thủ ISO/SOC2.",
+              "q": "Hệ thống host ở đâu? On-premise hay SaaS?"
+            },
+            {
+              "a": "Có 2 phần: (1) phí hạ tầng cloud (SMS, Email, ZNS theo lượt gửi — anh trả thẳng nhà cung cấp), (2) phí maintenance Vsoftware (tùy chọn, ~5–10 triệu/tháng cho monitoring + update + hỗ trợ kỹ thuật). Nếu không cần Vsoftware maintain, anh có thể tự quản — code và database thuộc về anh.",
+              "q": "Chi phí duy trì hàng tháng có không?"
+            },
+            {
+              "a": "Có. Mọi gói đều bao gồm session training trực tiếp (Starter 1 buổi, Growth 3 buổi, Enterprise unlimited trong tháng đầu). Ngoài ra có tài liệu hướng dẫn video + Zalo OA hỗ trợ 24/7 trong thời gian bảo hành.",
+              "q": "Đội bên anh có training cho marketing team không?"
+            }
+          ],
+          "heading": "Câu hỏi thường gặp"
+        },
+        "hero": {
+          "statBig": "1 nền tảng",
+          "statSub": "Gom Facebook + Zalo + Website + Email + SMS",
+          "tagline": "Không chỉ là phần mềm marketing — mà là hệ thống vận hành marketing riêng cho doanh nghiệp. Vsoftware xây giải pháp theo đúng quy trình, kênh bán hàng và mục tiêu tăng trưởng của bạn.",
+          "ctaPrimary": {
+            "href": "/contact",
+            "text": "Tư vấn miễn phí 30 phút"
+          },
+          "ctaSecondary": {
+            "href": "#features",
+            "text": "Xem demo hệ thống"
+          }
+        },
+        "pricing": {
+          "plans": [
+            {
+              "name": "Starter",
+              "price": "9.900.000đ",
+              "period": "/ dự án trọn gói",
+              "ctaHref": "/contact",
+              "ctaText": "Nhận tư vấn",
+              "features": [
+                "Lead Hub (2 kênh)",
+                "CDP cơ bản — 5.000 contact",
+                "10 workflow automation",
+                "Email + SMS gửi từ dashboard",
+                "Báo cáo cơ bản",
+                "Bảo hành 6 tháng + training 1 buổi"
+              ],
+              "subtitle": "SME 10–30 nhân sự, 1 kênh chính (FB hoặc Zalo)"
+            },
+            {
+              "name": "Growth",
+              "badge": "PHỔ BIẾN NHẤT",
+              "price": "29.900.000đ",
+              "period": "/ dự án trọn gói",
+              "ctaHref": "/contact",
+              "ctaText": "Đặt lịch khảo sát",
+              "featured": true,
+              "features": [
+                "Lead Hub đầy đủ kênh (FB + Zalo + Web + SMS + Email)",
+                "CDP nâng cao — 50.000 contact, phân khúc động",
+                "Unlimited workflow + A/B test",
+                "Zalo ZNS, Facebook broadcast, Email mass",
+                "Analytics đầy đủ + attribution model",
+                "Tích hợp CRM/POS có sẵn",
+                "Bảo hành 12 tháng + training 3 buổi"
+              ],
+              "subtitle": "SME 30–100 nhân sự, multi-channel"
+            },
+            {
+              "name": "Enterprise",
+              "price": "89.900.000đ",
+              "period": "/ dự án trọn gói",
+              "ctaHref": "/contact",
+              "ctaText": "Gặp chuyên gia",
+              "features": [
+                "Full custom theo quy trình riêng",
+                "CDP unlimited contact + AI scoring",
+                "Workflow + AI Agent chăm sóc tự động",
+                "Multi-brand, multi-region",
+                "API + Webhook + SSO doanh nghiệp",
+                "On-premise hoặc dedicated cloud",
+                "Bảo hành 18 tháng + SLA + training team"
+              ],
+              "subtitle": "SME 100+ / Tập đoàn / Chuỗi đa chi nhánh"
+            }
+          ],
+          "heading": "Báo giá theo gói — minh bạch, không phí ẩn",
+          "description": "3 mức tham khảo để chủ động ngân sách. Báo giá cuối xác nhận sau buổi khảo sát nhu cầu cụ thể của doanh nghiệp bạn."
+        },
+        "features": {
+          "items": [
+            {
+              "title": "Lead Hub — gom lead đa kênh về một nơi",
+              "bullets": [
+                "Kết nối Facebook Lead Ads, Messenger, comment auto-capture",
+                "Kết nối Zalo OA, Zalo Mini App, chatbot Zalo",
+                "Kết nối form Website, Landing Page, popup capture",
+                "Kết nối SMS, hotline (CSKH inbound)",
+                "Tất cả lead đổ về 1 dashboard với timeline rõ ràng"
+              ]
+            },
+            {
+              "title": "Customer Data Platform (CDP)",
+              "bullets": [
+                "Hồ sơ khách 360°: hành vi web, tương tác email, lịch sử mua",
+                "Tag tự động theo nguồn, ngành, mức chi tiêu, giai đoạn phễu",
+                "Phân khúc động: tự cập nhật khi hành vi khách thay đổi",
+                "Tích hợp dữ liệu từ CRM, ecommerce, POS sẵn có"
+              ]
+            },
+            {
+              "title": "Marketing Automation Engine",
+              "bullets": [
+                "Workflow kéo-thả: thiết kế chăm sóc theo phễu (TOFU/MOFU/BOFU)",
+                "Trigger theo hành vi: xem trang giá → gửi ưu đãi, bỏ giỏ → remind",
+                "A/B test message tự động, tối ưu theo conversion rate",
+                "Drip campaign email + SMS + Zalo theo lịch / theo điều kiện"
+              ]
+            },
+            {
+              "title": "Multi-channel Outreach từ 1 dashboard",
+              "bullets": [
+                "Gửi Email mass với template kéo-thả, personalize từng tên/ngành",
+                "Gửi SMS brandname, Zalo ZNS, Facebook broadcast",
+                "Lịch hậu mãi, mời event, mời mua lại — set 1 lần chạy mãi",
+                "Đồng bộ template thương hiệu, tránh sai brand voice"
+              ]
+            },
+            {
+              "title": "Analytics & Attribution",
+              "bullets": [
+                "Dashboard realtime: CPL, ROAS, CTR, conversion rate theo kênh",
+                "Attribution model: first-touch / last-touch / linear / time-decay",
+                "Funnel analysis: drop-off ở step nào, optimize step đó",
+                "Báo cáo tự động gửi email/Zalo cho lãnh đạo mỗi tuần"
+              ]
+            },
+            {
+              "title": "Mở rộng theo nhu cầu — API & Integration",
+              "bullets": [
+                "REST API + Webhook đầy đủ cho mọi entity (lead, contact, campaign)",
+                "Tích hợp sẵn: MISA, KiotViet, Sapo, Haravan, Shopify, GA4, Pixel",
+                "Single Sign-On (SSO) với Google Workspace / Microsoft 365",
+                "Hosting linh hoạt: cloud Vsoftware hoặc on-premise tùy chọn"
+              ]
+            }
+          ],
+          "heading": "Bên trong hệ thống marketing Vsoftware"
+        },
+        "solutions": {
+          "items": [
+            {
+              "text": "Gom lead từ tất cả kênh (Facebook, Zalo OA, Website, Landing Page, SMS) về một nơi duy nhất",
+              "iconName": "GitMerge"
+            },
+            {
+              "text": "Quản lý data khách hàng tập trung — phân loại theo hành vi, giai đoạn phễu, mức quan tâm",
+              "iconName": "Users"
+            },
+            {
+              "text": "Tự động phân loại + chấm điểm lead, gửi đúng người vào đúng workflow chăm sóc",
+              "iconName": "Zap"
+            },
+            {
+              "text": "Đa kênh outreach: Facebook, Zalo OA, Email, SMS, Mini App — gửi từ một dashboard duy nhất",
+              "iconName": "Send"
+            },
+            {
+              "text": "Báo cáo realtime ROAS, CPL, tỷ lệ chuyển đổi theo từng chiến dịch và từng kênh",
+              "iconName": "BarChart3"
+            },
+            {
+              "text": "Kết nối thẳng marketing với sales — lead nóng tự đẩy vào CRM của đội bán",
+              "iconName": "Workflow"
+            }
+          ],
+          "heading": "Vsoftware xây hệ thống marketing riêng — đúng nhu cầu, đúng quy trình của bạn",
+          "ctaPrimary": {
+            "href": "/contact",
+            "text": "Đặt lịch tư vấn miễn phí"
+          },
+          "ctaSecondary": {
+            "href": "/tin-tuc",
+            "text": "Xem case study"
+          }
+        },
+        "painPoints": {
+          "items": [
+            {
+              "title": "Data khách hàng phân tán nhiều công cụ",
+              "iconName": "Database",
+              "description": "Lead Facebook nằm trong Messenger, Zalo OA chỗ khác, Google Sheet chỗ khác. Khi cần tổng hợp, marketing mất cả ngày — và vẫn sai số."
+            },
+            {
+              "title": "Lead rơi giữa marketing và sales",
+              "iconName": "AlertTriangle",
+              "description": "Marketing chạy được 100 lead, sales chỉ chốt 5. Không ai biết 95 lead còn lại đi đâu, vì không có hệ thống bàn giao."
+            },
+            {
+              "title": "Không đo được hiệu quả từng kênh",
+              "iconName": "TrendingDown",
+              "description": "Tốn 50 triệu quảng cáo Facebook + Zalo + Google. Không biết kênh nào ra đơn, kênh nào đốt tiền. Quyết định bằng cảm tính."
+            },
+            {
+              "title": "Chăm sóc khách thủ công — không scale được",
+              "iconName": "Hourglass",
+              "description": "Mỗi khách phải gửi tin nhắn riêng, email riêng. Khi data lên 5.000 khách, không ai làm nổi. Lead nguội dần và mất."
+            }
+          ],
+          "heading": "SME Việt đang gặp những vấn đề này trong marketing?"
+        },
+        "trustStrip": {
+          "text": "⭐ Phù hợp cho SME 10–200 nhân sự — kết nối Facebook, Zalo OA, Website, Email, SMS, CRM trong 1 hệ thống"
+        },
+        "stickyBottom": {
+          "enabled": true,
+          "priceLabel": "Báo giá từ 9.9 triệu",
+          "ctaPrimaryHref": "/contact",
+          "ctaPrimaryText": "Tư vấn miễn phí",
+          "ctaSecondaryHref": "/contact",
+          "ctaSecondaryText": "Đặt lịch demo"
+        },
+        "testimonials": {
+          "items": [
+            {
+              "name": "Anh Nguyễn Văn Hùng",
+              "role": "Founder, chuỗi spa 8 chi nhánh tại TP.HCM",
+              "quote": "Trước đây mỗi tháng team marketing mất 3 ngày tổng hợp lead từ 5 kênh khác nhau. Sau khi Vsoftware làm hệ thống riêng, mọi lead tự đổ về một chỗ, tự phân loại — team tập trung vào chốt deal thay vì copy-paste data."
+            },
+            {
+              "name": "Chị Trần Thu Hà",
+              "role": "Marketing Director, công ty F&B 50 nhân sự",
+              "quote": "ROAS Facebook của bên mình tăng từ 2.1 lên 3.8 sau 2 tháng nhờ attribution model của Vsoftware. Lần đầu thấy rõ kênh nào sinh tiền, kênh nào đốt tiền — quyết định cắt cái nào, tăng cái nào rất nhanh."
+            }
+          ],
+          "heading": "Khách hàng SME đã chuyển đổi thành công"
+        }
+      },
+      "createdAt": "2026-06-03T08:38:49.494Z",
+      "updatedAt": "2026-06-03T08:38:49.494Z",
       "deletedAt": null
     },
     {
