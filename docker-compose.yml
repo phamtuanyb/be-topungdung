@@ -23,7 +23,9 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
       POSTGRES_DB: ${DB_DATABASE:-news_db}
     ports:
-      - "${DB_PORT_HOST:-5433}:5432"
+      # SECURITY: bind ONLY to 127.0.0.1 — Docker bypass UFW filter, nếu để 0.0.0.0
+      # thì hacker từ internet vẫn vào được DB. Sửa từ "5433:5432" → "127.0.0.1:5433:5432".
+      - "127.0.0.1:${DB_PORT_HOST:-5433}:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
