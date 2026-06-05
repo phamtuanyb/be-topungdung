@@ -41,6 +41,15 @@ import { UsersModule } from './modules/users/users.module';
         entities: [User, Category, Post, Media, Menu, MenuItem, ContactSubmission, SiteSettings],
         synchronize: config.get('NODE_ENV') !== 'production',
         logging: config.get('NODE_ENV') === 'development',
+        retryAttempts: 20,
+        retryDelay: 3000,
+        keepConnectionAlive: true,
+        autoLoadEntities: false,
+        extra: {
+          max: 20,
+          idleTimeoutMillis: 30000,
+          connectionTimeoutMillis: 5000,
+        },
       }),
     }),
 
