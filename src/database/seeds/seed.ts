@@ -1,4 +1,4 @@
-import { config } from 'dotenv';
+﻿import { config } from 'dotenv';
 import { DataSource } from 'typeorm';
 import * as bcrypt from 'bcryptjs';
 import { Category, CategoryStatus } from '../../entities/category.entity';
@@ -54,7 +54,7 @@ const NAV_MENU_ITEMS: SeedMenuItem[] = [
       { label: 'Vận hành & quản trị', url: '#' },
     ],
   },
-  { label: 'Liên hệ', url: '/contact' },
+  { label: 'Liên hệ', url: '/lien-he' },
 ];
 
 // ── Mapping migration: slug post → label nhóm cha tương ứng ──────────────────

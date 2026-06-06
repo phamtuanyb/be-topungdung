@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-06-03T15:52:33.071Z",
+  "exportedAt": "2026-06-06T02:19:30.609Z",
   "users": [
     {
       "id": 1,
@@ -8,9 +8,9 @@
       "fullName": "Root Admin",
       "role": "admin",
       "status": "active",
-      "refreshTokenHash": "$2a$10$ngW622kVJ4LXAcS/wa86E.xL3ZxOp9G2frYrFJmJcsTYnjKkzMEZi",
+      "refreshTokenHash": "$2a$10$o8mT5fdA3.DP1fJtWopjYONOWPbHoMMSg0HUeVFGxY3TgEZa9B6Ma",
       "createdAt": "2026-05-27T21:08:53.537Z",
-      "updatedAt": "2026-06-03T08:51:49.022Z"
+      "updatedAt": "2026-06-05T19:16:15.209Z"
     },
     {
       "id": 2,
