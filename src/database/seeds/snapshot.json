@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-06-06T05:38:32.326Z",
+  "exportedAt": "2026-06-07T16:59:32.300Z",
   "users": [
     {
       "id": 1,
@@ -7018,16 +7018,28 @@
           "logoUrl": "http://localhost:3001/uploads/031cabef-9fa3-4b09-b359-d6801250250e.webp",
           "socials": [
             {
-              "href": "https://www.facebook.com/vsoftwarevietnam",
+              "href": "#",
               "type": "facebook"
             },
             {
               "href": "#",
+              "type": "youtube"
+            },
+            {
+              "href": "https://zalo.me/vsoftware",
               "type": "zalo"
             },
             {
               "href": "#",
-              "type": "youtube"
+              "type": "tiktok"
+            },
+            {
+              "href": "#",
+              "type": "instagram"
+            },
+            {
+              "href": "#",
+              "type": "linkedin"
             }
           ],
           "tagline": "Phần mềm theo yêu cầu, vừa vặn cho doanh nghiệp Việt. Giải quyết bài toán thực chiến — không phải trang trí công nghệ.",
