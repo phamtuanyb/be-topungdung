@@ -1,6 +1,6 @@
 # Hướng dẫn deploy VPS với PM2 (cho người không chuyên)
 
-File này hướng dẫn deploy Vsoftware lên server VPS chạy Linux (Ubuntu/Debian) bằng PM2.
+File này hướng dẫn deploy TopỨngDụng lên server VPS chạy Linux (Ubuntu/Debian) bằng PM2.
 **Toàn bộ command đều copy-paste được, không cần biết code.**
 
 ---
@@ -19,7 +19,7 @@ File này hướng dẫn deploy Vsoftware lên server VPS chạy Linux (Ubuntu/D
 ## ✅ Yêu cầu trước khi bắt đầu
 
 - VPS chạy Ubuntu 20.04+ hoặc Debian 11+
-- Domain `vsoftware.vn` đã trỏ về IP server
+- Domain `topungdung.net` đã trỏ về IP server
 - Bạn có quyền SSH vào server (qua key hoặc password)
 - Đã `git push` code mới lên git (xong qua `.\sync.ps1` trên máy bạn)
 
@@ -51,9 +51,9 @@ sudo apt install -y postgresql postgresql-contrib
 
 # Tạo user và database
 sudo -u postgres psql <<EOF
-CREATE USER vsoftware WITH PASSWORD 'doi_password_manh_o_day';
-CREATE DATABASE news_db OWNER vsoftware;
-GRANT ALL PRIVILEGES ON DATABASE news_db TO vsoftware;
+CREATE USER topungdung WITH PASSWORD 'doi_password_manh_o_day';
+CREATE DATABASE news_db OWNER topungdung;
+GRANT ALL PRIVILEGES ON DATABASE news_db TO topungdung;
 EOF
 ```
 
@@ -81,22 +81,22 @@ sudo apt install -y nginx certbot python3-certbot-nginx
 
 ```bash
 # Tạo folder gốc
-sudo mkdir -p /srv/vsoftware
-sudo chown -R $USER:$USER /srv/vsoftware
-cd /srv/vsoftware
+sudo mkdir -p /srv/topungdung
+sudo chown -R $USER:$USER /srv/topungdung
+cd /srv/topungdung
 
 # Clone BE
-git clone https://github.com/VitechGroup/api-vsoftware.git be-vsoftware
+git clone <địa-chỉ-kho-BE> be-topungdung
 
 # Clone FE (đổi URL nếu khác)
-git clone <FE_REPO_URL> fe-vsoftware
+git clone <FE_REPO_URL> fe-topungdung
 ```
 
 Sau bước này, cấu trúc sẽ là:
 ```
-/srv/vsoftware/
-├── be-vsoftware/
-└── fe-vsoftware/
+/srv/topungdung/
+├── be-topungdung/
+└── fe-topungdung/
 ```
 
 ---
@@ -106,7 +106,7 @@ Sau bước này, cấu trúc sẽ là:
 ### 3.1 — BE `.env`
 
 ```bash
-cd /srv/vsoftware/be-vsoftware
+cd /srv/topungdung/be-topungdung
 cp .env.example .env
 nano .env
 ```
@@ -114,7 +114,7 @@ nano .env
 Sửa các giá trị sau (các cái còn lại giữ nguyên):
 
 ```ini
-DB_USERNAME=vsoftware
+DB_USERNAME=topungdung
 DB_PASSWORD=doi_password_manh_o_day    # password đã set ở bước 1.2
 DB_DATABASE=news_db
 DB_HOST=localhost
@@ -123,8 +123,8 @@ DB_PORT=5432
 JWT_SECRET=<sinh chuỗi random dài 64 ký tự — dùng: openssl rand -hex 32>
 JWT_REFRESH_SECRET=<sinh chuỗi random khác — dùng: openssl rand -hex 32>
 
-PUBLIC_URL=https://api.vsoftware.vn
-CORS_ORIGINS=https://vsoftware.vn
+PUBLIC_URL=https://api.topungdung.net
+CORS_ORIGINS=https://topungdung.net
 
 # SMTP (nếu muốn nhận email form khách gửi)
 EMAIL_ENABLED=true
@@ -133,7 +133,7 @@ SMTP_PORT=465
 SMTP_USER=your-email@gmail.com
 SMTP_PASSWORD=app-password-google
 SMTP_FROM_ADDRESS=your-email@gmail.com
-CONTACT_RECEIVE_EMAIL=ban@vsoftware.vn
+CONTACT_RECEIVE_EMAIL=ban@topungdung.net
 ```
 
 Lưu file: `Ctrl+O` → `Enter` → `Ctrl+X`.
@@ -141,16 +141,16 @@ Lưu file: `Ctrl+O` → `Enter` → `Ctrl+X`.
 ### 3.2 — FE `.env.production`
 
 ```bash
-cd /srv/vsoftware/fe-vsoftware
+cd /srv/topungdung/fe-topungdung
 nano .env.production
 ```
 
 Nội dung:
 
 ```ini
-NEXT_PUBLIC_API_URL=https://api.vsoftware.vn
-NEXT_PUBLIC_SITE_URL=https://vsoftware.vn
-NEXT_PUBLIC_SITE_NAME=Vsoftware
+NEXT_PUBLIC_API_URL=https://api.topungdung.net
+NEXT_PUBLIC_SITE_URL=https://topungdung.net
+NEXT_PUBLIC_SITE_NAME=TopỨngDụng
 ```
 
 Lưu file (Ctrl+O, Enter, Ctrl+X).
@@ -162,7 +162,7 @@ Lưu file (Ctrl+O, Enter, Ctrl+X).
 ### 4.1 — BE
 
 ```bash
-cd /srv/vsoftware/be-vsoftware
+cd /srv/topungdung/be-topungdung
 chmod +x deploy-pm2.sh backup-db.sh setup-backup-cron.sh
 bash deploy-pm2.sh
 ```
@@ -177,21 +177,21 @@ Script sẽ tự động:
 
 Kiểm tra:
 ```bash
-pm2 status               # phải thấy vsoftware-api status: online
+pm2 status               # phải thấy topungdung-api status: online
 curl http://localhost:3001/docs    # phải trả về HTML Swagger
 ```
 
 ### 4.2 — FE
 
 ```bash
-cd /srv/vsoftware/fe-vsoftware
+cd /srv/topungdung/fe-topungdung
 chmod +x deploy-pm2.sh
 bash deploy-pm2.sh
 ```
 
 Kiểm tra:
 ```bash
-pm2 status               # phải có cả vsoftware-fe và vsoftware-api status: online
+pm2 status               # phải có cả topungdung-fe và topungdung-api status: online
 curl http://localhost:3000   # phải trả về HTML
 ```
 
@@ -210,7 +210,7 @@ Sau lệnh này, PM2 sẽ nhớ và tự khởi động lại các process nếu
 ### 5.1 — Tạo file nginx config
 
 ```bash
-sudo nano /etc/nginx/sites-available/vsoftware
+sudo nano /etc/nginx/sites-available/topungdung
 ```
 
 Paste nội dung sau:
@@ -219,7 +219,7 @@ Paste nội dung sau:
 # Frontend
 server {
     listen 80;
-    server_name vsoftware.vn www.vsoftware.vn;
+    server_name topungdung.net www.topungdung.net;
 
     client_max_body_size 20M;
 
@@ -239,7 +239,7 @@ server {
 # Backend API
 server {
     listen 80;
-    server_name api.vsoftware.vn;
+    server_name api.topungdung.net;
 
     client_max_body_size 20M;
 
@@ -257,7 +257,7 @@ server {
 Lưu file. Bật config:
 
 ```bash
-sudo ln -s /etc/nginx/sites-available/vsoftware /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/topungdung /etc/nginx/sites-enabled/
 sudo rm /etc/nginx/sites-enabled/default      # bỏ config mặc định
 sudo nginx -t                                  # phải in: syntax is ok, test is successful
 sudo systemctl reload nginx
@@ -266,19 +266,19 @@ sudo systemctl reload nginx
 ### 5.2 — Cài HTTPS với Let's Encrypt
 
 ```bash
-sudo certbot --nginx -d vsoftware.vn -d www.vsoftware.vn -d api.vsoftware.vn
+sudo certbot --nginx -d topungdung.net -d www.topungdung.net -d api.topungdung.net
 ```
 
 Certbot sẽ hỏi vài câu (email, agree terms, redirect HTTP→HTTPS — chọn YES).
 
-**Kiểm tra:** mở browser, truy cập `https://vsoftware.vn` → phải thấy website chạy với 🔒 HTTPS.
+**Kiểm tra:** mở browser, truy cập `https://topungdung.net` → phải thấy website chạy với 🔒 HTTPS.
 
 ---
 
 ## Bước 6 — Cài backup DB tự động (mỗi 5h)
 
 ```bash
-cd /srv/vsoftware/be-vsoftware
+cd /srv/topungdung/be-topungdung
 bash setup-backup-cron.sh
 ```
 
@@ -297,13 +297,13 @@ Khi anh sửa code/data ở local rồi `.\sync.ps1` xong, lên server gõ:
 
 ### Update BE
 ```bash
-cd /srv/vsoftware/be-vsoftware
+cd /srv/topungdung/be-topungdung
 bash deploy-pm2.sh
 ```
 
 ### Update FE
 ```bash
-cd /srv/vsoftware/fe-vsoftware
+cd /srv/topungdung/fe-topungdung
 bash deploy-pm2.sh
 ```
 
@@ -321,11 +321,11 @@ bash deploy-pm2.sh --force-reset   # CẨN THẬN: mất data prod-only
 
 ```bash
 pm2 status                       # xem 2 process có online không
-pm2 logs vsoftware-api           # log BE realtime
-pm2 logs vsoftware-fe            # log FE realtime
+pm2 logs topungdung-api           # log BE realtime
+pm2 logs topungdung-fe            # log FE realtime
 pm2 monit                        # dashboard RAM/CPU
-pm2 restart vsoftware-api        # restart BE (có downtime nhẹ)
-pm2 reload vsoftware-api         # reload BE (không downtime)
+pm2 restart topungdung-api        # restart BE (có downtime nhẹ)
+pm2 reload topungdung-api         # reload BE (không downtime)
 ```
 
 ```bash
@@ -341,8 +341,8 @@ free -h                          # còn bao nhiêu RAM
 
 ### Website hiện 500 sau khi deploy
 ```bash
-pm2 logs vsoftware-api --lines 100      # xem error BE
-pm2 logs vsoftware-fe --lines 100       # xem error FE
+pm2 logs topungdung-api --lines 100      # xem error BE
+pm2 logs topungdung-fe --lines 100       # xem error FE
 ```
 
 Nếu thấy lỗi DB connection → check `.env` đúng password chưa.
@@ -351,10 +351,10 @@ Nếu thấy lỗi build → có thể code mới bị lỗi syntax, rollback b�
 ### Mất dữ liệu sau deploy
 Restore từ backup gần nhất:
 ```bash
-cd /srv/vsoftware/be-vsoftware/backups
+cd /srv/topungdung/be-topungdung/backups
 ls -lt | head     # tìm file gần nhất
-gunzip < dump-XXX.sql.gz | psql -h localhost -U vsoftware -d news_db
-pm2 restart vsoftware-api
+gunzip < dump-XXX.sql.gz | psql -h localhost -U topungdung -d news_db
+pm2 restart topungdung-api
 ```
 
 ### Nginx báo 502 Bad Gateway

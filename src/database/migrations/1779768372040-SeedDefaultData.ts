@@ -1,18 +1,36 @@
+import { randomBytes } from 'crypto';
+import * as bcrypt from 'bcryptjs';
 import { MigrationInterface, QueryRunner } from 'typeorm';
 
-// Password hash cho "vitechgroup" (bcrypt rounds=12)
-const ROOT_PASSWORD_HASH = '$2a$12$BLrwplRVMkNpnM7Y7Pl8ie4sGwhf1tARLJ47GLYqriTVYu9AK/hUS';
+/**
+ * Mật khẩu admin KHÔNG được ghi trong mã nguồn.
+ *
+ * Trước đây tệp này chứa sẵn chuỗi băm kèm chú thích nói rõ mật khẩu gốc, nên
+ * bất kỳ ai đọc được repo là đăng nhập được vào trang quản trị.
+ *
+ * Giờ mật khẩu lấy từ biến môi trường `SEED_ROOT_PASSWORD`. Không khai biến thì
+ * tài khoản vẫn được tạo nhưng với chuỗi băm ngẫu nhiên không ai đăng nhập được
+ * — buộc người dựng hệ thống phải chủ động đặt lại mật khẩu.
+ */
+function rootPasswordHash(): string {
+  const pw = process.env.SEED_ROOT_PASSWORD;
+  if (pw) return bcrypt.hashSync(pw, 12);
+  // Không có mật khẩu nào khớp được chuỗi băm sinh từ dữ liệu ngẫu nhiên này.
+  return bcrypt.hashSync(randomBytes(32).toString('hex'), 12);
+}
 
 export class SeedDefaultData1779768372040 implements MigrationInterface {
   name = 'SeedDefaultData1779768372040';
 
   public async up(queryRunner: QueryRunner): Promise<void> {
     // ── Admin mặc định ──────────────────────────────────────────────────────
-    await queryRunner.query(`
-      INSERT INTO "users" ("email", "passwordHash", "fullName", "role", "status")
-      VALUES ('root@vsoftware.vn', '${ROOT_PASSWORD_HASH}', 'Root Admin', 'admin', 'active')
-      ON CONFLICT ("email") DO NOTHING
-    `);
+    const email = process.env.SEED_ROOT_EMAIL || 'admin@topungdung.net';
+    await queryRunner.query(
+      `INSERT INTO "users" ("email", "passwordHash", "fullName", "role", "status")
+       VALUES ($1, $2, 'TopỨngDụng Admin', 'admin', 'active')
+       ON CONFLICT ("email") DO NOTHING`,
+      [email, rootPasswordHash()],
+    );
 
     // ── Danh mục mặc định ───────────────────────────────────────────────────
     await queryRunner.query(`
@@ -66,6 +84,9 @@ export class SeedDefaultData1779768372040 implements MigrationInterface {
     await queryRunner.query(`DELETE FROM "menu_items" WHERE "menuId" IN (SELECT id FROM "menus" WHERE slug = 'nav-menu')`);
     await queryRunner.query(`DELETE FROM "menus" WHERE "slug" = 'nav-menu'`);
     await queryRunner.query(`DELETE FROM "categories" WHERE "slug" IN ('tin-tuc','cong-nghe','kinh-te','the-thao','giai-tri','suc-khoe')`);
-    await queryRunner.query(`DELETE FROM "users" WHERE "email" = 'root@vsoftware.vn'`);
+    // Xoá đúng tài khoản mà phần up đã tạo, theo cùng biến môi trường.
+    await queryRunner.query(`DELETE FROM "users" WHERE "email" = $1`, [
+      process.env.SEED_ROOT_EMAIL || 'admin@topungdung.net',
+    ]);
   }
 }

@@ -35,10 +35,15 @@ export class MediaService {
       .toFile(filePath);
 
     const stat = fs.statSync(filePath);
-    const publicUrl = this.configService.get<string>('PUBLIC_URL', 'http://localhost:3001');
 
     const media = this.mediaRepo.create({
-      url: `${publicUrl}/uploads/${filename}`,
+      // Lưu đường dẫn TƯƠNG ĐỐI, không kèm host.
+      //
+      // Trước đây chỗ này ghép sẵn PUBLIC_URL vào, nên host bị đóng băng vào dữ
+      // liệu ngay lúc tải lên: đổi tên miền hay chuyển sang CDN là mọi ảnh cũ
+      // chết, phải chạy SQL sửa lại từng dòng. Frontend nhận "/uploads/<tệp>"
+      // rồi tự chuyển tiếp về backend qua rewrite trong next.config.
+      url: `/uploads/${filename}`,
       fileName: filename,
       mimeType: 'image/webp',
       size: stat.size,
@@ -76,10 +81,10 @@ export class MediaService {
       .toFile(filePath);
 
     const stat = fs.statSync(filePath);
-    const publicUrl = this.configService.get<string>('PUBLIC_URL', 'http://localhost:3001');
 
     const media = this.mediaRepo.create({
-      url: `${publicUrl}/uploads/${filename}`,
+      // Đường dẫn tương đối — xem ghi chú ở saveUpload phía trên.
+      url: `/uploads/${filename}`,
       fileName: filename,
       mimeType: 'image/webp',
       size: stat.size,

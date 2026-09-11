@@ -4,10 +4,12 @@ node_modules/
 # Build output
 dist/
 
-# Environment
+# Environment — chặn MỌI biến thể, chỉ chừa tệp mẫu.
+# Mẫu cũ (.env, .env.local, .env.*.local) không bắt được những tên như
+# ".env.bak-before-db", mà tệp đó chứa đủ JWT_SECRET, SMTP_PASSWORD, DB_PASSWORD.
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
 
 # Logs
 logs/
@@ -25,3 +27,6 @@ Thumbs.db
 
 # TypeScript
 *.tsbuildinfo
+
+# Bản dump CSDL sinh tự động — không đưa vào repo
+src/database/seeds/snapshot.json

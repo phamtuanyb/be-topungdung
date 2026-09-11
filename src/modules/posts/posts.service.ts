@@ -5,7 +5,7 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { Repository, SelectQueryBuilder } from 'typeorm';
 import { generateSlug } from '../../common/utils/slug.util';
 import { Category } from '../../entities/category.entity';
 import { Post, PostStatus } from '../../entities/post.entity';
@@ -24,6 +24,122 @@ export class PostsService {
     @InjectRepository(Category) private categoryRepo: Repository<Category>,
     private seoService: SeoService,
   ) {}
+
+  // ─── TÌM KIẾM ─────────────────────────────────────────────────────────────
+
+  /**
+   * Gom các trường mô tả một ứng dụng thành một chuỗi để dò từ khoá.
+   * `unaccent` cho phép gõ không dấu ("hop truc tuyen") vẫn ra kết quả.
+   */
+  private static readonly S_TITLE = `unaccent(lower(
+    coalesce(post.title,'') || ' ' || coalesce(post."shortName",'')
+  ))`;
+
+  /** Từ khoá SEO là nơi mô tả chủ đề sát nhất, nên được tính điểm cao. */
+  private static readonly S_KEYS = `unaccent(lower(
+    coalesce(post."seoKeywords",'') || ' ' || coalesce(post."focusKeyword",'')
+  ))`;
+
+  private static readonly S_META = `unaccent(lower(
+    coalesce(post.title,'') || ' ' || coalesce(post."shortName",'') || ' ' ||
+    coalesce(post.excerpt,'') || ' ' || coalesce(post."seoKeywords",'') || ' ' ||
+    coalesce(post."focusKeyword",'') || ' ' || coalesce(post."seoDescription",'') || ' ' ||
+    coalesce(category.name,'') || ' ' ||
+    coalesce(post."productPageConfig"->'app'->>'tagline','') || ' ' ||
+    coalesce(post."productPageConfig"->'app'->>'kind','')
+  ))`;
+
+  private static readonly S_BODY = `unaccent(lower(coalesce(post.content,'')))`;
+
+  /**
+   * Từ đồng nghĩa, khoá viết KHÔNG DẤU thường.
+   *
+   * Người Việt tìm "chỉnh sửa video" nhưng bài viết ghi "dựng video" hoặc
+   * "Video Editor" — lệch từ vựng khiến CapCut không ra kết quả dù là ứng dụng
+   * dựng video phổ biến nhất.
+   *
+   * Nguyên tắc chọn: chỉ nhận từ KHÔNG bị trùng nghĩa khi bỏ dấu. Ví dụ không
+   * dùng "dung" làm từ đồng nghĩa cho "chỉnh sửa", vì bỏ dấu thì "dựng" trùng
+   * với "dùng", "sử dụng", "dung lượng" — sẽ khớp bừa hàng loạt bài.
+   */
+  private static readonly SYNONYMS: Record<string, string[]> = {
+    chinh: ['edit'],
+    sua: ['edit'],
+    diet: ['quet'],
+    virus: ['antivirus'],
+    khau: ['password'],
+    nen: ['zip'],
+    hop: ['meeting'],
+  };
+
+  /**
+   * Tìm theo từ khoá thay vì chỉ khớp tiêu đề.
+   *
+   * Trước đây chỉ dò `title` và `excerpt`, nên những truy vấn rất đời thường như
+   * "nén file", "quản lý mật khẩu", "diệt virus" đều trả về 0 kết quả.
+   *
+   * Cách làm: tách truy vấn thành từng từ, bài phải chứa ĐỦ mọi từ (ở metadata
+   * hoặc trong nội dung) thì mới được lấy. Sau đó xếp theo điểm liên quan —
+   * khớp ở tiêu đề đứng trên khớp ở từ khoá, khớp ở nội dung xếp cuối vì rất
+   * rộng (riêng "ghi chú" đã xuất hiện trong 420/423 bài).
+   */
+  private applySearch(
+    qb: SelectQueryBuilder<Post>,
+    search: string,
+    sortBy: string,
+    sortOrder: 'ASC' | 'DESC',
+  ) {
+    const { S_TITLE, S_KEYS, S_META, S_BODY } = PostsService;
+
+    // Giới hạn 6 từ: đủ cho mọi truy vấn thật, tránh câu SQL phình vô hạn.
+    const terms = search.toLowerCase().split(/\s+/).filter(Boolean).slice(0, 6);
+    if (!terms.length) return;
+
+    const params: Record<string, string> = { phrase: `%${search}%` };
+    const musts: string[] = [];
+
+    terms.forEach((t, i) => {
+      params[`t${i}`] = `%${t}%`;
+
+      // Mỗi từ khớp chính nó HOẶC một từ đồng nghĩa. Từ đồng nghĩa tra theo
+      // dạng không dấu nên phải bỏ dấu từ khoá trước khi tra bảng.
+      const key = t.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd');
+      const alts = PostsService.SYNONYMS[key] ?? [];
+      const ors = [`${S_META} LIKE unaccent(lower(:t${i}))`];
+
+      alts.forEach((alt, j) => {
+        params[`s${i}_${j}`] = `%${alt}%`;
+        ors.push(`${S_META} LIKE unaccent(lower(:s${i}_${j}))`);
+      });
+
+      musts.push(`(${ors.join(' OR ')})`);
+    });
+
+    // Lọc CHỈ theo metadata: bài phải chứa đủ mọi từ trong tiêu đề, từ khoá,
+    // mô tả hoặc tên danh mục. Nội dung bài không tham gia lọc.
+    //
+    // Lý do: tiếng Việt có quá nhiều từ phổ thông ("ghi", "chú", "quản", "lý")
+    // nằm rải rác khắp các bài. Khi cho nội dung tham gia lọc, truy vấn "ghi chú"
+    // trả về 420/423 bài — tổng số vô nghĩa và trang 2 trở đi toàn rác.
+    // Bỏ nội dung ra thì còn 74 bài, và đo trên các truy vấn thật thì không
+    // truy vấn nào bị rơi về 0. Nội dung vẫn được dùng để CHẤM ĐIỂM bên dưới.
+    qb.andWhere(`(${musts.join(' AND ')})`, params);
+
+    const relevance = [
+      `(CASE WHEN ${S_TITLE} LIKE unaccent(lower(:phrase)) THEN 100 ELSE 0 END)`,
+      `(CASE WHEN ${S_KEYS}  LIKE unaccent(lower(:phrase)) THEN 50  ELSE 0 END)`,
+      `(CASE WHEN ${S_META}  LIKE unaccent(lower(:phrase)) THEN 25  ELSE 0 END)`,
+      `(CASE WHEN ${S_BODY}  LIKE unaccent(lower(:phrase)) THEN 5   ELSE 0 END)`,
+      // Cộng thêm cho từng từ khớp ở tiêu đề, để truy vấn nhiều từ vẫn xếp đúng.
+      ...terms.map(
+        (_, i) => `(CASE WHEN ${S_TITLE} LIKE unaccent(lower(:t${i})) THEN 10 ELSE 0 END)`,
+      ),
+    ].join(' + ');
+
+    qb.addSelect(relevance, 'relevance')
+      .orderBy('relevance', 'DESC')
+      .addOrderBy(`post.${sortBy}`, sortOrder);
+  }
 
   // ─── PUBLIC ───────────────────────────────────────────────────────────────
 
@@ -49,10 +165,8 @@ export class PostsService {
       ])
       .orderBy(`post.${sortBy}`, sortOrder);
 
-    if (search) {
-      qb.andWhere('(post.title LIKE :search OR post.excerpt LIKE :search)', {
-        search: `%${search}%`,
-      });
+    if (search?.trim()) {
+      this.applySearch(qb, search.trim(), sortBy, sortOrder);
     }
     if (category) {
       qb.andWhere('category.slug = :category', { category });
@@ -84,8 +198,13 @@ export class PostsService {
 
     if (!post) throw new NotFoundException('Bài viết không tồn tại hoặc chưa được xuất bản');
 
-    // Tăng view count bất đồng bộ, không ảnh hưởng response
-    this.postRepo.increment({ id: post.id }, 'viewCount', 1).catch(() => {});
+    // Tăng view count bất đồng bộ, không ảnh hưởng response.
+    // KHÔNG dùng repo.increment(): nó đi qua UpdateQueryBuilder nên tự đặt luôn
+    // @UpdateDateColumn, biến `updatedAt` thành "lần cuối có người xem" và làm
+    // `lastmod` trong sitemap đổi mỗi lượt truy cập. Câu lệnh thuần chỉ đụng một cột.
+    this.postRepo
+      .query('UPDATE posts SET "viewCount" = "viewCount" + 1 WHERE id = $1', [post.id])
+      .catch(() => {});
 
     return post;
   }
@@ -156,7 +275,7 @@ export class PostsService {
       .orderBy('post.createdAt', 'DESC');
 
     if (search) {
-      qb.andWhere('post.title LIKE :search', { search: `%${search}%` });
+      qb.andWhere('post.title ILIKE :search', { search: `%${search}%` });
     }
     if (status) {
       qb.andWhere('post.status = :status', { status });

@@ -1,12 +1,12 @@
 # ─────────────────────────────────────────────────────────────────────────────
-# Docker Compose — orchestrate toàn bộ stack Vsoftware: Postgres + BE + FE.
+# Docker Compose — dựng toàn bộ stack TopỨngDụng: Postgres + BE + FE.
 #
 # Cấu trúc thư mục mong đợi trên máy chạy:
-#   /srv/vsoftware/
-#   ├── be-vsoftware/      (repo BE — file này nằm ở đây)
-#   └── fe-vsoftware/      (repo FE — build context được tham chiếu ../fe-vsoftware)
+#   /srv/topungdung/
+#   ├── be-topungdung/      (repo BE — file này nằm ở đây)
+#   └── fe-topungdung/      (repo FE — build context được tham chiếu ../fe-topungdung)
 #
-# Usage (từ thư mục be-vsoftware/):
+# Usage (từ thư mục be-topungdung/):
 #   docker compose up -d --build       # build và start tất cả
 #   docker compose down                # stop (giữ volume)
 #   docker compose down -v             # stop + xoá volume (CẨN THẬN: mất DB)
@@ -16,7 +16,7 @@
 services:
   postgres:
     image: postgres:16-alpine
-    container_name: vsoftware-db
+    container_name: topungdung-db
     restart: unless-stopped
     environment:
       POSTGRES_USER: ${DB_USERNAME:-postgres}
@@ -38,7 +38,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: vsoftware-api
+    container_name: topungdung-api
     restart: unless-stopped
     depends_on:
       postgres:
@@ -69,7 +69,7 @@ services:
       SMTP_USER: ${SMTP_USER:-}
       SMTP_PASSWORD: ${SMTP_PASSWORD:-}
       SMTP_FROM_ADDRESS: ${SMTP_FROM_ADDRESS:-}
-      SMTP_FROM_NAME: ${SMTP_FROM_NAME:-Vsoftware}
+      SMTP_FROM_NAME: ${SMTP_FROM_NAME:-TopỨngDụng}
       CONTACT_RECEIVE_EMAIL: ${CONTACT_RECEIVE_EMAIL:-}
     ports:
       - "${BE_PORT:-3001}:3001"
@@ -85,24 +85,28 @@ services:
 
   frontend:
     build:
-      # Build context trỏ sang repo FE — phải có thư mục fe-vsoftware ngang cấp be-vsoftware
-      context: ../fe-vsoftware
+      # Build context trỏ sang repo FE — phải có thư mục fe-topungdung ngang cấp be-topungdung
+      context: ../fe-topungdung
       dockerfile: Dockerfile
       args:
         # NEXT_PUBLIC_* phải set ARG lúc build, không phải runtime
         NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:3001}
         NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-http://localhost:3000}
-        NEXT_PUBLIC_SITE_NAME: ${NEXT_PUBLIC_SITE_NAME:-Vsoftware}
-    container_name: vsoftware-web
+        NEXT_PUBLIC_SITE_NAME: ${NEXT_PUBLIC_SITE_NAME:-TopỨngDụng}
+    container_name: topungdung-web
     restart: unless-stopped
     depends_on:
       - backend
     environment:
       NODE_ENV: production
       PORT: 3000
+      # Biến chạy (không phải NEXT_PUBLIC_) nên đổi xong chỉ cần restart, khỏi
+      # build lại. Thiếu nó thì POST /api/revalidate trả 503 và nội dung sửa
+      # trong admin không hiện ra cho tới hết vòng ISR.
+      REVALIDATE_SECRET: ${REVALIDATE_SECRET:-}
     ports:
       - "${FE_PORT:-3000}:3000"
 
 volumes:
   postgres_data:
-    name: vsoftware_postgres_data
+    name: topungdung_postgres_data

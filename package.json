@@ -1,5 +1,5 @@
 {
-  "name": "base-web-tintuc-be",
+  "name": "be-topungdung",
   "version": "1.0.0",
   "description": "Backend NestJS cho website tin tức",
   "private": true,
@@ -15,7 +15,10 @@
     "typeorm": "ts-node -r tsconfig-paths/register node_modules/typeorm/cli.js",
     "migration:generate": "npm run typeorm -- migration:generate src/database/migrations/$npm_config_name -d src/database/data-source.ts",
     "migration:run": "npm run typeorm -- migration:run -d src/database/data-source.ts",
-    "migration:revert": "npm run typeorm -- migration:revert -d src/database/data-source.ts"
+    "migration:revert": "npm run typeorm -- migration:revert -d src/database/data-source.ts",
+    "seed:tud": "ts-node -r tsconfig-paths/register src/database/seeds/topungdung.seed.ts",
+    "seed:review": "ts-node -r tsconfig-paths/register src/database/seeds/topungdung-review.seed.ts",
+    "seo:fill": "ts-node -r tsconfig-paths/register src/database/seeds/fill-seo-scores.ts"
   },
   "dependencies": {
     "@nestjs/common": "^10.3.0",

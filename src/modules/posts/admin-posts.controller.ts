@@ -20,6 +20,8 @@ import { CreatePostDto } from './dto/create-post.dto';
 import { QueryPostDto } from './dto/query-post.dto';
 import { UpdatePostDto } from './dto/update-post.dto';
 import { PostsService } from './posts.service';
+import { ImportPostsService } from './import-posts.service';
+import type { ImportItem } from './import-validator';
 
 class CheckSlugQuery {
   @IsString() slug: string;
@@ -31,7 +33,24 @@ class CheckSlugQuery {
 @Controller('api/admin/posts')
 @UseGuards(JwtAuthGuard)
 export class AdminPostsController {
-  constructor(private postsService: PostsService) {}
+  constructor(
+    private postsService: PostsService,
+    private importService: ImportPostsService,
+  ) {}
+
+  /**
+   * Nạp bài từ tệp JSON soạn sẵn ngoài trình soạn thảo.
+   *
+   * Cách trình bày bài của site (khối trả lời nhanh, 3 bảng, 8 mục H2, 9 câu
+   * hỏi đáp) không dựng được bằng trình soạn thảo thường, nên bài được soạn ở
+   * ngoài rồi nạp qua đây. Mặc định là chạy thử: chỉ kiểm chuẩn và báo cáo,
+   * phải gửi dryRun=false mới thật sự ghi.
+   */
+  @Post('import')
+  @ApiOperation({ summary: 'Nạp bài viết từ JSON, có cổng kiểm chuẩn' })
+  importPosts(@Body() body: { items: ImportItem[]; dryRun?: boolean }) {
+    return this.importService.run(body?.items, body?.dryRun !== false);
+  }
 
   @Get()
   @ApiOperation({ summary: 'Danh sách bài viết (admin)' })

@@ -17,7 +17,7 @@
 # Hoặc thủ công cron mỗi 5h:
 #   crontab -e
 #   # thêm dòng:
-#   0 */5 * * * cd /home/vsoftware.vn-api && bash backup-db.sh >> logs/backup.log 2>&1
+#   0 */5 * * * cd /srv/topungdung/be-topungdung && bash backup-db.sh >> logs/backup.log 2>&1
 # ─────────────────────────────────────────────────────────────────────────────
 
 set -e

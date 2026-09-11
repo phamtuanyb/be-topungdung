@@ -1,4 +1,5 @@
-﻿import { config } from 'dotenv';
+﻿import { randomBytes } from 'crypto';
+import { config } from 'dotenv';
 import { DataSource } from 'typeorm';
 import * as bcrypt from 'bcryptjs';
 import { Category, CategoryStatus } from '../../entities/category.entity';
@@ -89,12 +90,22 @@ async function seed() {
   const categoryRepo = dataSource.getRepository(Category);
 
   // ── Admin mặc định ──────────────────────────────────────────────────────
-  const adminEmail = process.env.SEED_ADMIN_EMAIL || 'admin@example.com';
-  const adminPassword = process.env.SEED_ADMIN_PASSWORD || 'Admin@123456';
+  // Không ghi mật khẩu trong mã nguồn: trước đây mặc định là một chuỗi cố định
+  // nằm ngay trong tệp này, ai đọc repo là đăng nhập được. Không khai
+  // SEED_ADMIN_PASSWORD thì tài khoản nhận chuỗi băm ngẫu nhiên, phải đặt lại
+  // mật khẩu mới dùng được.
+  const adminEmail = process.env.SEED_ADMIN_EMAIL || 'admin@topungdung.net';
+  const adminPassword = process.env.SEED_ADMIN_PASSWORD;
 
   const existingAdmin = await userRepo.findOne({ where: { email: adminEmail } });
   if (!existingAdmin) {
-    const passwordHash = await bcrypt.hash(adminPassword, 12);
+    const passwordHash = await bcrypt.hash(
+      adminPassword || randomBytes(32).toString('hex'),
+      12,
+    );
+    if (!adminPassword) {
+      console.log('⚠️  Chưa khai SEED_ADMIN_PASSWORD — tài khoản tạo ra chưa đăng nhập được.');
+    }
     await userRepo.save(
       userRepo.create({
         email: adminEmail,

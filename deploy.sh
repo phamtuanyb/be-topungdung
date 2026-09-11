@@ -4,23 +4,23 @@
 #
 # Quy trình:
 #   1. Pull repo BE (thư mục hiện tại) → lấy code/snapshot/uploads mới
-#   2. Pull repo FE (../fe-vsoftware) → lấy code FE mới
+#   2. Pull repo FE (../fe-topungdung) → lấy code FE mới
 #   3. Phát hiện snapshot.json đã đổi → bật FORCE_RESEED=1 (đảm bảo data = local)
 #   4. docker compose up -d --build → rebuild + restart toàn bộ stack
 #
 # Cấu trúc thư mục yêu cầu:
-#   /srv/vsoftware/
-#   ├── be-vsoftware/      (clone từ git)
-#   └── fe-vsoftware/      (clone từ git, ngang cấp)
+#   /srv/topungdung/
+#   ├── be-topungdung/      (clone từ git)
+#   └── fe-topungdung/      (clone từ git, ngang cấp)
 #
-# Usage (chạy từ thư mục be-vsoftware/):
+# Usage (chạy từ thư mục be-topungdung/):
 #   bash deploy.sh
 # ─────────────────────────────────────────────────────────────────────────────
 
 set -e
 
 BE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-FE_DIR="$(cd "$BE_DIR/.." && pwd)/fe-vsoftware"
+FE_DIR="$(cd "$BE_DIR/.." && pwd)/fe-topungdung"
 
 CYAN='\033[0;36m'
 GREEN='\033[0;32m'
@@ -38,7 +38,7 @@ log "Deploy bắt đầu lúc $(date '+%Y-%m-%d %H:%M:%S')"
 echo ""
 
 # ── Bước 1: Pull BE ─────────────────────────────────────────────────────────
-log "[1/4] Pull BE (be-vsoftware)..."
+log "[1/4] Pull BE (be-topungdung)..."
 cd "$BE_DIR"
 
 SNAPSHOT_FILE="src/database/seeds/snapshot.json"
@@ -56,14 +56,14 @@ if [[ -f "$SNAPSHOT_FILE" ]]; then
 fi
 
 # ── Bước 2: Pull FE (clone nếu chưa có) ─────────────────────────────────────
-log "[2/4] Pull FE (fe-vsoftware)..."
+log "[2/4] Pull FE (fe-topungdung)..."
 if [[ -d "$FE_DIR/.git" ]]; then
   cd "$FE_DIR"
   git pull --ff-only origin main
   ok "FE đã pull"
 else
   warn "FE_DIR ($FE_DIR) chưa có repo. Bỏ qua FE pull."
-  warn "Lần đầu setup: cd .. && git clone <FE_REPO_URL> fe-vsoftware"
+  warn "Lần đầu setup: cd .. && git clone <FE_REPO_URL> fe-topungdung"
 fi
 
 # ── Bước 3: Quyết định FORCE_RESEED ────────────────────────────────────────

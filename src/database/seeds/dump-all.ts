@@ -32,7 +32,14 @@ async function dump() {
 
   const snapshot = {
     exportedAt: new Date().toISOString(),
-    users: await dataSource.getRepository(User).find(),
+    // Không ghi thông tin đăng nhập ra tệp: snapshot này nằm trong repo nên
+    // chuỗi băm mật khẩu lọt ra ngoài là rò rỉ thật. Khôi phục từ snapshot sẽ
+    // tạo tài khoản chưa đăng nhập được, phải chủ động đặt lại mật khẩu.
+    users: (await dataSource.getRepository(User).find()).map((u) => ({
+      ...u,
+      passwordHash: '',
+      refreshTokenHash: null,
+    })),
     categories: await dataSource.getRepository(Category).find(),
     menus: await dataSource.getRepository(Menu).find(),
     menuItems: await dataSource.getRepository(MenuItem).find(),

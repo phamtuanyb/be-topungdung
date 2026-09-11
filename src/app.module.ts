@@ -4,6 +4,8 @@ import { ThrottlerModule } from '@nestjs/throttler';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
+import { AppVote } from './entities/app-vote.entity';
+import { AppSuggestion } from './entities/app-suggestion.entity';
 import { Category } from './entities/category.entity';
 import { ContactSubmission } from './entities/contact-submission.entity';
 import { SiteSettings } from './entities/site-settings.entity';
@@ -22,6 +24,8 @@ import { SeoModule } from './modules/seo/seo.module';
 import { MenusModule } from './modules/menus/menus.module';
 import { PostsModule } from './modules/posts/posts.module';
 import { UsersModule } from './modules/users/users.module';
+import { VotesModule } from './modules/votes/votes.module';
+import { SuggestionsModule } from './modules/suggestions/suggestions.module';
 
 @Module({
   imports: [
@@ -38,7 +42,7 @@ import { UsersModule } from './modules/users/users.module';
         username: config.get('DB_USERNAME', 'postgres'),
         password: config.get('DB_PASSWORD', 'postgres'),
         database: config.get('DB_DATABASE', 'news_db'),
-        entities: [User, Category, Post, Media, Menu, MenuItem, ContactSubmission, SiteSettings],
+        entities: [User, Category, Post, Media, Menu, MenuItem, ContactSubmission, SiteSettings, AppVote, AppSuggestion],
         synchronize: config.get('NODE_ENV') !== 'production',
         logging: config.get('NODE_ENV') === 'development',
         retryAttempts: 20,
@@ -68,6 +72,8 @@ import { UsersModule } from './modules/users/users.module';
     ContactModule,
     SiteSettingsModule,
     SeoModule,
+    VotesModule,
+    SuggestionsModule,
   ],
 })
 export class AppModule {}

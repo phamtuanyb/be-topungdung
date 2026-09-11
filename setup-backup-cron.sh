@@ -33,13 +33,13 @@ REMOVE=false
 # ── Cron expression: mỗi 5h, đúng phút 0 ────────────────────────────────────
 CRON_SCHEDULE='0 */5 * * *'
 CRON_CMD="cd $SCRIPT_DIR && bash backup-db.sh >> $LOG_FILE 2>&1"
-CRON_TAG="# VSOFTWARE_BACKUP"
+CRON_TAG="# TOPUNGDUNG_BACKUP"
 CRON_LINE="$CRON_SCHEDULE $CRON_CMD $CRON_TAG"
 
 # ── Đảm bảo folder logs tồn tại ─────────────────────────────────────────────
 mkdir -p "$SCRIPT_DIR/logs"
 
-# ── Đọc crontab hiện tại, loại bỏ dòng có tag VSOFTWARE_BACKUP ──────────────
+# ── Đọc crontab hiện tại, loại bỏ dòng có tag TOPUNGDUNG_BACKUP ──────────────
 CURRENT_CRON=$(crontab -l 2>/dev/null | grep -v "$CRON_TAG" || true)
 
 if [[ "$REMOVE" == "true" ]]; then

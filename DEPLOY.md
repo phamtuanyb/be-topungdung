@@ -17,13 +17,41 @@ cp .env.example .env
 Mở `.env` chỉnh các biến quan trọng:
 
 **Trên prod:**
-- `JWT_SECRET` và `JWT_REFRESH_SECRET` → đổi sang chuỗi ngẫu nhiên (vd `openssl rand -hex 32`)
-- `DB_PASSWORD` → đổi password mạnh
-- `PUBLIC_URL` → `https://api.vsoftware.vn`
-- `CORS_ORIGINS` → `https://vsoftware.vn`
-- `NEXT_PUBLIC_API_URL` → `https://api.vsoftware.vn`
-- `NEXT_PUBLIC_SITE_URL` → `https://vsoftware.vn`
-- SMTP_* nếu muốn nhận form qua email
+
+| Biến | Giá trị | Ghi chú |
+|---|---|---|
+| `JWT_SECRET` | chuỗi ngẫu nhiên | **Bắt buộc đổi.** Để nguyên chuỗi mẫu thì ai đọc được mã nguồn cũng ký được token quản trị |
+| `JWT_REFRESH_SECRET` | chuỗi ngẫu nhiên **khác** | Sinh riêng, không dùng lại của `JWT_SECRET` |
+| `DB_PASSWORD` | mật khẩu mạnh | |
+| `REVALIDATE_SECRET` | chuỗi ngẫu nhiên | Thiếu thì sửa nội dung trong admin không hiện ra ngay |
+| `PUBLIC_URL` | `https://api.topungdung.net` | |
+| `CORS_ORIGINS` | `https://topungdung.net` | Thêm cả `www.` nếu dùng |
+| `NEXT_PUBLIC_API_URL` | `https://api.topungdung.net` | **Lúc build**, xem cảnh báo dưới |
+| `NEXT_PUBLIC_SITE_URL` | `https://topungdung.net` | **Lúc build**, xem cảnh báo dưới |
+| `SMTP_*` | | Chỉ cần nếu muốn nhận form liên hệ qua email |
+| `FORCE_RESEED` | **bỏ hẳn dòng này** | `=1` sẽ xoá trắng DB rồi nạp lại từ snapshot |
+
+Sinh secret:
+
+```bash
+node -e "console.log(require('crypto').randomBytes(48).toString('base64url'))"
+```
+
+> ⚠️ **`NEXT_PUBLIC_*` được nướng cứng vào bundle lúc BUILD**, không đọc lại lúc
+> chạy. Đặt sai là toàn bộ `canonical`, `og:image` và `sitemap` của bản production
+> trỏ về localhost — restart không cứu được, phải build lại.
+> `next.config.mjs` sẽ **chặn build** nếu hai biến này còn trỏ localhost, nên
+> không lỡ tay được; nhưng vẫn phải đặt đúng trước khi chạy `docker compose build`.
+
+### Bước 1b — Kiểm lại trước khi build
+
+```bash
+grep -E '^(JWT_SECRET|JWT_REFRESH_SECRET|DB_PASSWORD|REVALIDATE_SECRET)=' .env
+grep -E '^(NEXT_PUBLIC_|PUBLIC_URL|CORS_ORIGINS)' .env
+grep -c '^FORCE_RESEED' .env     # phải ra 0
+```
+
+Không còn `change_this`, không còn `localhost`, `FORCE_RESEED` không có mặt.
 
 ### Bước 2 — Build và start
 
@@ -74,11 +102,23 @@ docker compose up -d --build
 
 Compose tự động build lại image nào có thay đổi, restart container, giữ nguyên DB và uploads.
 
+### Sau mỗi lần build — chạy phép kiểm
+
+```bash
+cd ../fe-topungdung
+npm run kiem:len-song -- https://topungdung.net
+```
+
+Script mở 13 trang đại diện cho mọi loại bố cục và soi đúng loại lỗi mắt thường
+không thấy: `canonical`, `og:image`, `robots.txt`, `sitemap.xml` có còn trỏ
+localhost không; biểu tượng và manifest có tồn tại không; ảnh trong `/uploads`
+có phục vụ được không. Thoát mã khác 0 là **đừng trỏ tên miền vào**.
+
 ## Khi nào cần rebuild FE
 
 **FE phải rebuild khi đổi:**
 - Bất kỳ biến `NEXT_PUBLIC_*` nào trong `.env`
-- Code FE (`fe-vsoftware/`)
+- Code FE (`fe-topungdung/`)
 - `package.json`
 
 ```bash
@@ -92,10 +132,10 @@ docker compose up -d frontend
 
 ```bash
 # Local
-cd be-vsoftware
+cd be-topungdung
 npm run dump:all              # sinh snapshot.json mới
 cd ..
-git add be-vsoftware/src/database/seeds/snapshot.json
+git add be-topungdung/src/database/seeds/snapshot.json
 git commit -m "data: update snapshot"
 git push
 
@@ -124,12 +164,12 @@ docker compose exec -T postgres psql -U postgres news_db < backup-20260603.sql
 ├── docker-compose.yml          # Orchestrator chính
 ├── .env.example                # Template config (copy → .env)
 ├── .env                        # Config thật (KHÔNG commit)
-├── be-vsoftware/
+├── be-topungdung/
 │   ├── Dockerfile              # Multi-stage build BE
 │   ├── docker-entrypoint.sh    # Tự run migration + seed lần đầu
 │   ├── .dockerignore
 │   └── uploads/                # Volume mount, ảnh sống ngoài container
-├── fe-vsoftware/
+├── fe-topungdung/
 │   ├── Dockerfile              # Multi-stage build FE
 │   ├── .dockerignore
 │   └── next.config.mjs         # output: 'standalone' cho Docker
@@ -140,8 +180,8 @@ docker compose exec -T postgres psql -U postgres news_db < backup-20260603.sql
 
 | Tên | Dùng cho | Có sống khi `down`? |
 |---|---|---|
-| `vsoftware_postgres_data` | DB Postgres | ✅ Có |
-| `./be-vsoftware/uploads` | Ảnh upload | ✅ Có (bind mount) |
+| `topungdung_postgres_data` | DB Postgres | ✅ Có |
+| `./be-topungdung/uploads` | Ảnh upload | ✅ Có (bind mount) |
 
 ⚠️ `docker compose down -v` sẽ xoá `postgres_data`. Ảnh upload an toàn vì là bind mount.
 
@@ -151,6 +191,6 @@ docker compose exec -T postgres psql -U postgres news_db < backup-20260603.sql
 
 **BE 500 khi save settings** → `docker compose logs backend` xem error. Có thể migration chưa chạy.
 
-**Mất ảnh** → Folder `be-vsoftware/uploads/` còn không. Nếu rỗng thì restore từ backup hoặc git.
+**Mất ảnh** → Folder `be-topungdung/uploads/` còn không. Nếu rỗng thì restore từ backup hoặc git.
 
 **Container không khởi động** → `docker compose ps` xem trạng thái, `docker compose logs <service>` xem nguyên nhân.
