@@ -46,6 +46,10 @@ services:
     environment:
       NODE_ENV: production
       PORT: 3001
+      # Cột thời gian trong CSDL là "timestamp without time zone" và Postgres
+      # ghi bằng UTC. Node phải đọc chúng cũng bằng UTC, không thì mỗi mốc thời
+      # gian bị lệch đúng một múi giờ (đã gặp trên máy dev Windows: −7 tiếng).
+      TZ: UTC
       DB_HOST: postgres
       DB_PORT: 5432
       DB_USERNAME: ${DB_USERNAME:-postgres}
