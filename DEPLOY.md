@@ -102,6 +102,25 @@ docker compose up -d --build
 
 Compose tự động build lại image nào có thay đổi, restart container, giữ nguyên DB và uploads.
 
+### Nạp lại dữ liệu từ snapshot (khi máy chủ đang giữ dữ liệu cũ)
+
+Entrypoint chỉ nạp `snapshot.json` **một lần khi CSDL rỗng**; những lần deploy
+sau giữ nguyên CSDL. Nếu máy chủ được dựng lúc snapshot còn cũ, phải nạp lại
+một lần bằng tay — **xoá trắng CSDL trên máy chủ** rồi nạp bản mới:
+
+```bash
+cd /srv/topungdung/be-topungdung
+git pull && (cd ../fe-topungdung && git pull)
+# .env: thêm SEED_ADMIN_PASSWORD=<mật khẩu tạm cho admin> — snapshot không chứa băm mật khẩu
+FORCE_RESEED=1 docker compose up -d --build backend
+docker compose logs -f backend      # chờ thấy "posts: 508" và "Starting NestJS"
+docker compose up -d backend         # chạy lại KHÔNG có FORCE_RESEED để lần sau không nạp lại
+docker compose up -d --build frontend
+```
+
+Đăng nhập `/admin` bằng `SEED_ADMIN_PASSWORD`, đổi mật khẩu trong *Người dùng*,
+rồi xoá dòng đó khỏi `.env`.
+
 ### Sau mỗi lần build — chạy phép kiểm
 
 ```bash

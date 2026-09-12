@@ -1,4 +1,5 @@
 import { config } from 'dotenv';
+import * as bcrypt from 'bcryptjs';
 import { DataSource } from 'typeorm';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -28,6 +29,34 @@ const SNAPSHOT = path.resolve(__dirname, 'snapshot.json');
 
 // Bật bằng `npm run seed:all -- --reset` để TRUNCATE sạch trước khi restore (cẩn thận: mất hết data hiện có).
 const RESET = process.argv.includes('--reset');
+
+/**
+ * Xếp lại để dòng cha luôn đứng trước dòng con.
+ *
+ * bulkInsert chèn từng dòng theo thứ tự trong snapshot, mà dump-all không đảm
+ * bảo cha ra trước con: với 96 danh mục, một dòng con đứng trước cha là vướng
+ * FK_categories_parent và cả đợt nạp dừng lại. Snapshot cũ chỉ 12 danh mục nên
+ * tình cờ không lộ. Duyệt theo tầng từ gốc; dòng nào cha không tồn tại thì đẩy
+ * xuống cuối và báo, không âm thầm bỏ.
+ */
+function sapXepChaTruoc(rows: any[], khoaCha = 'parentId'): any[] {
+  const coId = new Set(rows.map((r) => r.id));
+  const daXep: any[] = [];
+  const daThay = new Set<number>();
+  let conLai = rows.slice();
+  while (conLai.length) {
+    const luot = conLai.filter((r) => r[khoaCha] == null || daThay.has(r[khoaCha]) || !coId.has(r[khoaCha]));
+    if (!luot.length) break; // vòng lặp cha-con — không xếp được nữa
+    for (const r of luot) { daXep.push(r); daThay.add(r.id); }
+    const lay = new Set(luot.map((r) => r.id));
+    conLai = conLai.filter((r) => !lay.has(r.id));
+  }
+  if (conLai.length) {
+    console.log(`⚠️  ${conLai.length} dòng tham chiếu cha theo vòng, chèn cuối: ${conLai.map((r) => r.id).join(', ')}`);
+    daXep.push(...conLai);
+  }
+  return daXep;
+}
 
 async function bulkInsert(table: string, rows: any[]) {
   if (!rows.length) return;
@@ -86,13 +115,36 @@ async function run() {
   await bulkInsert('users', snapshot.users);
   console.log(`✅ users:               ${snapshot.users.length}`);
 
-  await bulkInsert('categories', snapshot.categories);
+  // snapshot.json cố ý KHÔNG chứa băm mật khẩu (dump-all xoá đi để không đưa lên
+  // kho công khai). Nạp nguyên xi thì mọi tài khoản đều không đăng nhập được.
+  // Đặt lại từ SEED_ADMIN_PASSWORD cho những tài khoản đang trống; không có
+  // biến thì báo to, vì đây là lỗi chỉ lộ ra lúc đứng trước màn hình đăng nhập.
+  const trong = await dataSource.query(
+    `SELECT id, email FROM "users" WHERE "passwordHash" IS NULL OR "passwordHash" = ''`,
+  );
+  if (trong.length > 0) {
+    const pw = process.env.SEED_ADMIN_PASSWORD;
+    if (pw) {
+      const hash = await bcrypt.hash(pw, 12);
+      await dataSource.query(
+        `UPDATE "users" SET "passwordHash" = $1 WHERE "passwordHash" IS NULL OR "passwordHash" = ''`,
+        [hash],
+      );
+      console.log(`✅ đặt mật khẩu từ SEED_ADMIN_PASSWORD cho ${trong.length} tài khoản: ${trong.map((u: any) => u.email).join(', ')}`);
+      console.log('   → đăng nhập xong hãy đổi mật khẩu trong /admin/users rồi xoá biến này khỏi .env');
+    } else {
+      console.log(`⚠️  ${trong.length} tài khoản KHÔNG đăng nhập được vì băm mật khẩu rỗng: ${trong.map((u: any) => u.email).join(', ')}`);
+      console.log('   → đặt SEED_ADMIN_PASSWORD trong .env rồi chạy lại seed, hoặc đổi mật khẩu bằng SQL.');
+    }
+  }
+
+  await bulkInsert('categories', sapXepChaTruoc(snapshot.categories));
   console.log(`✅ categories:          ${snapshot.categories.length}`);
 
   await bulkInsert('menus', snapshot.menus);
   console.log(`✅ menus:               ${snapshot.menus.length}`);
 
-  await bulkInsert('menu_items', snapshot.menuItems);
+  await bulkInsert('menu_items', sapXepChaTruoc(snapshot.menuItems));
   console.log(`✅ menu_items:          ${snapshot.menuItems.length}`);
 
   await bulkInsert('posts', snapshot.posts);

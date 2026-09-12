@@ -66,6 +66,9 @@ services:
       # FORCE_RESEED=1 → entrypoint sẽ chạy seed:all --reset (ghi đè data từ snapshot.json)
       # deploy.sh tự set biến này nếu phát hiện snapshot.json đã đổi.
       FORCE_RESEED: ${FORCE_RESEED:-0}
+      # Mật khẩu đặt cho tài khoản admin khi nạp dữ liệu từ snapshot (snapshot
+      # không chứa băm mật khẩu). Chỉ dùng lúc nạp; đăng nhập xong thì đổi.
+      SEED_ADMIN_PASSWORD: ${SEED_ADMIN_PASSWORD:-}
       EMAIL_ENABLED: ${EMAIL_ENABLED:-false}
       SMTP_HOST: ${SMTP_HOST:-}
       SMTP_PORT: ${SMTP_PORT:-465}
