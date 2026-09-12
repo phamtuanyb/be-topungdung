@@ -106,13 +106,14 @@ Compose tự động build lại image nào có thay đổi, restart container, 
 
 ```bash
 cd ../fe-topungdung
-npm run kiem:len-song -- https://topungdung.net
+npm run kiem:len-song -- https://topungdung.net https://api.topungdung.net
 ```
 
 Script mở 13 trang đại diện cho mọi loại bố cục và soi đúng loại lỗi mắt thường
 không thấy: `canonical`, `og:image`, `robots.txt`, `sitemap.xml` có còn trỏ
 localhost không; biểu tượng và manifest có tồn tại không; ảnh trong `/uploads`
-có phục vụ được không. Thoát mã khác 0 là **đừng trỏ tên miền vào**.
+có phục vụ được không; **chứng chỉ SSL của API có được tin cậy không** và trang
+chủ có lấy được dữ liệu từ backend không. Thoát mã khác 0 là **đừng trỏ tên miền vào**.
 
 ## Khi nào cần rebuild FE
 

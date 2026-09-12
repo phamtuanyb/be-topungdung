@@ -108,6 +108,9 @@ services:
       # build lại. Thiếu nó thì POST /api/revalidate trả 503 và nội dung sửa
       # trong admin không hiện ra cho tới hết vòng ISR.
       REVALIDATE_SECRET: ${REVALIDATE_SECRET:-}
+      # SSR gọi backend qua mạng nội bộ của compose — không qua DNS công khai,
+      # Cloudflare hay chứng chỉ SSL. Trình duyệt vẫn dùng NEXT_PUBLIC_API_URL.
+      API_INTERNAL_URL: http://backend:3001
     ports:
       - "${FE_PORT:-3000}:3000"
 
