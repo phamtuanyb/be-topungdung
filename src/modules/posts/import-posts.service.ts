@@ -25,6 +25,10 @@ export interface ImportResult {
 /** Tách câu để so trùng. Bỏ thẻ HTML, cắt theo dấu chấm và xuống dòng. */
 function toSentences(html: string): string[] {
   return html
+    // Thẻ khối đóng lại là hết một câu — không thì tiêu đề "Cách dùng để có
+    // kết quả tốt" dính vào "1." của h3 kế tiếp thành một câu 8 từ giống nhau
+    // ở mọi bài, và bài nào cũng bị báo trùng với bài trước.
+    .replace(/<\/(h[1-6]|p|li|td|th|tr|div|blockquote)>/gi, '. ')
     .replace(/<[^>]+>/g, ' ')
     .replace(/&nbsp;/g, ' ')
     .replace(/\s+/g, ' ')
