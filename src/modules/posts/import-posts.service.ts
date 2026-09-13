@@ -155,6 +155,8 @@ export class ImportPostsService {
           seoDescription: item.seoDescription,
           seoKeywords: item.seoKeywords ?? existing.seoKeywords,
           excerpt: item.excerpt ?? existing.excerpt,
+          logoUrl: item.logoUrl ?? existing.logoUrl,
+          thumbnail: item.thumbnail ?? existing.thumbnail,
           productPageConfig,
         });
         await this.postRepo.save(existing);
@@ -170,6 +172,8 @@ export class ImportPostsService {
             seoDescription: item.seoDescription,
             seoKeywords: item.seoKeywords,
             excerpt: item.excerpt,
+            logoUrl: item.logoUrl,
+            thumbnail: item.thumbnail,
             productPageConfig,
             status: PostStatus.PUBLISHED,
             publishedAt: new Date(),

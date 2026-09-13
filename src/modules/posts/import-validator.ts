@@ -41,6 +41,9 @@ export interface ImportItem {
   seoDescription: string;
   seoKeywords?: string;
   excerpt?: string;
+  /** Logo đã nằm trên máy chủ ("/uploads/<tệp>.webp") — agent đăng bài tải qua /media/import-url trước rồi ghi vào đây */
+  logoUrl?: string;
+  thumbnail?: string;
   app?: ImportAppMeta;
   faq?: { q: string; a: string }[];
 }
