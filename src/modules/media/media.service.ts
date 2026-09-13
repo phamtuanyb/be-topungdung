@@ -58,8 +58,18 @@ export class MediaService {
     imageUrl: string,
     metadata?: { altText?: string; caption?: string },
   ): Promise<Media> {
-    const res = await fetch(imageUrl);
-    if (!res.ok) throw new Error(`Không thể tải ảnh: ${res.statusText}`);
+    // Nhiều CDN của nhà phát hành trả 403 cho User-Agent mặc định của Node;
+    // xưng là trình duyệt và giới hạn 20 giây để một logo treo không kẹt cả đợt nạp.
+    const res = await fetch(imageUrl, {
+      headers: {
+        'User-Agent':
+          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36',
+        Accept: 'image/avif,image/webp,image/png,image/*;q=0.8,*/*;q=0.5',
+      },
+      signal: AbortSignal.timeout(20_000),
+      redirect: 'follow',
+    });
+    if (!res.ok) throw new Error(`Không thể tải ảnh: ${res.status} ${res.statusText}`);
 
     const contentType = res.headers.get('content-type') ?? '';
     if (!contentType.startsWith('image/')) {
